@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="no_feeds">You have no feeds</string>
+    <string name="app_name">MyRSS</string>
+	<string name="feed_title">title</string>
+	<string name="feed_url">url</string>
+	<string name="home_menu_add_item">Add Feed</string>
+	<string name="add_feet_buton">Save</string>
+</resources>
