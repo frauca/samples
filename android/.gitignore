@@ -7,4 +7,5 @@
 # Ignore the default pdf eclipse and sdk
 /eclipse
 /sdk
-
+/developers
+*.~

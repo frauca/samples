@@ -5,6 +5,8 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore the default pdf eclipse and sdk
-/eclipse
-/sdk
-
+/.metadata
+**/bin/
+.classpath
+.project
+*.class
