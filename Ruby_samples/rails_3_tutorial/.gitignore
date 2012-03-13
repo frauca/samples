@@ -4,6 +4,7 @@ log/*.log
 *.log
 tmp/**/*
 tmp/*
+sample_app2/*
 doc/api
 doc/app
 *.swp
