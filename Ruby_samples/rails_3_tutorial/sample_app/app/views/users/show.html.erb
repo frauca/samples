@@ -1,1 +1,23 @@
-<%= @user.name %>, <%= @user.email %>
+<% content_for :custom_heads do %>
+ <%= stylesheet_link_tag "users" %>
+<% end %>
+
+<h1>
+<%= @user.name %>
+</h1>
+<div >
+	<%= gravatar_for @user %>
+	<div class="info">
+		<div>
+			<b>Name:</b> <%= @user.name %>
+		</div>
+		<div>
+			<b>Mail:</b> <%= @user.email %>
+		</div>
+		<div>
+			<b>URL:</b> <%= link_to user_url(@user), @user %>
+
+		</div>
+	</div>
+</div>
+

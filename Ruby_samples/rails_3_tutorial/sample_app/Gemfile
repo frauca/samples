@@ -40,6 +40,8 @@ gem 'jquery-rails'
 
 gem 'execjs'
 gem 'therubyracer'
+gem 'gravatar_image_tag'
+
 
 group :development do
 	gem 'annotate'
