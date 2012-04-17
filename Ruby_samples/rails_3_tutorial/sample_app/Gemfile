@@ -41,10 +41,12 @@ gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
 gem 'gravatar_image_tag'
+gem 'will_paginate'
 
 
 group :development do
 	gem 'annotate'
+	gem 'faker'
 end
 
 
