@@ -34,8 +34,11 @@ module SessionsHelper
 		redirect_to(session[:return_to] || default)
 		clear_return_to
 	end
-
-
+	
+	def authenticate
+		logger.info "denny access signed in"
+		deny_access unless signed_in?
+	end
 
 	
 	private

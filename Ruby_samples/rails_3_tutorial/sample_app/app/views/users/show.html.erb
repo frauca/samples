@@ -19,5 +19,12 @@
 
 		</div>
 	</div>
+	<% unless @user.microposts.empty? %>
+		<div class="microposts" summary="User microposts">
+		<%= render @microposts %>
+		</div>
+		<%= will_paginate @microposts %>
+	<% end %>
+
 </div>
 

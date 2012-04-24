@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def show
   	  @user = User.find(params[:id])
   	  @title=@user.name
+  	  @microposts = @user.microposts.paginate(:page => params[:page],:per_page => 5)
   end
 
   def new
@@ -43,18 +44,17 @@ class UsersController < ApplicationController
 
   end
   
+  
   def destroy
+  logger.error "joder"
 	User.find(params[:id]).destroy
 	flash[:success] = "User destroyed."
 	redirect_to users_path
   end
+ 
+
 
 	private
-	
-	def authenticate
-		logger.info "denny access signed in"
-		deny_access unless signed_in?
-	end
 	
 	def correct_user
 		@user = User.find(params[:id])
