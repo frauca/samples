@@ -140,7 +140,7 @@ color: blue;
 div.grabatar img{
 float:left;
 }
-div.feed_item{
+li.feed_item{
 	border: 1px solid;
 }
 
