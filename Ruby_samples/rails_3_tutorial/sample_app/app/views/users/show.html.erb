@@ -19,6 +19,9 @@
 
 		</div>
 	</div>
+	
+	<%= render 'follow_form' if signed_in? %>
+
 	<% unless @user.microposts.empty? %>
 		<div class="microposts" summary="User microposts">
 		<%= render @microposts %>
