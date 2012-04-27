@@ -29,11 +29,8 @@ class MainPage(webapp2.RequestHandler):
     # consistent. If we omitted the ancestor from this query there would be a
     # slight chance that Greeting that had just been written would not show up
     # in a query.
-    greetings = db.GqlQuery("SELECT * "
-                            "FROM Greeting "
-                            "WHERE ANCESTOR IS :1 "
-                            "ORDER BY date DESC LIMIT 10",
-                            guestbook_key(guestbook_name))
+    greetings = Greeting.gql("WHERE ANCESTOR IS :1 ORDER BY date DESC LIMIT 10",
+                             guestbook_key(guestbook_name))
 
     for greeting in greetings:
       if greeting.author:
