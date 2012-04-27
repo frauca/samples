@@ -9,5 +9,6 @@
 *.zip
 *.war
 *.~
+*.pyc
 google_appengine
 runit.sh
