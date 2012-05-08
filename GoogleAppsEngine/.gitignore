@@ -12,3 +12,5 @@
 *.pyc
 google_appengine
 runit.sh
+.project
+.pydevproject
