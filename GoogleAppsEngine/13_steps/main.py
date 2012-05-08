@@ -3,7 +3,7 @@ from google.appengine.dist import use_library
 use_library('django', '1.3')
 
 # Must set this env var *before* importing any part of Django
-os.environ['DJANGO_SETTINGS_MODULE'] = '13_steps.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'in13_steps.settings'
 
 # Google App Engine imports.
 from google.appengine.ext.webapp import util
