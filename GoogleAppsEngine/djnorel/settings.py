@@ -20,7 +20,7 @@ INSTALLED_APPS = (
     'djangotoolbox',
     'autoload',
     'dbindexer',
-
+    'core',
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',
 )
@@ -45,6 +45,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 TEST_RUNNER = 'djangotoolbox.test.CapturingTestSuiteRunner'
 
 ADMIN_MEDIA_PREFIX = '/media/admin/'
-TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
+TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),
+                 os.path.join(os.path.dirname(__file__), 'core/templates'),)
 
 ROOT_URLCONF = 'urls'
