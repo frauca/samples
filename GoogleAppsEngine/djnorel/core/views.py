@@ -1,9 +1,6 @@
 # Create your views here.
 from django.http import HttpResponse
-from django.template.loader import get_template
-from django.template import Context
+from django.shortcuts import render_to_response
 
 def hello(request):
-    t=get_template('hello.html')
-    html=t.render(Context({}));
-    return HttpResponse(html)
+    return render_to_response('hello.html',{})
