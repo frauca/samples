@@ -1,0 +1,21 @@
+<html>
+<html>
+<head>
+<title>Book Edit</title>
+</head>
+<body>
+<h1>Edit book</h1>
+	{% if form.errors %}
+		<p style="color: red;">
+			Please correct the error{{ form.errors|pluralize }} below.
+		</p>
+	{% endif %}
+<form action="" method="post">
+	<div>
+		
+		{{ form.as_ul }}
+	</div>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
