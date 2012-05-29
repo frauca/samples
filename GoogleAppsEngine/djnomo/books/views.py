@@ -2,6 +2,9 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from models import Book
 from books.forms import BookForm
+import logging
+
+logger = logging.getLogger(__name__)
 
 def search_form(request):
     return render_to_response('search_form.html')
@@ -22,7 +25,8 @@ def edit_book(request):
             cd = form.cleaned_data
             book = Book(title=cd['title'])
             book.put()
-            return   HttpResponseRedirect('/search-form/?q=all')
+            return   HttpResponseRedirect('/search/?q=all')
     else:
         form = BookForm()
+        logger.error ("here i am")
     return render_to_response('book_edit.html', {'form': form})
