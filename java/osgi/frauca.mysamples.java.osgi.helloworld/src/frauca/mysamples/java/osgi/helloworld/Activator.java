@@ -2,29 +2,31 @@ package frauca.mysamples.java.osgi.helloworld;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+
+import frauca.mysamples.java.osgi.helloservice.HelloService;;
 
 public class Activator implements BundleActivator {
 
-	private static BundleContext context;
+	 ServiceReference helloServiceReference;//Without tracker
+	 HelloServiceTracker helloServiceTracker;
+    public void start(BundleContext context) throws Exception {
+        System.out.println("Hello World!!");
+      /*  helloServiceReference= context.getServiceReference(HelloService.class.getName());
+        HelloService helloService =(HelloService)context.getService(helloServiceReference);
+        System.out.println(helloService.sayHello());//Without tracker
+        **/
+        helloServiceTracker= new HelloServiceTracker(context);
+        helloServiceTracker.open();
+        HelloService helloService = (HelloService)helloServiceTracker.getService();
+        System.out.println(helloService.sayHello());
 
-	static BundleContext getContext() {
-		return context;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
-	 */
-	public void start(BundleContext bundleContext) throws Exception {
-		Activator.context = bundleContext;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * @see org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
-	 */
-	public void stop(BundleContext bundleContext) throws Exception {
-		Activator.context = null;
-	}
+    }
+    public void stop(BundleContext context) throws Exception {
+        System.out.println("Goodbye World!!");
+        /*context.ungetService(helloServiceReference);//Without Service traker
+         * **/
+        helloServiceTracker.close();
+    }
 
 }

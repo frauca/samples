@@ -5,4 +5,6 @@ Bundle-SymbolicName: frauca.mysamples.java.osgi.helloworld
 Bundle-Version: 0.1
 Bundle-Activator: frauca.mysamples.java.osgi.helloworld.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Import-Package: org.osgi.framework;version="1.3.0"
+Import-Package: frauca.mysamples.java.osgi.helloservice,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="1.5.1"
