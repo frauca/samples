@@ -6,7 +6,7 @@ var bodyParser = require('body-parser')
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
-})); 
+}));
 
 // This responds with "Hello World" on the homepage
 app.get('/', function (req, res) {
@@ -45,12 +45,5 @@ app.get('/ab*cd', function(req, res) {
    res.send('Page Pattern Match');
 })
 
-
-var server = app.listen(8081, function () {
-
-  var host = server.address().address
-  var port = server.address().port
-
-  console.log("Example app listening at http://%s:%s", host, port)
-
-})
+console.log("Starting hello world");
+app.listen(8081)
