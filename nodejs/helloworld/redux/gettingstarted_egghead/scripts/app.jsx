@@ -1,4 +1,5 @@
 import expect from 'expect'
+import { createStore } from 'redux'
 
 function counter(state=0,action){
   switch (action.type) {
@@ -12,17 +13,15 @@ function counter(state=0,action){
   return state;
 }
 
-expect(
-  counter(0,{type:"INCREMENET"})
-).toEqual(1);
+const store = createStore(counter);
 
-expect(
-  counter(2,{type:"DECREMENET"})
-).toEqual(1);
+const render = () =>{
+  document.body.innerText = store.getState();
+}
 
-expect(
-  counter(undefined,{type:"INCREMENET"})
-).toEqual(1);
+store.subscribe(render);
 
-
-console.log("Test passed");
+document.addEventListener('click',()=>{
+  store.dispatch({type:"INCREMENET"});
+})
+console.log("done");
