@@ -36,52 +36,91 @@ const incrementCounter=(list,index)=>{
   ]
 }
 
-const toggleTodo=(todo)=>{
-  return Object.assign({},todo,{completed:!todo.completed});
-}
-
-const testToggleTodo=()=>{
-  const before={
-    id: 1,
-    text:'learn redux',
-    completed: true
-  };
-  const after={
-    id: 1,
-    text:'learn redux',
-    completed: false
+const todos = (state=[],action)=>{
+  switch (action.type) {
+    case "ADD_TODO":
+      return [
+        ...state,
+        {id:action.id,
+         text:action.text,
+         completed:false}
+      ]
+    case "TOGLE_TODO":
+      return state.map((togle)=>{
+          if(togle.id!=action.id){
+            return togle;
+          }
+          return Object.assign({},togle,{completed:!togle.completed})
+        }
+      );
+    default:
+      return state;
   }
-  expect(
-    toggleTodo(before)
-  ).toEqual(after);
 }
 
-const testAddCounter =()=>{
-  const listBefore=[];
-  const listAfter=[0];
-  deepFreeze(listBefore);
-  expect(
-    addCounter(listBefore)
-  ).toEqual(listAfter);
+const visibilityFilter = (state='SHOW_ALL',action)=>{
+  switch (ation.type) {
+    case "SET_FILTER":
+      return action.visibilityFilter;
+    default:
+      return state;
+  }
 }
 
-const testRemoveCounter = ()=>{
-  const listBefore=[1,2,3];
-  const listAfter=[1,3];
+
+const todoApp =(state={},action)=>{
+  return {
+    todos:todos(state.todos,action),
+    visibilityFilter:visibilityFilter(state.visibilityFilter,action)
+  }
+}
+const testTodos=()=>{
+  const stateBefore=[];
+  const action={
+    type: "ADD_TODO",
+    id:0,
+    text: 'learn redux'
+  }
+  const stateAfter=[
+    {
+      id:0,
+      text: 'learn redux',
+      completed: false
+    }
+  ]
   expect(
-    removeCounter(listBefore,1)
-  ).toEqual(listAfter);
+    todos(stateBefore,action)
+  ).toEqual(stateAfter);
 }
 
-const testIncrementCounter = ()=>{
-  const listBefore=[1,2,3];
-  const listAfter=[1,3,3];
+const testTogleTodos=()=>{
+  const stateBefor=[
+    {id:0,
+     text: 'learn',
+     completed:false
+   },{id:1,
+    text: 'learn',
+    completed:false
+  }
+  ]
+  const action={
+    type:"TOGLE_TODO",
+    id:1
+  }
+  const stateAfter=[
+    {id:0,
+     text: 'learn',
+     completed:false
+   },{id:1,
+    text: 'learn',
+    completed:true
+  }
+  ]
   expect(
-    incrementCounter(listBefore,1)
-  ).toEqual(listAfter);
+    todos(stateBefor,action)
+  ).toEqual(stateAfter);
 }
-
-testToggleTodo();
+testTogleTodos();
 const store = createStore(counter);
 
 const Counter = ({
