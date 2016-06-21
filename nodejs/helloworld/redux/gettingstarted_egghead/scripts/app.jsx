@@ -1,5 +1,5 @@
 import expect from 'expect'
-import { createStore } from 'redux'
+import { createStore, combineReducers} from 'redux'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import deepFreeze  from 'deep-freeze'
@@ -59,7 +59,7 @@ const todos = (state=[],action)=>{
 }
 
 const visibilityFilter = (state='SHOW_ALL',action)=>{
-  switch (ation.type) {
+  switch (action.type) {
     case "SET_FILTER":
       return action.visibilityFilter;
     default:
@@ -67,61 +67,16 @@ const visibilityFilter = (state='SHOW_ALL',action)=>{
   }
 }
 
+// const todoApp =combineReducers(
+//   {todos:todos,
+//   visibilityFilter:visibilityFilter}
+// );
 
-const todoApp =(state={},action)=>{
-  return {
-    todos:todos(state.todos,action),
-    visibilityFilter:visibilityFilter(state.visibilityFilter,action)
-  }
-}
-const testTodos=()=>{
-  const stateBefore=[];
-  const action={
-    type: "ADD_TODO",
-    id:0,
-    text: 'learn redux'
-  }
-  const stateAfter=[
-    {
-      id:0,
-      text: 'learn redux',
-      completed: false
-    }
-  ]
-  expect(
-    todos(stateBefore,action)
-  ).toEqual(stateAfter);
-}
+const todoApp =combineReducers(
+  {todos, visibilityFilter}
+);
 
-const testTogleTodos=()=>{
-  const stateBefor=[
-    {id:0,
-     text: 'learn',
-     completed:false
-   },{id:1,
-    text: 'learn',
-    completed:false
-  }
-  ]
-  const action={
-    type:"TOGLE_TODO",
-    id:1
-  }
-  const stateAfter=[
-    {id:0,
-     text: 'learn',
-     completed:false
-   },{id:1,
-    text: 'learn',
-    completed:true
-  }
-  ]
-  expect(
-    todos(stateBefor,action)
-  ).toEqual(stateAfter);
-}
-testTogleTodos();
-const store = createStore(counter);
+
 
 const Counter = ({
     value,
@@ -135,17 +90,35 @@ const Counter = ({
     </div>
 )
 
+let nextTodoId=0;
+const ToDoApp =({todos})=>(
+  <div>
+    <button onClick={()=>{
+      store.dispatch({type:'ADD_TODO',
+                      text:'Test',
+                      id:nextTodoId++});
+    }}>Add Todo</button>
+    <ul>
+      {todos.map(todo =>
+        <li key={todo.id}>{todo.text}</li>
+      )}
+    </ul>
+  </div>
+)
+
 const render = () =>{
   ReactDOM.render(
-    <Counter
-      value={store.getState()}
-      onIncrement={()=>store.dispatch({type:"INCREMENET"})}
-      onDecrement={()=>store.dispatch({type:"DECREMENET"})}
-    />
+    // <ToDoApp
+    //   value={store.getState()}
+    //   onIncrement={()=>store.dispatch({type:"INCREMENET"})}
+    //   onDecrement={()=>store.dispatch({type:"DECREMENET"})}
+    // />
+    <ToDoApp todos={store.getState().todos}/>
     ,document.getElementById('root')
   );
 }
 
+const store = createStore(todoApp);
 store.subscribe(render);
 render();
 
