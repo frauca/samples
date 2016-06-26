@@ -1,8 +1,11 @@
 import expect from 'expect'
-import { createStore, combineReducers} from 'redux'
-import React from 'react'
+import { createStore, combineReducer} from 'redux'
+import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
 import deepFreeze  from 'deep-freeze'
+import todoApp from './reducers/todoApp.jsx'
+
+
 
 function counter(state=0,action){
   switch (action.type) {
@@ -36,75 +39,38 @@ const incrementCounter=(list,index)=>{
   ]
 }
 
-const todos = (state=[],action)=>{
-  switch (action.type) {
-    case "ADD_TODO":
-      return [
-        ...state,
-        {id:action.id,
-         text:action.text,
-         completed:false}
-      ]
-    case "TOGLE_TODO":
-      return state.map((togle)=>{
-          if(togle.id!=action.id){
-            return togle;
-          }
-          return Object.assign({},togle,{completed:!togle.completed})
-        }
-      );
-    default:
-      return state;
-  }
-}
-
-const visibilityFilter = (state='SHOW_ALL',action)=>{
-  switch (action.type) {
-    case "SET_FILTER":
-      return action.visibilityFilter;
-    default:
-      return state;
-  }
-}
-
-// const todoApp =combineReducers(
-//   {todos:todos,
-//   visibilityFilter:visibilityFilter}
-// );
-
-const todoApp =combineReducers(
-  {todos, visibilityFilter}
-);
-
-
-
-const Counter = ({
-    value,
-    onIncrement,
-    onDecrement
-  })=>(
-    <div>
-      <h1>{value}</h1>
-      <button onClick={onIncrement}>+</button>
-      <button onClick={onDecrement}>-</button>
+let nextTodoId=0;
+class ToDoApp extends Component {
+  render(){
+    return (<div>
+      <input ref={node=>{this.input=node}}/>
+      <button onClick={()=>{
+        store.dispatch({type:'ADD_TODO',
+                        text:this.input.value,
+                        id:nextTodoId++});
+        this.input.value='';
+      }}>Add Todo</button>
+      <ul>
+        {this.props.todos.map(todo =>
+          <li key={todo.id}
+              onClick={()=>{
+                store.dispatch({
+                  type:'TOGLE_TODO',
+                  id:todo.id
+                });
+              }}
+              style={{
+                textDecoration:
+                  todo.completed?
+                    'line-through':
+                    'none'
+              }}>{todo.text}</li>
+        )}
+      </ul>
     </div>
 )
-
-let nextTodoId=0;
-const ToDoApp =({todos})=>(
-  <div>
-    <button onClick={()=>{
-      store.dispatch({type:'ADD_TODO',
-                      text:'Test',
-                      id:nextTodoId++});
-    }}>Add Todo</button>
-    <ul>
-      {todos.map(todo =>
-        <li key={todo.id}>{todo.text}</li>
-      )}
-    </ul>
-  </div>
-)
+  }
+}
 
 const render = () =>{
   ReactDOM.render(
