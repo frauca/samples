@@ -39,9 +39,42 @@ const incrementCounter=(list,index)=>{
   ]
 }
 
+const getVisibleTodos = (filter,values)=>{
+  switch (filter) {
+    case 'SHOW_ALL':
+      return values;
+    case 'SHOW_ACTIVE':
+      return values.filter(t=>!t.completed);
+    case 'SHOW_COMPLETED':
+      return values.filter(t=>t.completed);
+    default:
+      return values;
+  }
+}
+
+const Filterlink = ({filter,children})=>{
+  console.log('stateless'+filter);
+  return (
+    <a href='#'
+        onClick={e=>{
+          e.preventDefault();
+          store.dispatch({
+            type:'SET_FILTER',
+            visibilityFilter:filter});
+        }}>
+            {children}
+    </a>
+  )
+}
+
 let nextTodoId=0;
 class ToDoApp extends Component {
   render(){
+    const visibleTodos = getVisibleTodos(
+      this.props.visibilityFilter,
+      this.props.todos
+    );
+    console.log('filert'+this.props.visibilityFilter);
     return (<div>
       <input ref={node=>{this.input=node}}/>
       <button onClick={()=>{
@@ -51,7 +84,7 @@ class ToDoApp extends Component {
         this.input.value='';
       }}>Add Todo</button>
       <ul>
-        {this.props.todos.map(todo =>
+        {visibleTodos.map(todo =>
           <li key={todo.id}
               onClick={()=>{
                 store.dispatch({
@@ -67,6 +100,17 @@ class ToDoApp extends Component {
               }}>{todo.text}</li>
         )}
       </ul>
+      <p>
+        Show:
+        {' '}
+        <Filterlink filter='SHOW_ALL'>All</Filterlink>
+        {' '}
+        <Filterlink filter={'SHOW_ACTIVE'}>Active</Filterlink>
+        {' '}
+        <Filterlink filter='SHOW_COMPLETED'>
+        Completed
+        </Filterlink>
+      </p>
     </div>
 )
   }
@@ -79,7 +123,7 @@ const render = () =>{
     //   onIncrement={()=>store.dispatch({type:"INCREMENET"})}
     //   onDecrement={()=>store.dispatch({type:"DECREMENET"})}
     // />
-    <ToDoApp todos={store.getState().todos}/>
+    <ToDoApp todos={store.getState().todos} visibilityFilter={store.getState().visibilityFilter}/>
     ,document.getElementById('root')
   );
 }
