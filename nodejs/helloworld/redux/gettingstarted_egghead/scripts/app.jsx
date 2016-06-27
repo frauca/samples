@@ -53,7 +53,7 @@ const getVisibleTodos = (filter,values)=>{
 }
 
 const Filterlink = ({filter,children})=>{
-  console.log('stateless'+filter);
+  //console.log('stateless'+filter);
   return (
     <a href='#'
         onClick={e=>{
@@ -74,7 +74,7 @@ class ToDoApp extends Component {
       this.props.visibilityFilter,
       this.props.todos
     );
-    console.log('filert'+this.props.visibilityFilter);
+    //console.log('filert'+this.props.visibilityFilter);
     return (<div>
       <input ref={node=>{this.input=node}}/>
       <button onClick={()=>{
@@ -123,7 +123,7 @@ const render = () =>{
     //   onIncrement={()=>store.dispatch({type:"INCREMENET"})}
     //   onDecrement={()=>store.dispatch({type:"DECREMENET"})}
     // />
-    <ToDoApp todos={store.getState().todos} visibilityFilter={store.getState().visibilityFilter}/>
+    <ToDoApp {...store.getState()}/>
     ,document.getElementById('root')
   );
 }
