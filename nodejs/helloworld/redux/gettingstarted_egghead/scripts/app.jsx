@@ -7,37 +7,7 @@ import todoApp from './reducers/todoApp.jsx'
 
 
 
-function counter(state=0,action){
-  switch (action.type) {
-    case "INCREMENET":
-      return state+1;
-    case "DECREMENET":
-      return state-1;
-    default:
-      return state;
-  }
-  return state;
-}
-
-
-const addCounter =(list)=>{
-  return [...list,0];
-}
-
-const removeCounter=(list,index)=>{
-  return [
-    ...list.slice(0,index)
-    ,...list.slice(index+1)
-  ]
-}
-
-const incrementCounter=(list,index)=>{
-  return[
-    ...list.slice(0,index)
-    ,list[index]+1
-    ,...list.slice(index+1)
-  ]
-}
+const store = createStore(todoApp);
 
 const getVisibleTodos = (filter,values)=>{
   switch (filter) {
@@ -81,14 +51,14 @@ class Filterlink extends Component{
     let props=this.props;
     let visibilityFilter=store.getState().visibilityFilter;
     let active=(visibilityFilter===props.filter);
-    console.log('render filter '+props.filter);
-    
+    //console.log('render filter '+props.filter);
+
     return (
       <Link filter={active}
             onClick={()=>{
               store.dispatch({
                 type:'SET_FILTER',
-                visibilityFilter:filter});
+                visibilityFilter:props.filter});
             }}>{props.children}</Link>
     )
   }
@@ -106,7 +76,7 @@ const Footer =()=>(
     <Filterlink filter='SHOW_COMPLETED'>Completed</Filterlink>
   </p>
 )
-const AddToDo =({onAddClick})=>{
+const AddToDo =()=>{
   let input;
   return(
     <div>
@@ -115,7 +85,9 @@ const AddToDo =({onAddClick})=>{
           input=node
         }}/>
     <button onClick={()=>{
-      onAddClick(input.value);
+      store.dispatch({type:'ADD_TODO',
+                      text:input.value,
+                      id:nextTodoId++});
       input.value='';
     }}>Add Todo</button>
     </div>
@@ -147,44 +119,40 @@ const ToDoList = ({todos,onToDoClick})=>{
 }
 let nextTodoId=0;
 
-class ToDoApp extends Component {
+class VisibleTodos extends Component{
+  componentDidMount(){
+      this.unsubscribe=store.subscribe(()=>{this.forceUpdate()})
+  }
+
+  componentWillUnmount(){
+    this.unsubscribe();
+  }
   render(){
-    const {visibilityFilter,todos}=this.props;
+    let props=this.props;
+    let state=store.getState();
     const visibleTodos = getVisibleTodos(
-      visibilityFilter,
-      todos
+      state.visibilityFilter,
+      state.todos
     );
-    //console.log('filert'+this.props.visibilityFilter);
-    return (<div>
-      <AddToDo onAddClick={text=>{
-        store.dispatch({type:'ADD_TODO',
-                        text,
-                        id:nextTodoId++});
-      }}/>
+    return(
       <ToDoList todos={visibleTodos}
                 onToDoClick={id =>
                           store.dispatch({type:'TOGLE_TODO',id})}/>
-      <Footer />
-    </div>
-)
+    )
   }
 }
 
-const render = () =>{
-  console.log('full render');
-  ReactDOM.render(
-    // <ToDoApp
-    //   value={store.getState()}
-    //   onIncrement={()=>store.dispatch({type:"INCREMENET"})}
-    //   onDecrement={()=>store.dispatch({type:"DECREMENET"})}
-    // />
-    <ToDoApp {...store.getState()}/>
-    ,document.getElementById('root')
-  );
-}
+const ToDoApp=()=>(
+  <div>
+      <AddToDo />
+      <VisibleTodos/>
+      <Footer />
+    </div>
+)
 
-const store = createStore(todoApp);
-store.subscribe(render);
-render();
+ReactDOM.render(
+  <ToDoApp />
+  ,document.getElementById('root')
+);
 
 console.log("done");
