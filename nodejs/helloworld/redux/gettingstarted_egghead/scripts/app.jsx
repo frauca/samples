@@ -41,6 +41,7 @@ const Link = ({active,onClick,children})=>{
 class Filterlink extends Component{
 
   componentDidMount(){
+    const {store}=this.context;
       this.unsubscribe=store.subscribe(()=>{this.forceUpdate()})
   }
 
@@ -48,6 +49,7 @@ class Filterlink extends Component{
     this.unsubscribe();
   }
   render() {
+    const {store}=this.context;
     let props=this.props;
     let visibilityFilter=store.getState().visibilityFilter;
     let active=(visibilityFilter===props.filter);
@@ -62,9 +64,11 @@ class Filterlink extends Component{
             }}>{props.children}</Link>
     )
   }
-
 }
 
+Filterlink.contextTypes={
+  store:React.PropTypes.object
+}
 const Footer =()=>(
   <p>
     Show:
@@ -76,7 +80,7 @@ const Footer =()=>(
     <Filterlink filter='SHOW_COMPLETED'>Completed</Filterlink>
   </p>
 )
-const AddToDo =()=>{
+const AddToDo =(props,{store})=>{
   let input;
   return(
     <div>
@@ -92,6 +96,9 @@ const AddToDo =()=>{
     }}>Add Todo</button>
     </div>
   )
+}
+AddToDo.contextTypes={
+  store:React.PropTypes.object
 }
 
 const ToDo = ({onClick,completed,text})=>{
@@ -121,6 +128,7 @@ let nextTodoId=0;
 
 class VisibleTodos extends Component{
   componentDidMount(){
+      const {store} = this.context;
       this.unsubscribe=store.subscribe(()=>{this.forceUpdate()})
   }
 
@@ -128,6 +136,7 @@ class VisibleTodos extends Component{
     this.unsubscribe();
   }
   render(){
+    const {store} = this.context;
     let props=this.props;
     let state=store.getState();
     const visibleTodos = getVisibleTodos(
@@ -141,7 +150,9 @@ class VisibleTodos extends Component{
     )
   }
 }
-
+VisibleTodos.contextTypes={
+  store:React.PropTypes.object
+}
 const ToDoApp=()=>(
   <div>
       <AddToDo />
@@ -150,8 +161,24 @@ const ToDoApp=()=>(
     </div>
 )
 
+class Provider extends Component{
+  getChildContext(){
+    return {
+      store: this.props.store
+    }
+  }
+  render(){
+    return (this.props.children)
+  }
+}
+Provider.childContextTypes={
+  store:React.PropTypes.object
+}
+
 ReactDOM.render(
-  <ToDoApp />
+  <Provider store={createStore(todoApp)}>
+    <ToDoApp />
+  </Provider>
   ,document.getElementById('root')
 );
 
