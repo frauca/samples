@@ -7,6 +7,7 @@ import todoApp from './reducers/todoApp.jsx'
 import Footer from './components/Footer.jsx'
 import VisibleTodos from './components/VisibleTodos.jsx'
 import {Provider,connect} from 'react-redux'
+import addTodo from './actions/actions.jsx'
 
 
 const store = createStore(todoApp);
@@ -20,9 +21,7 @@ let AddToDo =({dispatch})=>{
           input=node
         }}/>
     <button onClick={()=>{
-      dispatch({type:'ADD_TODO',
-                      text:input.value,
-                      id:nextTodoId++});
+      dispatch(addTodo(input.value));
       input.value='';
     }}>Add Todo</button>
     </div>
@@ -38,7 +37,7 @@ AddToDo=connect()(AddToDo);
 
 
 
-let nextTodoId=0;
+
 
 
 const ToDoApp=()=>(
