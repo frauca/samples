@@ -2,10 +2,10 @@ import React from 'react'
 
 class ToDoList extends React.Component {
   render () {
-    console.log('state');
-    console.log(this.props.state);
+    console.log('render todos'+JSON.stringify(this.props.todos));
+    console.log(this.props.todos);
     return <ul>
-      {this.props.state.todos.map(todo=>
+      {this.props.todos.map(todo=>
       <li> {todo}</li>
     )}
     </ul>;

@@ -9,7 +9,7 @@ import reducer from './reducers'
 var store = createStore(reducer);
 
 const paintMe=()=>{
-  console.log('Ei you must paint me');
+  console.log('Ei you must paint me '+JSON.stringify(store.getState()));
   render(
     <Provider store={store}>
       <App />
