@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {addToDo} from '../actions'
 import AllToDos  from '../containers/AllToDos.js'
+import AddToDo  from '../containers/AddToDo.js'
 
 const mapStateToProps = (state) => ({
   state: state
@@ -9,13 +9,9 @@ const mapStateToProps = (state) => ({
 
 class App extends React.Component {
   render () {
-    console.log('Apps ');
-    console.log(this);
     return <div>
       <p> My fancy copy but made by me of redux todos</p>
-      <button onClick={()=>{
-          this.props.dispatch(addToDo('Test'));
-        }}>Add Todo</button>
+    <AddToDo/>
     <AllToDos/>
     </div>;
   }

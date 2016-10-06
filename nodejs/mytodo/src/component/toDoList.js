@@ -5,8 +5,8 @@ class ToDoList extends React.Component {
     console.log('render todos'+JSON.stringify(this.props.todos));
     console.log(this.props.todos);
     return <ul>
-      {this.props.todos.map(todo=>
-      <li> {todo}</li>
+      {this.props.todos.map((todo,i)=>
+      <li key={i}> {todo}</li>
     )}
     </ul>;
   }
