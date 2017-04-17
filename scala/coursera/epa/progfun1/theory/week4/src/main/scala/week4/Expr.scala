@@ -10,11 +10,17 @@ trait Expr {
     case Sum(e1, e2) => e1.eval + e2.eval
   }
 
-  def show: String = this match{
-    case Number(n) => n.toString
-    case Sum(e1, e2) => e1.show +" + " + e2.show
-    case Prod(e1, e2) => e1.show +" * " + e2.show
-    case Var(x) => x
+  def show: String = {
+    def parens(e: Expr) = e match {
+      case Sum(_, _) => "(" + e.show + ")"
+      case _ => e.show
+    }
+    this match {
+      case Number(n) => n.toString
+      case Sum(l, r) => l.show + " + " + r.show
+      case Prod(l, r) => parens(l) + " * " + parens(r)
+      case Var(x) => x
+    }
   }
 }
 

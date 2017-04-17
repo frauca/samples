@@ -35,8 +35,18 @@ object List {
   def apply[T](x1: T): List[T] = new Cons(x1, Nil)
 
   def apply[T] = Nil
+
+  def isort(xs: List[T]):List[T] = {
+    def insert(x: Int, ys: List[Int]) = ys match{
+      case Empty => new List(x)
+      case y :: zs => if (x<=y) x:: ys
+                      else  y :: insert(x,zs)
+    }
+    xs match {
+      case List() => new List()
+      case x :: ys => insert(x, isort(ys))
+    }
+  }
 }
 
-object test {
-  def f(xs: List[NonEmpty], x: Empty) = xs prepend x
-}
+
