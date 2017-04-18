@@ -241,7 +241,7 @@ object Huffman {
    */
     def codeBits(table: CodeTable)(char: Char): List[Bit] = table match {
       case pair::others=>if(pair._1==char) pair._2 else codeBits(others)(char)
-      case Nil => new Error("char not found")
+      case Nil => throw new Error("char not found")
     }
   
   /**
@@ -255,7 +255,7 @@ object Huffman {
     def convert(tree: CodeTree): CodeTable = {
       def recConvert(t: CodeTree,bits:List[Bit]): CodeTable = t match {
         case Leaf(c,_)=>List((c,bits))
-        case Fork(left,right,_,_) => mergeCodeTables(recConvert(left,0::bits),recConvert(right,1::bits))
+        case Fork(left,right,_,_) => mergeCodeTables(recConvert(left,bits:+0),recConvert(right,bits:+1))
       }
       recConvert(tree,List())
     }
@@ -276,7 +276,7 @@ object Huffman {
     def quickEncode(tree: CodeTree)(text: List[Char]): List[Bit] = {
       def table:CodeTable=convert(tree)
       text match {
-        case c::tail => codeBits(table)(c)::quickEncode(tree)(tail)
+        case c::tail => codeBits(table)(c):::quickEncode(tree)(tail)
         case Nil => List()
       }
     }
