@@ -5,6 +5,7 @@ package streams
  */
 object Bloxorz extends App {
 
+  println("starting")
   /**
    * A level constructed using the `InfiniteTerrain` trait which defines
    * the terrain to be valid at every position.
