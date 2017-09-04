@@ -2,6 +2,7 @@ package week1
 
 import scala.util.Random
 
+import org.scalameter._
 
 /**
   * Created by rofc on 27/06/2017.
@@ -22,6 +23,9 @@ object MonteCarloPi {
   def monteCarloPiSeq(iter: Int): Double = 4.0 * mcCount(iter) / iter
 
   def main(args: Array[String]): Unit = {
-    println(monteCarloPiSeq(10000000))
+    val tmonte = measure {
+      println(monteCarloPiSeq(10000000))
+    }
+    println(tmonte)
   }
 }
