@@ -61,9 +61,9 @@ abline(h=median(nyw632008_1$Sample.Value,na.rm = TRUE))
 mn0<-with(pm0,tapply(Sample.Value,State.Code,mean,na.rm=TRUE))
 mn1<-with(pm1,tapply(Sample.Value,State.Code,mean,na.rm=TRUE))
 
-d0<-data.frame(name=names(mn0), mean=mn0)
-d1<-data.frame(name=names(mn1), mean=mn1)
-mrg<-merge(d0,d1,by = "name")
+d0<-data.frame(state=names(mn0), mean=mn0)
+d1<-data.frame(state=names(mn1), mean=mn1)
+mrg<-merge(d0,d1,by = "state")
 
 plot(rep(1999,52),mrg[,2],xlim=c(1998,2013))
 points(rep(2012,52),mrg[,3])
