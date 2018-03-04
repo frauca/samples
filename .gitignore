@@ -7,5 +7,6 @@
 # Ignore the default pdf zip war 
 *.pdf
 *.zip
+*.gz
 *.war
 *.~
