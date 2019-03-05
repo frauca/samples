@@ -11,5 +11,8 @@
 *.war
 *.~
 
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
 data/
 python/helloWorld/.vscode/settings.json
