@@ -15,4 +15,8 @@ public class CutomerService {
 	public Customer save(Customer customer) {
 		return customerManager.save(customer);
 	}
+	
+	public Customer getOne(Long id) {
+		return customerManager.getOne(id);
+	}
 }

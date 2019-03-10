@@ -15,4 +15,12 @@ public class CustomerManager {
 	public Customer save(Customer customer) {
 		return repository.save(customer);
 	}
+	
+	
+	public Customer getOne(Long id) {
+		return repository.findById(id)
+				.orElseThrow(()->new RuntimeException(
+						String.format("Customer %s could not be found", id))
+						);
+	}
 }

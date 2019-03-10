@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.extern.slf4j.Slf4j;
 import spring.boot.helloworld.rest.bussiness.CutomerService;
 import spring.boot.helloworld.rest.model.Customer;
+import spring.boot.helloworld.rest.rest.assembler.CustomerAssembler;
 
 @RestController
 @Slf4j
@@ -21,18 +22,20 @@ public class CustomerController {
 	
 	@Autowired
 	CutomerService customerService;
+	
+	@Autowired
+	CustomerAssembler assembler;
 
 	@PostMapping("/customeers")
-	Resource<Customer> newCustomer(@RequestBody Customer customer) {
+	public Resource<Customer> newCustomer(@RequestBody Customer customer) {
 		log.info(String.format("Try to add user :: %s", customer));
 		Customer newCustomer = customerService.save(customer);
-		return new Resource<Customer>(newCustomer, 
-				linkTo(methodOn(CustomerController.class).one(newCustomer.getId())).withSelfRel());
+		return assembler.toResource(newCustomer);
 	}
 	
 	@GetMapping("/customeers/{id}")
-	Resource<Customer> one(@PathVariable Long id) {
-
-		return null;
+	public Resource<Customer> one(@PathVariable Long id) {
+		Customer customer = customerService.getOne(id);
+		return assembler.toResource(customer);
 	}
 }
