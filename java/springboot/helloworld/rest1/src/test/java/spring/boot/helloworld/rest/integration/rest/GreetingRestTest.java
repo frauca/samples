@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -20,7 +21,7 @@ public class GreetingRestTest {
 
     @Test
     public void greetingShouldReturnDefaultMessage() throws Exception {
-        assertThat(this.restTemplate.getForObject(this.restTemplate.getRootUri() + "/greeting?name=Roger",
+        assertThat(this.restTemplate.getForObject(this.restTemplate.getRootUri() + "/greeting?username=user&password=password",
                 String.class)).contains("Hello");
     }
 }
