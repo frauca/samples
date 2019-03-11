@@ -9,12 +9,11 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import spring.boot.helloworld.rest.RestApplicationTests;
 import spring.boot.helloworld.rest.bussiness.CustomerManager;
 import spring.boot.helloworld.rest.model.Customer;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class CustomerManagerTest {
+public class CustomerManagerTest extends RestApplicationTests {
 	
 	@Autowired
 	CustomerManager customerManager;
