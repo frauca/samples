@@ -11,3 +11,6 @@ when test with a simple application work as expected
 if you modify application.properties more or less messages apears
 
 ## More than one Type of logger
+With the talkers also work without problem.
+
+I will invesitage into the project about the problem
