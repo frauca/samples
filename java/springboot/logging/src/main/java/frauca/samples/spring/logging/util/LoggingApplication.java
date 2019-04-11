@@ -22,7 +22,9 @@ public class LoggingApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
     log.info("Start applicatoin");
-
+    log.fine("fine message");
+    log.finer("finer message");
+    log.finest("message");
     log.info("End program");
   }
 }
