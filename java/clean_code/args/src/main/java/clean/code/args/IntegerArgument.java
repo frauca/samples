@@ -1,20 +1,20 @@
 package clean.code.args;
 
-public class IntegerArgument extends ArgumentEndingTag<Integer> {
+public class IntegerArgument extends clean.code.args.ArgumentEndingTag<Integer> {
   private static String INTEGER_ENDING ="#";
 
   @Override
-  public Argument<Integer> parseValue(String value) {
+  public clean.code.args.Argument<Integer> parseValue(String value) {
     try{
       int integerValue = Integer.valueOf(value);
       return new IntegerArgument(getName(),integerValue);
     }catch (NumberFormatException e){
-      throw new ArgumentWithInvalidFormatException(String.format("%s is not an integer",value),getName(),e);
+      throw new clean.code.args.ArgumentWithInvalidFormatException(String.format("%s is not an integer",value),getName(),e);
     }
   }
 
   @Override
-  protected Argument<Integer> makeConfiguration(String argumentName) {
+  protected clean.code.args.Argument<Integer> makeConfiguration(String argumentName) {
     return new IntegerArgument(argumentName);
   }
 

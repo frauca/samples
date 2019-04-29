@@ -1,6 +1,6 @@
 package clean.code.args;
 
-public class ArgumentWithInvalidFormatException extends ArgumentException {
+public class ArgumentWithInvalidFormatException extends clean.code.args.ArgumentException {
 
   public ArgumentWithInvalidFormatException(String message, String argumentName) {
     super(message, argumentName);

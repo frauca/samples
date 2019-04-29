@@ -7,10 +7,10 @@ import java.util.Map;
  */
 public class Args {
 
-  private Map<String,Argument> arguments;
+  private Map<String, clean.code.args.Argument> arguments;
 
   public Args(String configuration,String...args){
-    ArgumentsParser parser = new ArgumentsParser();
+    clean.code.args.ArgumentsParser parser = new clean.code.args.ArgumentsParser();
     this.arguments = parser.parse(configuration,args);
   }
 
@@ -28,17 +28,17 @@ public class Args {
 
   private<T> T getValueAndCast(String name, String castMessage){
     try {
-      Argument<T> argument = getArgument(name);
+      clean.code.args.Argument<T> argument = getArgument(name);
       return argument.getValue();
     }catch (ClassCastException e){
-      throw new ArgumentException(castMessage,e);
+      throw new clean.code.args.ArgumentException(castMessage,e);
     }
   }
 
-  private <T> Argument<T> getArgument(String name){
-    Argument<T> argument = arguments.get("name");
+  private <T> clean.code.args.Argument<T> getArgument(String name){
+    clean.code.args.Argument<T> argument = arguments.get(name);
     if(argument==null){
-      throw new ArgumentException(String.format("Argument %s not found",name));
+      throw new clean.code.args.ArgumentException(String.format("Argument %s not found",name));
     }
     return argument;
   }

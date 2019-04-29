@@ -5,7 +5,7 @@ import java.util.Optional;
 /**
  * The Argmunt is set empty on the parse of the configuration.
  * Then filled arguments are generated on the arguments process.
- * To make a new type to Parse it must be added on the types
+ * To make a new argument just implement one ArgumentClass
  * @see ArgumentsParser
  * Argument of type T
  * @param <T> type of te argument
@@ -16,7 +16,7 @@ public abstract class Argument<T> {
   protected final Optional<T> value;
 
   public abstract Argument<T> parseValue(String value);
-  public abstract Argument<T> parseConfiguration(String argumentName) throws ArgumentNotFromMyTypeException;
+  public abstract Argument<T> parseConfiguration(String argumentName) throws clean.code.args.ArgumentNotFromMyTypeException;
 
   public String getName(){
     return this.name;
@@ -25,7 +25,7 @@ public abstract class Argument<T> {
   public T getValue(){
     return this.value
         .orElseThrow(()->
-          new ArgumentException(String.format("Argument %s is not setted",getName()),getName())
+          new clean.code.args.ArgumentException(String.format("Argument %s is not setted",getName()),getName())
          );
   }
 
