@@ -16,3 +16,6 @@ gradle-wrapper.jar
 
 data/
 python/helloWorld/.vscode/settings.json
+
+#idea projects
+.idea
