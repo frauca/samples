@@ -2,6 +2,7 @@ package auctionsniper;
 
 public enum AuctionState {
     JOINING("joining"),
+    BINDING("binding"),
     LOST("lost");
 
     final String value;
