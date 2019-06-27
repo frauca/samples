@@ -3,9 +3,10 @@ package auctionsniper;
 public enum AuctionState {
     JOINING("joining"),
     BINDING("binding"),
+    WINING("wining"),
     LOST("lost");
 
-    final String value;
+    private final String value;
 
     AuctionState(String value){
         this.value = value;

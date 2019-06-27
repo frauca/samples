@@ -1,17 +1,17 @@
 package auctionsniper;
 
 import auctionsniper.ui.MainWindow;
+import auctionsniper.ui.SniperStateDisplayer;
+import auctionsniper.xmpp.XMPPAuction;
 import org.jivesoftware.smack.Chat;
-import org.jivesoftware.smack.MessageListener;
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
-import org.jivesoftware.smack.packet.Message;
 
 import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class Main implements AuctionEventListener {
+public class Main {
     public static final String AUCTION_RESOURCE = "Auction";
     public static final String ITEM_ID_AS_LOGIN = "auction-%s";
     public static final String BID_COMMAND_FORMAT = "SOLVersion: 1.1; Command: BID; Price: %d;";
@@ -46,20 +46,25 @@ public class Main implements AuctionEventListener {
         return connection;
     }
 
+    private static String auctionId(String itemId, XMPPConnection connection) {
+        return String.format(AUCTION_ID_FORMAT, itemId,
+                connection.getServiceName());
+    }
+
     private void joinAuction(String[] args) throws XMPPException {
         XMPPConnection connection = connectTo(args[ARG_HOSTNAME],
                 args[ARG_USERNAME],
                 args[ARG_PASSWORD]);
         disconnectWhenUICloses(connection);
         Chat chat = connection.getChatManager().createChat(
-                auctionId(args[ARG_ITEM_ID], connection), new AuctionMessageTranslator(this));
-        this.notToBeGCd = chat;
-        chat.sendMessage(JOIN_COMMAND_FORMAT);
-    }
+                auctionId(args[ARG_ITEM_ID], connection),
+                null);
+        Auction auction = new XMPPAuction(chat);
 
-    private static String auctionId(String itemId, XMPPConnection connection) {
-        return String.format(AUCTION_ID_FORMAT, itemId,
-                connection.getServiceName());
+        chat.addMessageListener(new AuctionMessageTranslator(new AuctionSniper(auction, new SniperStateDisplayer(ui))));
+        auction.join();
+        this.notToBeGCd = chat;
+
     }
 
     private void startUserInterface() throws Exception {
@@ -79,21 +84,5 @@ public class Main implements AuctionEventListener {
         });
     }
 
-    @Override
-    public void auctionClosed() {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                ui.showStatus(AuctionState.LOST.value());
-            }
-        });
-    }
 
-    @Override
-    public void currentPrice(int price, int increment) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                ui.showStatus(AuctionState.BINDING.value());
-            }
-        });
-    }
 }
