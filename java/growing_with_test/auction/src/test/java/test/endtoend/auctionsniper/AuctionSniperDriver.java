@@ -1,5 +1,6 @@
 package test.endtoend.auctionsniper;
 
+import auctionsniper.AuctionState;
 import auctionsniper.Main;
 import auctionsniper.ui.MainWindow;
 import com.objogate.wl.swing.AWTEventQueueProber;
@@ -16,8 +17,8 @@ public class AuctionSniperDriver extends JFrameDriver {
                 new AWTEventQueueProber(timeoutMillis, 100));
     }
 
-    public void showsSniperStatus(String statusText) {
+    public void showsSniperStatus(AuctionState state) {
         new JLabelDriver(
-                this, named(MainWindow.SNIPER_STATUS_NAME)).hasText(equalTo(statusText));
+                this, named(MainWindow.SNIPER_STATUS_NAME)).hasText(equalTo(state.value()));
     }
 }

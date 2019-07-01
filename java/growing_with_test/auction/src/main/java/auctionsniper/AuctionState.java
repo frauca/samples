@@ -4,7 +4,8 @@ public enum AuctionState {
     JOINING("joining"),
     BINDING("binding"),
     WINING("wining"),
-    LOST("lost");
+    LOST("lost"),
+    WON("won");
 
     private final String value;
 

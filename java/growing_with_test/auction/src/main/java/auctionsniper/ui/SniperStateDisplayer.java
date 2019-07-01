@@ -24,6 +24,11 @@ public class SniperStateDisplayer implements SniperListener {
         showStatus(AuctionState.WINING);
     }
 
+    @Override
+    public void sniperWon() {
+        showStatus(AuctionState.WON);
+    }
+
     private void showStatus(final AuctionState status) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
