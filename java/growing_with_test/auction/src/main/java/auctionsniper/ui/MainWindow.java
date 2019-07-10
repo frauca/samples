@@ -1,7 +1,6 @@
 package auctionsniper.ui;
 
-import auctionsniper.AuctionState;
-import auctionsniper.Main;
+import auctionsniper.SniperSnapshot;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -9,28 +8,41 @@ import java.awt.*;
 
 public class MainWindow extends JFrame {
     public static final String MAIN_WINDOW_NAME = "Auction Sniper Main";
-    public static final String SNIPER_STATUS_NAME ="Sniper Status";
-    private final JLabel sniperStatus = createLabel(AuctionState.JOINING.value());
+    public static final String MAIN_WINDOW_TITLE = "Auction Sniper";
+    private static final String SNIPERS_TABLE_NAME = "Snipers Table";
+    private final SnipersTableModel snipers;
 
-    public MainWindow() {
-        super("Auction Sniper");
+    public MainWindow(SnipersTableModel snipers) {
+        super(MAIN_WINDOW_TITLE);
+        this.snipers = snipers;
         setName(MAIN_WINDOW_NAME);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(300,400));
-        add(sniperStatus);
+        setPreferredSize(new Dimension(300, 200));
+        fillContentPane(makeSnipersTable());
         setResizable(true);
+        pack();
         setVisible(true);
     }
 
     private static JLabel createLabel(String initialText) {
         JLabel result = new JLabel(initialText);
-        result.setName(SNIPER_STATUS_NAME);
+        result.setName(SNIPERS_TABLE_NAME);
         result.setBorder(new LineBorder(Color.BLACK));
-        result.setPreferredSize(new Dimension(150,40));
+        result.setPreferredSize(new Dimension(150, 40));
         return result;
     }
 
-    public void showStatus(String status) {
-        sniperStatus.setText(status);
+    private void fillContentPane(JTable snipersTable) {
+        final Container contentPane = getContentPane();
+        contentPane.setLayout(new BorderLayout());
+        contentPane.add(new JScrollPane(snipersTable), BorderLayout.CENTER);
     }
+
+    private JTable makeSnipersTable() {
+        final JTable snipersTable = new JTable(snipers);
+        snipersTable.setName(SNIPERS_TABLE_NAME);
+        return snipersTable;
+    }
+
+
 }

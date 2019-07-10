@@ -14,6 +14,7 @@ repositories {
 dependencies {
     implementation 'com.googlecode.windowlicker:windowlicker-swing:r268'
     implementation 'org.igniterealtime.smack:smack:3.2.1'
+    implementation 'org.apache.commons:commons-lang3:3.1'
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.4.2'
     testCompile group: 'org.hamcrest', name: 'hamcrest', version: '2.1'
     testCompile group: 'org.jmockit', name: 'jmockit',version: '1.46'

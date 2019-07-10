@@ -4,10 +4,20 @@ import auctionsniper.Auction;
 import auctionsniper.AuctionEventListener.PriceSource;
 import auctionsniper.AuctionSniper;
 import auctionsniper.SniperListener;
+import auctionsniper.SniperSnapshot;
+import auctionsniper.SniperState;
 import mockit.Mocked;
 import mockit.Verifications;
+import org.hamcrest.FeatureMatcher;
+import org.hamcrest.Matcher;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class AuctionSniperTest {
 
@@ -16,10 +26,11 @@ public class AuctionSniperTest {
     @Mocked
     SniperListener listener;
     private AuctionSniper sniper;
+    private static final String ITEM_ID = "item-id";
 
     @BeforeEach
     public void setUp() {
-        sniper = new AuctionSniper(auction, listener);
+        sniper = new AuctionSniper(auction, listener,ITEM_ID);
     }
 
     @Test
@@ -28,8 +39,9 @@ public class AuctionSniperTest {
         sniper.auctionClosed();
 
         new Verifications() {{
-            listener.sniperLost();
-            times = 1;
+            SniperSnapshot snapshot;
+            listener.sniperStateChanged(snapshot = withCapture());
+            assertThat(snapshot,hasASniperThatIs(SniperState.LOST));
         }};
     }
 
@@ -41,8 +53,9 @@ public class AuctionSniperTest {
         sniper.auctionClosed();
 
         new Verifications() {{
-            listener.sniperLost();
-            times = 1;
+            SniperSnapshot snapshot;
+            listener.sniperStateChanged(snapshot = withCapture());
+            assertThat(snapshot,hasASniperThatIs(SniperState.LOST));
         }};
     }
 
@@ -53,8 +66,9 @@ public class AuctionSniperTest {
         sniper.auctionClosed();
 
         new Verifications() {{
-            listener.sniperWon();
-            times = 1;
+            SniperSnapshot snapshot;
+            listener.sniperStateChanged(snapshot = withCapture());
+            assertThat(snapshot,hasASniperThatIs(SniperState.WON));
         }};
     }
 
@@ -62,24 +76,42 @@ public class AuctionSniperTest {
     public void bidsHigherAndReportsBiddingWhenNewPriceArrives() {
         final int price = 1001;
         final int increment = 25;
+        int bid = increment + price;
 
         sniper.currentPrice(price, increment, PriceSource.FromOtherBidder);
 
         new Verifications() {{
-            auction.bid(price + increment);
+            SniperSnapshot snaptshot;
+            auction.bid(bid);
             times = 1;
-            listener.sniperBidding();
-            minTimes = 1;
+            listener.sniperStateChanged(snaptshot = withCapture());
+            assertThat(snaptshot,hasASniperThatIs(SniperState.BIDDING));
         }};
     }
 
     @Test
     public void reportsIsWinningWhenCurrentPriceComesFromSniper() {
 
-        sniper.currentPrice(123, 45, PriceSource.FromSniper);
+        sniper.currentPrice(123, 12, PriceSource.FromOtherBidder);
+        sniper.currentPrice(135, 45, PriceSource.FromSniper);
         new Verifications() {{
-            listener.sniperWinning();
-            minTimes = 1;
+            List<SniperSnapshot> snapshots = new ArrayList<>();
+            listener.sniperStateChanged(withCapture(snapshots));
+
+            assertThat(snapshots.get(0),hasASniperThatIs(SniperState.BIDDING));
+            assertThat(snapshots.get(1),hasASniperThatIs(SniperState.WINNING));
+
         }};
     }
+
+    private Matcher<SniperSnapshot> hasASniperThatIs(final SniperState state) {
+        return new FeatureMatcher<SniperSnapshot, SniperState>(
+                equalTo(state), "sniper that is ", "was") {
+            @Override
+            protected SniperState featureValueOf(SniperSnapshot actual) {
+                return actual.state;
+            }
+        };
+    }
+
 }

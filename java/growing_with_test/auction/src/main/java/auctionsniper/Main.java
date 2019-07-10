@@ -1,7 +1,8 @@
 package auctionsniper;
 
 import auctionsniper.ui.MainWindow;
-import auctionsniper.ui.SniperStateDisplayer;
+import auctionsniper.ui.SwingThreadSniperListener;
+import auctionsniper.ui.SnipersTableModel;
 import auctionsniper.xmpp.XMPPAuction;
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.XMPPConnection;
@@ -26,6 +27,7 @@ public class Main {
     @SuppressWarnings("unused")
     private Chat notToBeGCd;
     private MainWindow ui;
+    private final SnipersTableModel snipers = new SnipersTableModel();
 
     public Main() throws Exception {
         startUserInterface();
@@ -56,12 +58,13 @@ public class Main {
                 args[ARG_USERNAME],
                 args[ARG_PASSWORD]);
         disconnectWhenUICloses(connection);
+        String itemId = args[ARG_ITEM_ID];
         Chat chat = connection.getChatManager().createChat(
-                auctionId(args[ARG_ITEM_ID], connection),
+                auctionId(itemId, connection),
                 null);
         Auction auction = new XMPPAuction(chat);
 
-        chat.addMessageListener(new AuctionMessageTranslator(connection.getUser(), new AuctionSniper(auction, new SniperStateDisplayer(ui))));
+        chat.addMessageListener(new AuctionMessageTranslator(connection.getUser(), new AuctionSniper(auction, new SwingThreadSniperListener(snipers),itemId)));
         auction.join();
         this.notToBeGCd = chat;
 
@@ -70,7 +73,7 @@ public class Main {
     private void startUserInterface() throws Exception {
         SwingUtilities.invokeAndWait(new Runnable() {
             public void run() {
-                ui = new MainWindow();
+                ui = new MainWindow(snipers);
             }
         });
     }
