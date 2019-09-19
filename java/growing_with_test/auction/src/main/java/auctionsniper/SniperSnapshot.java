@@ -51,5 +51,9 @@ public class SniperSnapshot {
         return HashCodeBuilder.reflectionHashCode(this);
     }
 
+    public boolean isForSameItemAs(SniperSnapshot sniperSnapshot) {
+        return itemId.equals(sniperSnapshot.itemId);
+    }
+
 
 }

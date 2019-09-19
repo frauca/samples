@@ -30,7 +30,7 @@ public class AuctionSniperTest {
 
     @BeforeEach
     public void setUp() {
-        sniper = new AuctionSniper(auction, listener,ITEM_ID);
+        sniper = new AuctionSniper(ITEM_ID, auction, listener);
     }
 
     @Test
@@ -41,7 +41,7 @@ public class AuctionSniperTest {
         new Verifications() {{
             SniperSnapshot snapshot;
             listener.sniperStateChanged(snapshot = withCapture());
-            assertThat(snapshot,hasASniperThatIs(SniperState.LOST));
+            assertThat(snapshot, hasASniperThatIs(SniperState.LOST));
         }};
     }
 
@@ -55,7 +55,7 @@ public class AuctionSniperTest {
         new Verifications() {{
             SniperSnapshot snapshot;
             listener.sniperStateChanged(snapshot = withCapture());
-            assertThat(snapshot,hasASniperThatIs(SniperState.LOST));
+            assertThat(snapshot, hasASniperThatIs(SniperState.LOST));
         }};
     }
 
@@ -68,7 +68,7 @@ public class AuctionSniperTest {
         new Verifications() {{
             SniperSnapshot snapshot;
             listener.sniperStateChanged(snapshot = withCapture());
-            assertThat(snapshot,hasASniperThatIs(SniperState.WON));
+            assertThat(snapshot, hasASniperThatIs(SniperState.WON));
         }};
     }
 
@@ -85,7 +85,7 @@ public class AuctionSniperTest {
             auction.bid(bid);
             times = 1;
             listener.sniperStateChanged(snaptshot = withCapture());
-            assertThat(snaptshot,hasASniperThatIs(SniperState.BIDDING));
+            assertThat(snaptshot, hasASniperThatIs(SniperState.BIDDING));
         }};
     }
 
@@ -98,8 +98,8 @@ public class AuctionSniperTest {
             List<SniperSnapshot> snapshots = new ArrayList<>();
             listener.sniperStateChanged(withCapture(snapshots));
 
-            assertThat(snapshots.get(0),hasASniperThatIs(SniperState.BIDDING));
-            assertThat(snapshots.get(1),hasASniperThatIs(SniperState.WINNING));
+            assertThat(snapshots.get(0), hasASniperThatIs(SniperState.BIDDING));
+            assertThat(snapshots.get(1), hasASniperThatIs(SniperState.WINNING));
 
         }};
     }

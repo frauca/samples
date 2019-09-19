@@ -2,28 +2,50 @@ package auctionsniper.ui;
 
 import auctionsniper.SniperSnapshot;
 import auctionsniper.SniperState;
+import com.objogate.exception.Defect;
 
+import javax.swing.event.TableModelEvent;
 import javax.swing.table.AbstractTableModel;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SnipersTableModel extends AbstractTableModel {
-    private final static SniperSnapshot STARTING_UP = new SniperSnapshot("", 0, 0,SniperState.STARTING);
-    private SniperSnapshot snapshot = STARTING_UP;
+    private final static SniperSnapshot STARTING_UP = new SniperSnapshot("", 0, 0, SniperState.STARTING);
+    private List<SniperSnapshot> snapshots = new ArrayList<SniperSnapshot>();
+
+
+    public void addSniper(SniperSnapshot snapshot){
+        int row = snapshots.size();
+        snapshots.add(snapshot);
+        fireTableChanged(new TableModelEvent(this,row));
+    }
 
     public int getColumnCount() {
         return Column.values().length;
     }
 
     public int getRowCount() {
-        return 1;
+        return snapshots.size();
     }
 
-     public Object getValueAt(int rowIndex, int columnIndex) {
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        SniperSnapshot snapshot = snapshots.get(rowIndex);
         return Column.at(columnIndex).valueIn(snapshot);
     }
 
-    public void sniperStateChanged(SniperSnapshot newSniperState) {
-        snapshot = newSniperState;
-        fireTableRowsUpdated(0, 0);
+    public void sniperStateChanged(SniperSnapshot newSnapshot) {
+        int row = rowMatching(newSnapshot);
+        snapshots.set(row, newSnapshot);
+        fireTableRowsUpdated(row, row);
+    }
+
+    private int rowMatching(SniperSnapshot snapshot) {
+        for (int i = 0; i < snapshots.size(); i++) {
+            if (snapshot.isForSameItemAs(snapshots.get(i))) {
+                return i;
+            }
+        }
+        throw new Defect("Cannot find match for " + snapshot);
     }
 
     @Override
