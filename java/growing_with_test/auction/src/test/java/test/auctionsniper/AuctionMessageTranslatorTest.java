@@ -1,7 +1,7 @@
 package test.auctionsniper;
 
 import auctionsniper.AuctionEventListener;
-import auctionsniper.AuctionMessageTranslator;
+import auctionsniper.xmpp.AuctionMessageTranslator;
 import mockit.Injectable;
 import mockit.Verifications;
 import org.jivesoftware.smack.Chat;

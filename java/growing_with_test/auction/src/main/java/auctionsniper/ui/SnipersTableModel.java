@@ -1,5 +1,8 @@
 package auctionsniper.ui;
 
+import auctionsniper.AuctionSniper;
+import auctionsniper.SniperCollector;
+import auctionsniper.SniperListener;
 import auctionsniper.SniperSnapshot;
 import auctionsniper.SniperState;
 import com.objogate.exception.Defect;
@@ -9,15 +12,23 @@ import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SnipersTableModel extends AbstractTableModel {
+public class SnipersTableModel extends AbstractTableModel implements SniperListener, SniperCollector {
     private final static SniperSnapshot STARTING_UP = new SniperSnapshot("", 0, 0, SniperState.STARTING);
     private List<SniperSnapshot> snapshots = new ArrayList<SniperSnapshot>();
+    private final ArrayList<AuctionSniper> notToBeGCd = new ArrayList<>();
+
+    @Override
+    public void addSniper(AuctionSniper sniper) {
+        notToBeGCd.add(sniper);
+        addSniperSnapshot(sniper.getSnapshot());
+        sniper.addSniperListener(new SwingThreadSniperListener(this));
+    }
 
 
-    public void addSniper(SniperSnapshot snapshot){
+    public void addSniperSnapshot(SniperSnapshot snapshot) {
         int row = snapshots.size();
         snapshots.add(snapshot);
-        fireTableChanged(new TableModelEvent(this,row));
+        fireTableChanged(new TableModelEvent(this, row));
     }
 
     public int getColumnCount() {
@@ -52,4 +63,5 @@ public class SnipersTableModel extends AbstractTableModel {
     public String getColumnName(int column) {
         return Column.at(column).name;
     }
+
 }

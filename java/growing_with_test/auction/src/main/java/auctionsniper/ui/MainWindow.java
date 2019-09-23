@@ -1,5 +1,6 @@
 package auctionsniper.ui;
 
+import auctionsniper.SniperPortfolio;
 import auctionsniper.UserRequestListener;
 import com.google.common.eventbus.EventBus;
 
@@ -17,6 +18,7 @@ public class MainWindow extends JFrame {
     public static final String NEW_ITEM_STOP_PRICE_NAME = "stop price";
     public static final String JOIN_BUTTON_NAME = "join button";
     private final EventBus eventBus = new EventBus();
+    SniperPortfolio portfolio;
 
     public MainWindow(SnipersTableModel snipers) {
         super(MAIN_WINDOW_TITLE);
@@ -49,6 +51,8 @@ public class MainWindow extends JFrame {
     }
 
     private JTable makeSnipersTable(SnipersTableModel snipers) {
+        SnipersTableModel model = new SnipersTableModel();
+        portfolio.addPortfolioListener(model);
         final JTable snipersTable = new JTable(snipers);
         snipersTable.setName(SNIPERS_TABLE_NAME);
         return snipersTable;

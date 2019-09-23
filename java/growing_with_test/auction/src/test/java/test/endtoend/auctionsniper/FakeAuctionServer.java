@@ -1,6 +1,8 @@
 package test.endtoend.auctionsniper;
 
 import auctionsniper.Main;
+import auctionsniper.xmpp.XMPPAuction;
+import auctionsniper.xmpp.XMPPAuctionHouse;
 import org.hamcrest.Matcher;
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.ChatManagerListener;
@@ -36,7 +38,7 @@ public class FakeAuctionServer {
     public void startSellingItem() throws XMPPException {
         connection.connect();
         connection.login(String.format(ITEM_ID_AS_LOGIN, itemId),
-                AUCTION_PASSWORD, Main.AUCTION_RESOURCE);
+                AUCTION_PASSWORD, XMPPAuctionHouse.AUCTION_RESOURCE);
         connection.getChatManager().addChatListener(
                 new ChatManagerListener() {
                     public void chatCreated(Chat chat, boolean createdLocally) {
@@ -70,7 +72,7 @@ public class FakeAuctionServer {
 
     }
 
-    public void hasReceivedJoinRequestFromSniper(String sniperId) throws InterruptedException {
+    public void hasReceivedJoinRequestFrom(String sniperId) throws InterruptedException {
         receivesAMessageMatching(sniperId, equalTo(Main.JOIN_COMMAND_FORMAT));
     }
 
