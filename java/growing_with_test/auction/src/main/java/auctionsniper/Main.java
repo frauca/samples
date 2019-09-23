@@ -4,6 +4,7 @@ import auctionsniper.ui.MainWindow;
 import auctionsniper.ui.SnipersTableModel;
 import auctionsniper.ui.SwingThreadSniperListener;
 import auctionsniper.xmpp.XMPPAuction;
+import com.google.common.eventbus.EventBus;
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
@@ -59,22 +60,10 @@ public class Main {
     private void addUserRequestListenerFor(final XMPPConnection connection) {
         ui.addUserRequestListener((itemId) ->{
             snipers.addSniper(SniperSnapshot.joining(itemId));
-            Chat chat = connection.getChatManager()
-                    .createChat(auctionId(itemId, connection), null);
-            notToBeGCd.add(chat);
-            Auction auction = new XMPPAuction(chat);
-            chat.addMessageListener(
-                    new AuctionMessageTranslator(connection.getUser(),
-                            new AuctionSniper(itemId, auction, new SwingThreadSniperListener(snipers))));
+            EventBus auctionEventListeners = new EventBus();
+            Auction auction = new XMPPAuction(connection,itemId);
+            auctionEventListeners.register(new AuctionSniper(itemId, auction, new SwingThreadSniperListener(snipers))));
             auction.join();
-        });
-    }
-
-    private void safelyAddItemToModel(final String itemId) throws Exception {
-        SwingUtilities.invokeAndWait(new Runnable() {
-            public void run() {
-                snipers.addSniper(SniperSnapshot.joining(itemId));
-            }
         });
     }
 
