@@ -7,7 +7,7 @@ The objective of this project is to make a simple is to make a simple example wi
 * Second commit to make the same application work on a kubernetes
 * Adding hazelcast to the solution
 
-## Making maven image
+## Working in kubernetes
 Make the docker image 
 
 ```
@@ -29,3 +29,5 @@ kubectl run -i --rm --restart=Never  curl-client --image=tutum/curl:alpine --com
 ```
 
 You will need to perform a lot times the get to get the correct result as it depends on wich one you are requesting
+
+## Working with hazelcast
