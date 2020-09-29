@@ -1,17 +1,24 @@
 package frauca.hazelcast;
 
 
+import com.hazelcast.core.HazelcastInstance;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 @RestController
 public class CommandController {
 
-    Map<String,String> map = new HashMap();
+    Map<String,String> map;
+
+    public CommandController(HazelcastInstance hazelcastInstance){
+        map = Objects.requireNonNull(hazelcastInstance.getMap("map"));
+    }
 
     @RequestMapping("/put")
     public CommandResponse put(@RequestParam(value = "key") String key, @RequestParam(value = "value") String value) {
@@ -39,7 +46,7 @@ public class CommandController {
 
     @RequestMapping("/info")
     public CommandResponse info() {
-        return new CommandResponse("Kubernetes without hazelcast");
+        return new CommandResponse("Kubernetes with hazelcast");
     }
 
     @RequestMapping("/populate")

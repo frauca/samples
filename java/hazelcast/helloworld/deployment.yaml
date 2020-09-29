@@ -1,3 +1,39 @@
+
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: hazelcast-server
+spec:
+  replicas: 2
+  serviceName: hazelcast-server
+  selector:
+    matchLabels:
+      app: hazelcast-server
+  template:
+    metadata:
+      labels:
+        app: hazelcast-server
+    spec:
+      containers:
+        - name: hazelcast-server
+          image: hazelcast/hazelcast:4.0
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: hazelcast-server
+spec:
+  type: NodePort
+  selector:
+    app: hazelcast-server
+  ports:
+    - name: hazelcast-server
+      port: 5701
+
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -12,12 +48,16 @@ spec:
       labels:
         app: hazelcast-frauca
     spec:
+      initContainers:
+        - name: wait-for-pod-hazelcast-server
+          image: busybox
+          command: [ 'sh', '-c', 'sleep 60' ]
       containers:
         - name: hazelcast-frauca
           image: frauca/hazelcast-simple-sample
           imagePullPolicy: Always
           ports:
-          - containerPort: 8080
+            - containerPort: 8080
 
 ---
 
@@ -30,5 +70,6 @@ spec:
   selector:
     app: hazelcast-frauca
   ports:
-  - name: app
-    port: 8080
+    - name: hazelcast-frauca
+      port: 8080
+

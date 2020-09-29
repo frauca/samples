@@ -1,0 +1,51 @@
+# =========================================================
+# 1st action == Set of pods for Hazelcast Servers
+# =========================================================
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: pod-hazelcast-server
+spec:
+  # 1 or 2 server pods
+  # replicas: 2
+  replicas: 2
+  serviceName: service-hazelcast-server
+  selector:
+    matchLabels:
+      app: pod-hazelcast-server
+  template:
+    metadata:
+      labels:
+        app: pod-hazelcast-server
+    spec:
+      containers:
+        - env:
+            # Are we in Kubernetes
+            - name: K8S
+              value: "true"
+          image: hazelcast/hazelcast:4.0.1
+          # Always from local, never from Dockerhub
+          imagePullPolicy: IfNotPresent
+          name: container-hazelcast-server
+---
+# =========================================================
+# 2nd action == Service from Hazelcast Servers pods
+# =========================================================
+# Note the name 'service-hazelcast-server' is
+# hardcoded in Hazelcast Server when it tries to find the
+# cluster members. If you change one, change the other.
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-hazelcast-server
+spec:
+  # Headless service, only cluster members
+  clusterIP: None
+  selector:
+    app: pod-hazelcast-server
+  ports:
+    - protocol: TCP
+      port: 5701
+      targetPort: 5701
