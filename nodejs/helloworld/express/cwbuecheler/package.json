@@ -20,7 +20,7 @@
     "debug": "^2.2.0",
     "express": "^4.13.4",
     "jade": "^1.11.0",
-    "mongodb": "^2.1.19",
+    "mongodb": "^3.6.1",
     "monk": "^1.0.1",
     "morgan": "^1.6.1",
     "serve-favicon": "^2.3.0"
