@@ -37,6 +37,11 @@ public class CommandController {
         return new CommandResponse(Integer.toString(size));
     }
 
+    @RequestMapping("/info")
+    public CommandResponse info() {
+        return new CommandResponse("Kubernetes without hazelcast");
+    }
+
     @RequestMapping("/populate")
     public CommandResponse populate() {
         for (int i = 0; i < 1000; i++) {
