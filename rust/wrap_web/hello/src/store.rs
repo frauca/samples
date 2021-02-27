@@ -5,9 +5,6 @@ use std::sync::Arc;
 use serde::{Deserialize, Serialize};
 use tokio::sync::RwLock;
 
-type Items = Vec<Item>;
-
-
 #[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct Item {
     pub name: String,
@@ -16,7 +13,7 @@ pub struct Item {
 
 #[derive(Clone)]
 pub struct Store {
-    grocery_list: Arc<RwLock<Items>>
+    grocery_list: Arc<RwLock<Vec<Item>>>
 }
 
 impl Store {
@@ -30,6 +27,11 @@ impl Store {
         let mut unlocked_items = self.grocery_list.write().await;
         unlocked_items.push(item);
         unlocked_items.last().unwrap().clone()
+    }
+
+    pub async fn get(&self) -> Vec<Item> {
+        let items = self.grocery_list.read().await;
+        items.clone()
     }
 }
 

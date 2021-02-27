@@ -18,20 +18,29 @@ fn store_routes(store: Store) -> impl Filter<Extract=(impl Reply, ), Error=Rejec
 }
 
 fn item_routes(store: Store) -> impl Filter<Extract=(impl Reply, ), Error=Rejection> + Clone {
-    let item = warp::path("item");
-    item.clone()
+    let item = warp::path("items")
+        .and(with_store(store));
+
+    let list_all = item.clone()
         .and(warp::get())
-        .and(with_store(store))
-        .and_then(get_item)
+        .and_then(get_item);
+
+    let save_one = item.clone()
+        .and(warp::post())
+        .and(warp::body::json())
+        .and_then(save_item);
+
+    list_all
+        .or(save_one)
 }
 
-async fn save_item(item: Item, store: Store) -> Result<impl Reply, Rejection> {
+async fn save_item(store: Store, item: Item) -> Result<impl Reply, Infallible> {
     let saved_item = store.add(item).await;
     Ok(warp::reply::json(&saved_item))
 }
 
 async fn get_item(store: Store) -> Result<impl Reply, Infallible> {
-    Ok(warp::reply::json(&Item::new(String::from("sample"), 1)))
+    Ok(warp::reply::json(&(store.get().await)))
 }
 
 async fn get_store() -> Result<impl Reply, Rejection> {
