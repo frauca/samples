@@ -1,14 +1,12 @@
 use std::collections::HashMap;
+use std::io::Write;
 use std::sync::Arc;
 
 use serde::{Deserialize, Serialize};
 use tokio::sync::RwLock;
 
-type Items = HashMap<String, i32>;
+type Items = Vec<Item>;
 
-pub fn joder(){
-
-}
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct Item {
@@ -24,8 +22,14 @@ pub struct Store {
 impl Store {
     pub fn new() -> Self {
         Store {
-            grocery_list: Arc::new(RwLock::new(HashMap::new())),
+            grocery_list: Arc::new(RwLock::new(Vec::new())),
         }
+    }
+
+    pub async fn add(&self, item: Item) -> Item {
+        let mut unlocked_items = self.grocery_list.write().await;
+        unlocked_items.push(item);
+        unlocked_items.last().unwrap().clone()
     }
 }
 
