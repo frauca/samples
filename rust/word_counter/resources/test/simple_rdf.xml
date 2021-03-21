@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:pgterms="http://www.gutenberg.org/rdfterms/"
+         xml:base="http://www.gutenberg.org/feeds/catalog.rdf">
+    <pgterms:file rdf:about="f;dirs/4/5/3/9/45398/45398.txt">
+        <dc:format>
+            <dcterms:IMT>
+                <rdf:value>text/plain; charset="us-ascii"</rdf:value>
+            </dcterms:IMT>
+        </dc:format>
+        <dcterms:extent>377695</dcterms:extent>
+        <dcterms:modified>
+            <dcterms:W3CDTF>
+                <rdf:value>2014-04-14</rdf:value>
+            </dcterms:W3CDTF>
+        </dcterms:modified>
+        <dcterms:isFormatOf rdf:resource="#etext45398"/>
+    </pgterms:file>
+</rdf:RDF>
