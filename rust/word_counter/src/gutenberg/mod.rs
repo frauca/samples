@@ -5,6 +5,6 @@ mod reader;
 mod error;
 
 
-pub(super) fn readCatalog(catalogPath: String) -> Result<Vec<Book>, Error> {
-    return reader::readCatalog(catalogPath);
+pub(super) fn read_catalog(catalog_path: String) -> Result<Vec<Book>, Error> {
+    return reader::read_catalog(catalog_path);
 }

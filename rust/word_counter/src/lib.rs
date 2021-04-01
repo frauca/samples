@@ -5,6 +5,6 @@ mod book;
 pub mod gutenberg;
 
 
-pub fn readCalog(catalogPath: String) -> Result<Vec<Book>, Error> {
-    return gutenberg::readCatalog(catalogPath);
+pub fn read_catalog(catlog_path: String) -> Result<Vec<Book>, Error> {
+    return gutenberg::read_catalog(catlog_path);
 }

@@ -1,0 +1,4982 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY pg "Project Gutenberg">
+<!ENTITY lic "http://www.gutenberg.org/license">
+<!ENTITY f "http://www.gutenberg.org/">
+]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:cc="http://web.resource.org/cc/" xmlns:pgterms="http://www.gutenberg.org/rdfterms/" xml:base="http://www.gutenberg.org/feeds/catalog.rdf">
+  <pgterms:etext rdf:ID="etext14600">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Theory of Silk Weaving
+A Treatise on the Construction and Application of Weaves, and the Decomposition and Calculation of Broad and Narrow, Plain, Novelty and Jacquard Silk Fabrics</dc:title>
+    <dc:creator rdf:parseType="Literal">Wolfensberger, Arnold</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Theory of Silk Weaving by Arnold Wolfensberger</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Weaving</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Silk industry</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>TS</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-01-05</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>146</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext33941">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Methods of Glass Blowing and of Working Silica in the Oxy-Gas Flame
+For the use of chemical and physical students</dc:title>
+    <dc:creator rdf:parseType="Literal">Shenstone, W. A.</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Methods of Glass Blowing and of Working Silica</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2010-10-06</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>108</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext27137">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Scholfield Wool-Carding Machines</dc:title>
+    <dc:creator rdf:parseType="Literal">Cooper, Grace Rogers</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Scholfield Wool-Carding Machines by Cooper</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Wool-carding</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>TS</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-11-03</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>145</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext10136">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Book of Household Management</dc:title>
+    <dc:creator rdf:parseType="Literal">Beeton, Mrs. (Isabella Mary), 1836-1865</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Book of Household Management by Mrs.  Beeton</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Cooking, English</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Home economics</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>TX</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2003-11-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>560</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38658">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Self-Instructor in the Art of Hair Work, Dressing Hair, Making Curls, Switches, Braids, and Hair Jewelry of Every Description.</dc:title>
+    <dc:creator rdf:parseType="Literal">Campbell, Mark, 19th cent.</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Self-Instructor in the Art of Hair Work, Dressing </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Hairdressing</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Jewelry -- Catalogs</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Hairwork</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>TT</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-01-24</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>134</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext24165">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Development of Embroidery in America</dc:title>
+    <dc:creator rdf:parseType="Literal">Wheeler, Candace, 1827-1923</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Development of Embroidery in America</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Embroidery -- United States</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Tapestry -- United States</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Bayeux tapestry</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>NK</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-01-04</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>125</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19982">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Projet pour la compagnie des transports, postes et messageries</dc:title>
+    <dc:creator rdf:parseType="Literal">Anonymous</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Projet pour la compagnie des transports, postes et</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>fr</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Postal service -- France</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>France. Ministère des P.T.T. -- History</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>DC</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>HE</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-11-30</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>7</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19756">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">La réforme postale en France</dc:title>
+    <dc:creator rdf:parseType="Literal">Barrillon, François-Guillaume</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">La réforme postale en France by Barrillon</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>fr</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Postal service -- France</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>HE</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-11-11</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>8</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext18890">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Mémoire pour le service actuel des messageries</dc:title>
+    <dc:creator rdf:parseType="Literal">Anonymous</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Mémoire pour le service actuel des messageries</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>fr</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Coaching (Transportation) -- France</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Transportation -- France</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>HE</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>DC</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-07-22</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>11</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19414">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">General Instructions For The Guidance Of Post Office Inspectors In The Dominion Of Canada</dc:title>
+    <dc:creator rdf:parseType="Literal">Campbell, Alexander, 1822-1892</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">General Instructions For The Guidance Of Post Offi</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Postal service -- Canada -- Handbooks, manuals, etc.</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>F1001</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>HE</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-10-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>7</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext17691">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Le tour de France en aéroplane</dc:title>
+    <dc:creator rdf:parseType="Literal">Graffigny, H. de (Henry), 1863-1934</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Raffin, Ferdinand [Illustrator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Le tour de France en aéroplane by Graffigny</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>fr</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>France -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Aeronautics -- Flights</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>TL</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-02-06</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>134</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext39806">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">How "A Dear Little Couple" Went Abroad</dc:title>
+    <dc:creator rdf:parseType="Literal">Brine, Mary D. (Mary Dow)</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">How "A Dear Little Couple" Went Abroad by Brine</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-05-26</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>36</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext39185">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Across the Cameroons
+A Story of War and Adventure</dc:title>
+    <dc:creator rdf:parseType="Literal">Gilson, Charles, 1878-1943</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Across the Cameroons by Charles Gilson</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-03-17</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>32</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38404">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A Journey from Prince of Wales's Fort in Hudson's Bay to the Northern Ocean in the Years 1769, 1770, 1771, 1772
+New Edition with Introduction, Notes, and Illustrations</dc:title>
+    <dc:creator rdf:parseType="Literal">Hearne, Samuel, 1745-1792</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">A Journey from Prince of Wales's Fort in Hudson's </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Northwest, Canadian -- Description and travel</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-12-24</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>157</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext37472">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Zanzibar Tales
+Told by natives of the East Coast of Africa</dc:title>
+    <dc:contributor rdf:parseType="Literal">Bateman, George W. [Translator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Zanzibar Tales</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Tales -- Africa</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-09-18</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>44</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext36249">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Among the Canadian Alps</dc:title>
+    <dc:creator rdf:parseType="Literal">Burpee, Lawrence J. (Lawrence Johnstone), 1873-1946</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Among the Canadian Alps by Lawrence J.  Burpee</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-05-29</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>36</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38265">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">My Life in Many States and in Foreign Lands
+Dictated in My Seventy-Fourth Year</dc:title>
+    <dc:creator rdf:parseType="Literal">Train, George Francis</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">My Life in Many States and in Foreign Lands</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-12-10</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>26</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext37615">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Ocean to Ocean on Horseback
+Being the Story of a Tour in the Saddle from the Atlantic
+to the Pacific; with Especial Reference to the Early History
+and Devel</dc:title>
+    <dc:creator rdf:parseType="Literal">Glazier, Willard W., 1841-1905</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Ocean to Ocean on Horseback by Willard W. Glazier</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-10-04</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>105</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext36924">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Letters of Amerigo Vespucci
+and other documents illustrative of his career</dc:title>
+    <dc:creator>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Columbus, Christopher, 1451-1506</rdf:li>
+        <rdf:li rdf:parseType="Literal">Casas, Bartolomé de las, 1474-1566</rdf:li>
+        <rdf:li rdf:parseType="Literal">Vespucci, Amerigo</rdf:li>
+      </rdf:Bag>
+    </dc:creator>
+    <dc:contributor rdf:parseType="Literal">Markham, Clements R. (Clements Robert), Sir, 1830-1916 [Translator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Letters of Amerigo Vespucci by Casas</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-07-31</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>114</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38784">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Travels in the Interior of North America, Part I, (Being Chapters I-XV of the London Edition, 1843)
+Early Western Travels, 1748-1846, Volume XXII</dc:title>
+    <dc:creator rdf:parseType="Literal">Wied, Maximilian, Prinz von, 1782-1867</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Thwaites, Reuben Gold, 1853-1913 [Editor]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Travels in the Interior of North America, Part I, </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-02-07</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>70</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38556">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Historic Waterways—Six Hundred Miles of Canoeing Down the Rock, Fox, and Wisconsin Rivers</dc:title>
+    <dc:creator rdf:parseType="Literal">Thwaites, Reuben Gold, 1853-1913</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Historic Waterways—Six Hundred Miles of Canoeing</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-01-12</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>45</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38351">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A Trip to California in 1853
+Recollections of a Gold Seeking Trip by Ox Train across the Plains and Mountains by an Old Illinois Pioneer</dc:title>
+    <dc:creator rdf:parseType="Literal">Bailey, Washington</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">A Trip to California in 1853 by Washington Bailey</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-12-20</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>28</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext37765">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Some Pioneers and Pilgrims on the Prairies of Dakota
+Or, From the ox team to the aeroplane</dc:title>
+    <dc:creator>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Reese, H. B.</rdf:li>
+        <rdf:li rdf:parseType="Literal">Reese, John B.</rdf:li>
+      </rdf:Bag>
+    </dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Some Pioneers and Pilgrims on the Prairies of Dako</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-10-16</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>23</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext6653">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Voyages of Samuel De Champlain — Volume 01</dc:title>
+    <dc:creator rdf:parseType="Literal">Champlain, Samuel de, 1574-1635</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Otis, Charles P. (Charles Pomeroy), 1840-1888 [Translator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Voyages of Samuel De Champlain — Volume 01</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>New France -- Discovery and exploration</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Indians of North America -- Canada</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>America -- Discovery and exploration -- French</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>F1001</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-10-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>45</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext36435">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Wonderland; or Alaska and the Inside Passage
+With a Description of the Country Traversed by the Northern
+Pacific Railroad</dc:title>
+    <dc:creator>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Hyde, John</rdf:li>
+        <rdf:li rdf:parseType="Literal">Schwatka, Lieut. Frederick</rdf:li>
+      </rdf:Bag>
+    </dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Wonderland; or Alaska and the Inside Passage</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-06-16</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>28</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext30697">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Alaska Days with John Muir</dc:title>
+    <dc:creator rdf:parseType="Literal">Young, Samual Hall, 1847-1927</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Alaska Days with John Muir by Samual Hall Young</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Young, Samuel Hall, 1847-1927 -- Travel -- Alaska</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Alaska -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Muir, John, 1838-1914 -- Travel -- Alaska</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Natural history -- Alaska</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>F850.5</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2009-12-17</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>57</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext26059">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Ascent of Denali (Mount McKinley)
+A Narrative of the First Complete Ascent of the Highest
+Peak in North America</dc:title>
+    <dc:creator rdf:parseType="Literal">Stuck, Hudson, 1863-1920</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Ascent of Denali (Mount McKinley) by Stuck</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>McKinley, Mount (Alaska)</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Mountaineering -- Alaska -- McKinley, Mount</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Stuck, Hudson, 1863-1920 -- Travel -- Alaska -- McKinley, Mount</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>F850.5</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-07-15</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>38</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext39013">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">North-Pole Voyages</dc:title>
+    <dc:creator rdf:parseType="Literal">Mudge, Zachariah Atwell</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">North-Pole Voyages by Zachariah Atwell Mudge</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-02-29</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>11</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38296">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Wild Adventures round the Pole
+The Cruise of the "Snowbird" Crew in the "Arrandoon"</dc:title>
+    <dc:creator rdf:parseType="Literal">Stables, Gordon, 1840-1910</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Wild Adventures round the Pole by Gordon Stables</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-12-13</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>14</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38203">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A Trip to Cuba</dc:title>
+    <dc:creator rdf:parseType="Literal">Howe, Julia Ward, 1819-1910</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">A Trip to Cuba by Julia Ward Howe</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-12-03</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>23</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext36746">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Mountains of Oregon</dc:title>
+    <dc:creator rdf:parseType="Literal">Steel, William Gladstone, 1854-1934</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Mountains of Oregon by William Gladstone Steel</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-07-16</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>18</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext35268">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Adventures in the Canyons of the Colorado
+By two of its earliest explorers</dc:title>
+    <dc:creator rdf:parseType="Literal">Bass, William Wallace, 1848-1933</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Adventures in the Canyons of the Colorado by Bass</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-03-06</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>18</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38827">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Journeys in Persia and Kurdistan, Volume I (of 2)
+Including a Summer in the Upper Karun Region and a Visit
+to the Nestorian Rayahs</dc:title>
+    <dc:creator rdf:parseType="Literal">Bird, Isabella L. (Isabella Lucy), 1831-1904</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Journeys in Persia and Kurdistan, Volume I (of 2)</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-02-11</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>64</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext25729">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Travel Tales in the Promised Land (Palestine)</dc:title>
+    <dc:creator rdf:parseType="Literal">May, Karl, 1842-1912</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Travel Tales in the Promised Land (Palestine)</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Middle East -- Description and travel</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DS</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-06-08</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>37</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights>Copyrighted work. See license inside work.</dc:rights>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext627">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Essays of Travel</dc:title>
+    <dc:tableOfContents rdf:parseType="Literal">The amateur emigrant, from the Clyde to Sandy Hook -- Cockermouth and Keswick -- An autumn effect -- A winter's walk in Carrick and Galloway -- Forest notes -- A mountain town in France -- Random memories, rosa quo locorum -- The ideal house -- Davos in winter -- Health and mountains -- Alpine diversions -- The stimulation of the Alps -- Roads -- On the enjoyment of unpleasant places.</dc:tableOfContents>
+    <dc:creator rdf:parseType="Literal">Stevenson, Robert Louis, 1850-1894</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Essays of Travel by Robert Louis Stevenson</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Essays</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Stevenson, Robert Louis, 1850-1894 -- Travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>PR</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>1996-08-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>98</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext39474">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">From Egypt to Japan</dc:title>
+    <dc:creator rdf:parseType="Literal">Field, Henry M. (Henry Martyn), 1822-1907</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">From Egypt to Japan by Henry M.  Field</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-04-18</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>33</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext39342">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Sea: Its Stirring Story of Adventure, Peril, &amp; Heroism. Volume 2</dc:title>
+    <dc:creator rdf:parseType="Literal">Whymper, Frederick</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Sea: Its Stirring Story of Adventure, Peril, &amp;</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-04-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>189</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext37947">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Incidents of Travel in Greece, Turkey, Russia, and Poland, 7th ed. Vol. 2 of 2</dc:title>
+    <dc:creator rdf:parseType="Literal">Stephens, John Lloyd, 1805-1852</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Incidents of Travel in Greece, Turkey, Russia, and</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-11-09</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>23</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext37889">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. I (of 2)</dc:title>
+    <dc:creator rdf:parseType="Literal">Stephens, John Lloyd, 1805-1852</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Incidents of Travel in Greece, Turkey, Russia, and</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-10-30</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>45</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext39917">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Narrative of an Expedition to the Shores of the Arctic Sea in 1846 and 1847</dc:title>
+    <dc:creator rdf:parseType="Literal">Rae, John, 1813-1893</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Narrative of an Expedition to the Shores of the Ar</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Arctic regions -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Northwest, Canadian -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-06-05</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>28</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38253">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A Description of the Coasts of East Africa and Malabar in the Beginning of the Sixteenth Century</dc:title>
+    <dc:creator rdf:parseType="Literal">Barbosa, Duarte, -1521</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Stanley, Henry Edward John Stanley, Baron, 1827-1903 [Translator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">A Description of the Coasts of East Africa and Mal</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-12-09</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>47</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext36069">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Explorers and Travellers</dc:title>
+    <dc:creator rdf:parseType="Literal">Greely, Adolphus W., 1844-1935</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Explorers and Travellers by Adolphus W. Greely</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-05-09</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>87</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext28323">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Travels in North America, From Modern Writers
+With Remarks and Observations; Exhibiting a Connected View
+of the Geography and Present State of that Quarter of the
+Globe</dc:title>
+    <dc:creator rdf:parseType="Literal">Bingley, William, 1774-1823</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Travels in North America, From Modern Writers</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Mexico -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Canada -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>E151</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2009-03-13</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>40</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext36654">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Cruisings in the Cascades
+A Narrative of Travel, Exploration, Amateur Photography,
+Hunting, and Fishing</dc:title>
+    <dc:creator rdf:parseType="Literal">Shields, G. O. (George O.), 1846-1925</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Cruisings in the Cascades by G. O.  Shields</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Hunting -- United States</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Fishing -- United States</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>SK</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-07-07</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>28</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext31111">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Across Asia on a Bicycle
+The Journey of Two American Students from Constantinople to Peking</dc:title>
+    <dc:creator>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Allen, Thomas Gaskell, 1868-</rdf:li>
+        <rdf:li rdf:parseType="Literal">Sachtleben, William Lewis, -1953</rdf:li>
+      </rdf:Bag>
+    </dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Across Asia on a Bicycle by Allen and Sachtleben</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Asia -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Bicycle touring -- Asia</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Allen, Thomas Gaskell -- Travel -- Asia</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Sachtleben, William Lewis -- Travel -- Asia</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DS</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2010-01-29</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>235</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext39421">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Mount Everest the Reconnaissance, 1921</dc:title>
+    <dc:creator>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Howard-Bury, Charles Kenneth, 1881-1963</rdf:li>
+        <rdf:li rdf:parseType="Literal">Wollaston, A. F. R.</rdf:li>
+        <rdf:li rdf:parseType="Literal">Leigh-Mallory, George H., 1886-1924</rdf:li>
+      </rdf:Bag>
+    </dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Mount Everest the Reconnaissance, 1921</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-04-10</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>159</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext37993">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Climbing in The British Isles.  Vol. 1 - England</dc:title>
+    <dc:creator rdf:parseType="Literal">Smith, W. P. Haskett</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Carr, Ellis [Illustrator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Climbing in The British Isles.  Vol. 1 - England</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-11-12</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>46</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext37502">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Climbing in The British Isles, Vol. II
+Wales and Ireland</dc:title>
+    <dc:creator>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Smith, W. P. Haskett</rdf:li>
+        <rdf:li rdf:parseType="Literal">Hart, H. C.</rdf:li>
+      </rdf:Bag>
+    </dc:creator>
+    <dc:contributor rdf:parseType="Literal">Carr, Ellis [Illustrator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Climbing in The British Isles, Vol. II by Hart</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-09-21</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>34</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38183">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">From the Thames to the Tiber
+or, My visit to Paris, Rome, Florence, Venice, Milan, Switzerland, etc.</dc:title>
+    <dc:creator rdf:parseType="Literal">Wardle, J.</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">From the Thames to the Tiber by J. Wardle</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-12-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>38</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext24452">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Nights
+Rome, Venice, in the Aesthetic Eighties; London, Paris, in the Fighting Nineties</dc:title>
+    <dc:creator rdf:parseType="Literal">Pennell, Elizabeth Robins, 1855-1936</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Nights by Elizabeth Robins Pennell</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Venice (Italy) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Paris (France) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>London (England) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Rome (Italy) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>DA</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>DG</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>DC</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-01-29</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>25</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext24419">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Germany, Bohemia, and Hungary, Visited in 1837. Vol. II</dc:title>
+    <dc:creator rdf:parseType="Literal">Gleig, G. R. (George Robert), 1796-1888</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Germany, Bohemia, and Hungary, Visited in 1837. Vo</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Bohemia (Czech Republic) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Austria -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Germany -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>DB</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>DD</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-01-28</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>26</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext21499">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Europe—Whither Bound?
+Being Letters of Travel from the Capitals of Europe in the Year 1921</dc:title>
+    <dc:creator rdf:parseType="Literal">Graham, Stephen, 1884-1975</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Europe—Whither Bound? by Stephen Graham</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Europe -- Description and travel</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>D</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-05-16</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>11</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38767">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Spanish Highways and Byways</dc:title>
+    <dc:creator rdf:parseType="Literal">Bates, Katharine Lee, 1859-1929</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Spanish Highways and Byways by Katharine Lee Bates</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2012-02-04</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>34</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext38222">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Quest of the 'Golden Hope'
+A Seventeenth Century Story of Adventure</dc:title>
+    <dc:creator rdf:parseType="Literal">Westerman, Percy F. (Percy Francis), 1876-1959</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Wiles, Frank E. [Illustrator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Quest of the 'Golden Hope' by Westerman</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-12-04</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>29</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext37937">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A Wanderer in Paris</dc:title>
+    <dc:creator rdf:parseType="Literal">Lucas, E. V. (Edward Verrall), 1868-1938</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">A Wanderer in Paris by E. V.  Lucas</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-11-06</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>74</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext37814">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Story of Magellan and The Discovery of the Philippines</dc:title>
+    <dc:creator rdf:parseType="Literal">Butterworth, Hezekiah, 1839-1905</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Merrill, Frank T., 1848- [Illustrator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Story of Magellan and The Discovery of the Phi</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-10-21</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>96</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext37206">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Sea and Sardinia</dc:title>
+    <dc:creator rdf:parseType="Literal">Lawrence, D. H. (David Herbert), 1885-1930</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Juta, Jan [Illustrator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Sea and Sardinia by D. H.  Lawrence</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-08-26</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>158</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext11039">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A Woman's Journey Round the World
+From Vienna to Brazil, Chili, Tahiti, China, Hindostan, Persia and Asia Minor</dc:title>
+    <dc:creator rdf:parseType="Literal">Pfeiffer, Ida, 1797-1858</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">A Woman's Journey Round the World by Ida Pfeiffer</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Voyages around the world</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>G</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-02-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>95</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext15777">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A Voyage Towards the South Pole and Round the World, Volume 1</dc:title>
+    <dc:creator rdf:parseType="Literal">Cook, James, 1728-1779</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Furneaux, Tobias, 1735-1781 [Contributor]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">A Voyage Towards the South Pole and Round the Worl</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Antarctica</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Oceania -- Discovery and exploration -- Early works to 1800</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Voyages around the world -- Early works to 1800</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>G</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-05-07</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>57</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext3177">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Roughing It</dc:title>
+    <dc:creator rdf:parseType="Literal">Twain, Mark, 1835-1910</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Roughing It by Mark Twain</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Authors, American -- Homes and haunts -- West (U.S.)</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Twain, Mark, 1835-1910 -- Travel -- West (U.S.)</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>West (U.S.) -- Intellectual life -- 19th century</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>West (U.S.) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>PS</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>E660</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-07-03</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>3926</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext6469">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Queen Victoria, her girlhood and womanhood</dc:title>
+    <dc:creator rdf:parseType="Literal">Greenwood, Grace, 1823-1904</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Queen Victoria, her girlhood and womanhood</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Victoria, Queen of Great Britain, 1819-1901</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-09-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>23</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext4245">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A History of the Early Part of the Reign of James the Second</dc:title>
+    <dc:creator rdf:parseType="Literal">Fox, Charles James, 1749-1806</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Morley, Henry, 1822-1894 [Editor]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">A History of the Early Part of the Reign of James </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History -- James II, 1685-1688</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2003-07-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>17</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext23469">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A History of the Four Georges, Volume I</dc:title>
+    <dc:creator rdf:parseType="Literal">McCarthy, Justin, 1830-1912</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">A History of the Four Georges, Volume I</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- Politics and government -- 1714-1837</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- 1714-1837</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-11-13</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>3</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext20023">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Letters of Queen Victoria : A Selection from Her Majesty's Correspondence between the Years 1837 and 1861
+Volume 1, 1837-1843</dc:title>
+    <dc:creator rdf:parseType="Literal">Victoria, Queen of Great Britain, 1819-1901</dc:creator>
+    <dc:contributor>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Benson, Arthur Christopher, 1862-1925 [Editor]</rdf:li>
+        <rdf:li rdf:parseType="Literal">Esher, Reginald Baliol Brett, Viscount, 1852-1930 [Editor]</rdf:li>
+      </rdf:Bag>
+    </dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Letters of Queen Victoria : A Selection from H</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Europe -- Politics and government -- 1848-1871</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- Victoria, 1837-1901 -- Sources</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- Victoria, 1837-1901</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- Politics and government -- 1837-1901</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Victoria, Queen of Great Britain, 1819-1901 -- Correspondence</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>DA</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>AC</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-12-05</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>283</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext13103">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Great Britain and Her Queen</dc:title>
+    <dc:description rdf:parseType="Literal">Second Edition</dc:description>
+    <dc:creator rdf:parseType="Literal">Keeling, Annie E.</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Great Britain and Her Queen by Annie E. Keeling</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Victoria, Queen of Great Britain, 1819-1901</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- 19th century</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-08-03</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>94</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext8556">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England from the Norman Conquest to the Death of John (1066-1216)</dc:title>
+    <dc:creator rdf:parseType="Literal">Adams, George Burton, 1851-1925</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England from the Norman Conquest to</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History -- Medieval period, 1066-1485</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-07-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>43</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext6910">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Life of Her Most Gracious Majesty the Queen — Volume 1</dc:title>
+    <dc:creator rdf:parseType="Literal">Tytler, Sarah, 1827-1914</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Life of Her Most Gracious Majesty the Queen — Vo</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Victoria, Queen of Great Britain, 1819-1901</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-11-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>34</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext24254">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">History of the English People, Volume VI
+Puritan England, 1642-1660; The Revolution, 1660-1683</dc:title>
+    <dc:creator rdf:parseType="Literal">Green, John Richard, 1837-1883</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">History of the English People, Volume VI by Green</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-01-11</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>33</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext16617">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Chronicles (1 of 6): The Historie of England (7 of 8)
+The Seventh Boke of the Historie of England</dc:title>
+    <dc:creator rdf:parseType="Literal">Holinshed, Raphael, -1580?</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Chronicles (1 of 6): The Historie of England (7 of</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History -- Anglo-Saxon period, 449-1066</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-08-29</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>23</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext16555">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Chronicles 1 (of 6): The Historie of England 5 (of 8)
+The Fift Booke of the Historie of England.</dc:title>
+    <dc:creator rdf:parseType="Literal">Holinshed, Raphael, -1580?</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Chronicles 1 (of 6): The Historie of England 5 (of</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History -- Anglo-Saxon period, 449-1066</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-08-20</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>19</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext16536">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Chronicles (1 of 6): The Historie of England (4 of 8)
+The Fovrth Booke Of The Historie Of England</dc:title>
+    <dc:creator rdf:parseType="Literal">Holinshed, Raphael, -1580?</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Chronicles (1 of 6): The Historie of England (4 of</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History -- Roman period, 55 B.C.-449 A.D.</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-08-16</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>18</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext20274">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England, from the Accession of James II, Volume 1, Chapter 02</dc:title>
+    <dc:creator rdf:parseType="Literal">Macaulay, Thomas Babington Macaulay, Baron, 1800-1859</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England, from the Accession of Jame</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- James II, 1685-1688</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- William and Mary, 1689-1702</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-01-05</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>10</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:type>
+      <pgterms:category>
+        <rdf:value>Audio Book, human-read</rdf:value>
+      </pgterms:category>
+    </dc:type>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext16749">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Chronicles of England, Scotland and Ireland (2 of 6): England (3 of 12)
+Henrie I.</dc:title>
+    <dc:creator rdf:parseType="Literal">Holinshed, Raphael, -1580?</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Chronicles of England, Scotland and Ireland (2 of </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History -- Henry I, 1100-1135</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-09-25</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>13</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext2614">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England, from the Accession of James II — Volume 5</dc:title>
+    <dc:creator rdf:parseType="Literal">Macaulay, Thomas Babington Macaulay, Baron, 1800-1859</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England, from the Accession of Jame</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- James II, 1685-1688</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- William and Mary, 1689-1702</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-06-26</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>49</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext2612">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England, from the Accession of James II — Volume 3</dc:title>
+    <dc:creator rdf:parseType="Literal">Macaulay, Thomas Babington Macaulay, Baron, 1800-1859</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England, from the Accession of Jame</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- James II, 1685-1688</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- William and Mary, 1689-1702</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-06-26</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>51</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext13046">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Historic Thames</dc:title>
+    <dc:creator rdf:parseType="Literal">Belloc, Hilaire, 1870-1953</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Historic Thames by Hilaire Belloc</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Historic sites -- England -- Thames Valley</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Thames Valley (England) -- History</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Thames Valley (England) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-07-29</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>18</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext12857">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Beautiful Britain—Cambridge</dc:title>
+    <dc:creator rdf:parseType="Literal">Home, Gordon, 1878-1969</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Beautiful Britain—Cambridge by Gordon Home</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Cambridge (England) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>University of Cambridge</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-07-08</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>14</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext20310">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Hammersmith, Fulham and Putney
+The Fascination of London</dc:title>
+    <dc:creator>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Geikie, John Cunningham, 1824-1906</rdf:li>
+        <rdf:li rdf:parseType="Literal">Mitton, G. E. (Geraldine Edith)</rdf:li>
+      </rdf:Bag>
+    </dc:creator>
+    <dc:contributor rdf:parseType="Literal">Besant, Walter, 1836-1901 [Editor]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Hammersmith, Fulham and Putney by Geikie</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Fulham (London, England) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Hammersmith (London, England) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Putney (London, England) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-01-07</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>92</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext15167">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">London River</dc:title>
+    <dc:tableOfContents rdf:parseType="Literal">The foreshore -- A midnight voyage -- A shipping parish -- The "Heart's Desire" -- The master -- The ship-runners -- Not in the almanac -- The illusion -- In a coffee-shop -- Off-shore -- An old Lloyd's register.</dc:tableOfContents>
+    <dc:creator rdf:parseType="Literal">Tomlinson, H. M. (Henry Major), 1873-1958</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">London River by H. M.  Tomlinson</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>London (England)</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Seafaring life</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>PR</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-02-25</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>17</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext10451">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Life of Johnson, Volume 5
+Tour to the Hebrides (1773) and Journey into North Wales (1774)</dc:title>
+    <dc:creator rdf:parseType="Literal">Boswell, James, 1740-1795</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Hill, George Birkbeck Norman, 1835-1903 [Editor]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Life of Johnson, Volume 5 by James Boswell</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Critics -- Great Britain -- Biography</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Johnson, Samuel, 1709-1784</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Authors, English -- 18th century -- Biography</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Lexicographers -- Great Britain -- Biography</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>PR</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2003-12-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>50</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19800">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">London and the Kingdom - Volume I</dc:title>
+    <dc:creator rdf:parseType="Literal">Sharpe, Reginald R. (Reginald Robinson), 1848-1925</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">London and the Kingdom - Volume I by Sharpe</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>London (England) -- History</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-11-13</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>29</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext1938">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Voskresenie. English</dc:title>
+    <dc:title rdf:parseType="Literal">Resurrection</dc:title>
+    <dc:creator rdf:parseType="Literal">Tolstoy, Leo, graf, 1828-1910</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Maude, Louise, 1855-1939 [Translator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Voskresenie. English by graf Leo Tolstoy</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Russia -- Social conditions -- 1801-1917 -- Fiction</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Atonement -- Fiction</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Trials (Murder) -- Russia -- Fiction</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Prostitutes -- Russia -- Fiction</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Aristocracy (Social class) -- Russia -- Fiction</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Social justice -- Russia -- Fiction</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Change -- Religious aspects -- Fiction</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>PG</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>1999-10-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>274</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext21591">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Harbours of England</dc:title>
+    <dc:creator rdf:parseType="Literal">Ruskin, John, 1819-1900</dc:creator>
+    <dc:contributor>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Turner, J. M. W. (Joseph Mallord William), 1775-1851 [Illustrator]</rdf:li>
+        <rdf:li rdf:parseType="Literal">Lupton, Thomas Goff, 1791-1873 [Engraver]</rdf:li>
+      </rdf:Bag>
+    </dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Harbours of England by John Ruskin</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Harbors -- England</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>NE</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-05-23</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>46</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19881">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Bell's Cathedrals: The Cathedral Church of Carlisle
+A Description of Its Fabric and A Brief History of the Episcopal See</dc:title>
+    <dc:creator rdf:parseType="Literal">Eley, C. King</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Bell's Cathedrals: The Cathedral Church of Carlisl</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Carlisle Cathedral (Carlisle, England)</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>NA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-11-20</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>56</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext22880">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Bell's Cathedrals: A Short Account of Romsey Abbey
+A Description of the Fabric and Notes on the History of the Convent of SS. Mary &amp; Ethelfleda</dc:title>
+    <dc:creator rdf:parseType="Literal">Perkins, Thomas, Rev., 1842-1907</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Bell's Cathedrals: A Short Account of Romsey Abbey</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Romsey Abbey</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>NA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-10-03</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>15</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19424">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Bell's Cathedrals: The Cathedral Church of Exeter
+A Description of Its Fabric and a Brief History of the Episcopal See</dc:title>
+    <dc:creator rdf:parseType="Literal">Addleshaw, Percy, 1866-1916</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Bell's Cathedrals: The Cathedral Church of Exeter</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Exeter Cathedral</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>NA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-10-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>67</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext14735">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Political Thought in England from Locke to Bentham</dc:title>
+    <dc:creator rdf:parseType="Literal">Laski, Harold Joseph, 1893-1950</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Political Thought in England from Locke to Bentham</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Political science -- Great Britain -- History</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>JA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-01-19</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>99</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext3799">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Landholding in England</dc:title>
+    <dc:creator rdf:parseType="Literal">Fisher, Joseph, F.R.H.S.</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Landholding in England by F.R.H.S. Joseph Fisher</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Land tenure -- Great Britain</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>HD</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2003-02-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>11</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext1216">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Reflections on the Decline of Science in England, and on Some of Its Causes</dc:title>
+    <dc:creator rdf:parseType="Literal">Babbage, Charles, 1791-1871</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Reflections on the Decline of Science in England, </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Science -- Great Britain -- History</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Royal Society (Great Britain)</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>Q</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>1998-02-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>136</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext20488">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Henry of Monmouth
+Or, Memoirs of the Life and Character of Henry the Fifth, as Prince of Wales and King of England
+Volume 1</dc:title>
+    <dc:creator rdf:parseType="Literal">Tyler, James Endell, 1789-1851</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Henry of Monmouth by James Endell Tyler</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Henry V, King of England, 1387-1422</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-01-31</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>22</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext1265">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Queen Victoria</dc:title>
+    <dc:creator rdf:parseType="Literal">Strachey, Lytton, 1880-1932</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Queen Victoria by Lytton Strachey</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Victoria, Queen of Great Britain, 1819-1901</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Queens -- Great Britain -- Biography</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- Victoria, 1837-1901</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-02-19</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>215</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19215">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England in Three Volumes, Vol.I., Part E.
+From Charles I. to Cromwell</dc:title>
+    <dc:creator rdf:parseType="Literal">Hume, David, 1711-1776</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England in Three Volumes, Vol.I., P</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- Puritan Revolution, 1642-1660</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- Charles I, 1625-1649</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-09-08</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>55</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19212">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England in Three Volumes, Vol.I., Part B.
+From Henry III. to Richard III.</dc:title>
+    <dc:creator rdf:parseType="Literal">Hume, David, 1711-1776</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England in Three Volumes, Vol.I., P</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-09-08</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>112</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext16496">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Chronicles (1 of 6): The Historie of England (1 of 8)
+From the Time That It Was First Inhabited, Vntill the Time That It Was Last Conquered: Wherein the Sundrie Alterations of the State Vnder Forren People Is Declared; And Other Manifold Observations Remembred</dc:title>
+    <dc:creator rdf:parseType="Literal">Holinshed, Raphael, -1580?</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Chronicles (1 of 6): The Historie of England (1 of</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History -- To 55 B.C.</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-08-09</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>136</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext13624">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Chronicles (1 of 6): The Historie of England (2 of 8)
+The Second Booke Of The Historie Of England</dc:title>
+    <dc:creator rdf:parseType="Literal">Holinshed, Raphael, -1580?</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Chronicles (1 of 6): The Historie of England (2 of</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History -- To 55 B.C.</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-08-31</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>26</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext16760">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Chronicles of England, Scotland and Ireland (2 of 6): England (4 of 12)
+Stephan Earle Of Bullongne</dc:title>
+    <dc:creator rdf:parseType="Literal">Holinshed, Raphael, -1580?</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Chronicles of England, Scotland and Ireland (2 of </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History -- Stephen, 1135-1154</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-09-27</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>18</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext16738">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Chronicles of England, Scotland and Ireland (2 of 6)
+England (1 of 12) William the Conqueror</dc:title>
+    <dc:creator rdf:parseType="Literal">Holinshed, Raphael, -1580?</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Chronicles of England, Scotland and Ireland (2 of </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Great Britain -- History -- William I, 1066-1087</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-09-24</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>40</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext1468">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England, from the Accession of James II — Volume 1</dc:title>
+    <dc:creator rdf:parseType="Literal">Macaulay, Thomas Babington Macaulay, Baron, 1800-1859</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England, from the Accession of Jame</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- James II, 1685-1688</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- William and Mary, 1689-1702</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-06-26</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>354</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext20277">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England, from the Accession of
+James II, vol1, chapter 05</dc:title>
+    <dc:creator rdf:parseType="Literal">Macaulay, Thomas Babington Macaulay, Baron, 1800-1859</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England, from the Accession of</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- James II, 1685-1688</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- William and Mary, 1689-1702</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-01-05</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>2</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:type>
+      <pgterms:category>
+        <rdf:value>Audio Book, human-read</rdf:value>
+      </pgterms:category>
+    </dc:type>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext20276">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England, from the Accession of James II, Volume 1, Chapter 04</dc:title>
+    <dc:creator rdf:parseType="Literal">Macaulay, Thomas Babington Macaulay, Baron, 1800-1859</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England, from the Accession of Jame</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- James II, 1685-1688</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- William and Mary, 1689-1702</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-01-05</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>0</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:type>
+      <pgterms:category>
+        <rdf:value>Audio Book, human-read</rdf:value>
+      </pgterms:category>
+    </dc:type>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext20275">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England, from the Accession of
+James II, vol1, chapter 03</dc:title>
+    <dc:creator rdf:parseType="Literal">Macaulay, Thomas Babington Macaulay, Baron, 1800-1859</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England, from the Accession of</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- James II, 1685-1688</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- William and Mary, 1689-1702</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-01-05</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>10</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:type>
+      <pgterms:category>
+        <rdf:value>Audio Book, human-read</rdf:value>
+      </pgterms:category>
+    </dc:type>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext10807">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Constitutional History of England from 1760 to 1860</dc:title>
+    <dc:creator rdf:parseType="Literal">Yonge, Charles Duke, 1812-1891</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Constitutional History of England from 1760 to</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- George III, 1760-1820</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Constitutional history -- Great Britain</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History -- 19th century</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-01-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>8</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext6358">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The History of England - a Study in Political Evolution</dc:title>
+    <dc:creator rdf:parseType="Literal">Pollard, A. F. (Albert Frederick), 1869-1948</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The History of England - a Study in Political Evol</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- Politics and government</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- History</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-08-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>25</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext21660">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">An Introduction to the Industrial and Social History of England</dc:title>
+    <dc:creator rdf:parseType="Literal">Cheyney, Edward Potts, 1861-1947</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">An Introduction to the Industrial and Social Histo</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- Maps</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Great Britain -- Economic conditions</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Industries -- Great Britain</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>HC</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-06-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>72</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext14472">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Showell's Dictionary of Birmingham
+A History and Guide, Arranged Alphabetically</dc:title>
+    <dc:creator>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Showell, Walter, 1836?-1901</rdf:li>
+        <rdf:li rdf:parseType="Literal">Harman, Thomas T.</rdf:li>
+      </rdf:Bag>
+    </dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Showell's Dictionary of Birmingham by Harman</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Birmingham (England) -- History -- Dictionaries</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-12-26</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>273</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext11356">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A Tale of One City: the New Birmingham
+Papers Reprinted from the "Midland Counties Herald"</dc:title>
+    <dc:creator rdf:parseType="Literal">Anderton, Thomas, 1836-1903</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">A Tale of One City: the New Birmingham by Anderton</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Birmingham (England) -- Social life and customs</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Birmingham (England)</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-02-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>27</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext21411">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Holborn and Bloomsbury
+The Fascination of London</dc:title>
+    <dc:creator>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Mitton, G. E. (Geraldine Edith)</rdf:li>
+        <rdf:li rdf:parseType="Literal">Besant, Walter, 1836-1901</rdf:li>
+      </rdf:Bag>
+    </dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Holborn and Bloomsbury by Besant and Mitton</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Bloomsbury (London, England) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Holborn (London, England) -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-05-09</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>108</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext20990">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">London and the Kingdom - Volume II</dc:title>
+    <dc:creator rdf:parseType="Literal">Sharpe, Reginald R. (Reginald Robinson), 1848-1925</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">London and the Kingdom - Volume II by Sharpe</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>London (England) -- History</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-04-05</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>20</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext2064">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A Journey to the Western Islands of Scotland</dc:title>
+    <dc:creator rdf:parseType="Literal">Johnson, Samuel, 1709-1784</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">A Journey to the Western Islands of Scotland</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Scotland -- Description and travel -- Early works to 1800</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Johnson, Samuel, 1709-1784 -- Travel -- Scotland -- Hebrides</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Boswell, James, 1740-1795 -- Travel -- Scotland -- Hebrides</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Hebrides (Scotland) -- Description and travel -- Early works to 1800</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2000-02-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>242</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext31093">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Memória sobre a plantação dos algodões
+e sua exportação sobre a decadencia da lavoura de mandiocas, no termo da villa de Camamú, Comarca dos Ilhéos, Governo da Bahia</dc:title>
+    <dc:creator rdf:parseType="Literal">Bettencourt, José de Sá</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Memória sobre a plantação dos algodões</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>pt</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Cotton growing -- Brazil -- Early works to 1800</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Cassava -- Early works to 1800</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Portugal -- Colonies -- America -- Commerce -- Early works to 1800</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>SB</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>F2501</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2010-01-26</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>13</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext22397">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Shakespearean Playhouses
+A History of English Theatres from the Beginnings to the Restoration</dc:title>
+    <dc:creator rdf:parseType="Literal">Adams, Joseph Quincy, 1881-1946</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Shakespearean Playhouses by Joseph Quincy Adams</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Shakespeare, William, 1564-1616 -- Stage history -- To 1625</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Theaters -- England -- London -- History</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>PN</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-08-25</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>187</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext20191">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Bell's Cathedrals: The Cathedral Church of Durham
+A Description of Its Fabric and A Brief History of the Espiscopal See</dc:title>
+    <dc:creator rdf:parseType="Literal">Bygate, Joseph E.</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Bell's Cathedrals: The Cathedral Church of Durham</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Durham Cathedral</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Church of England. Diocese of Durham</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>NA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-12-26</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>88</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19715">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Bell's Cathedrals: The Cathedral Church of Norwich
+A Description of Its Fabric and A Brief History of the Episcopal See</dc:title>
+    <dc:creator rdf:parseType="Literal">Quennell, C. H. B. (Charles Henry Bourne), 1872-1935</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Bell's Cathedrals: The Cathedral Church of Norwich</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Norwich Cathedral (Norwich, England)</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>NA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-11-05</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>64</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19511">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Bell's Cathedrals: Wimborne Minster and Christchurch Priory
+A Short History of Their Foundation and a Description of Their Buildings</dc:title>
+    <dc:creator rdf:parseType="Literal">Perkins, Thomas, Rev., 1842-1907</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Bell's Cathedrals: Wimborne Minster and Christchur</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Christ Church Priory (Canterbury, England)</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Wimborne Minster (England)</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Churches -- England</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>NA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-10-09</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>68</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext11642">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">What to See in England
+A Guide to Places of Historic Interest, Natural Beauty or Literary Association</dc:title>
+    <dc:creator rdf:parseType="Literal">Home, Gordon, 1878-1969</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">What to See in England by Gordon Home</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>England -- Guidebooks</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Wales -- Guidebooks</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-03-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>26</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext24505">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Forest of Dean: An Historical and Descriptive Account</dc:title>
+    <dc:creator rdf:parseType="Literal">Nicholls, H. G. (Henry George), 1825-1867</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Forest of Dean: An Historical and Descriptive </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Dean, Forest of (England : Forest)</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Technology, History of</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>England -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Iron industry and trade -- England -- Dean, Forest of</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Archaeology</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>DA</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-02-03</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>132</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19582">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Amendments to the United States Constitution</dc:title>
+    <dc:creator rdf:parseType="Literal">United States</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Amendments to the United States Constitution</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Constitutional amendments -- United States</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>KF</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-10-20</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>6</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:type>
+      <pgterms:category>
+        <rdf:value>Audio Book, human-read</rdf:value>
+      </pgterms:category>
+    </dc:type>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext3085">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Original Short Stories — Volume 09</dc:title>
+    <dc:tableOfContents rdf:parseType="Literal">Toine -- Madame Husson's rosier -- The adopted son -- A coward -- Old Mongilet -- Moonlight -- The first snowfall -- Sundays of a bourgeois -- A recollection -- Our letters -- The love of long ago -- Friend Joseph -- The effeminates -- Old amable.</dc:tableOfContents>
+    <dc:creator rdf:parseType="Literal">Maupassant, Guy de, 1850-1893</dc:creator>
+    <dc:contributor>
+      <rdf:Bag>
+        <rdf:li rdf:parseType="Literal">Henderson, A. E. [Translator]</rdf:li>
+        <rdf:li rdf:parseType="Literal">Quesada, Louise Charlotte Garstin, 1864?- [Translator]</rdf:li>
+        <rdf:li rdf:parseType="Literal">McMaster, Albert Cohn [Translator]</rdf:li>
+      </rdf:Bag>
+    </dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Original Short Stories — Volume 09 by Maupassant</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Short stories, French -- Translations into English</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>PQ</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2004-10-03</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>38</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext22675">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Home Life in Colonial Days</dc:title>
+    <dc:creator rdf:parseType="Literal">Earle, Alice Morse, 1851-1911</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Home Life in Colonial Days by Alice Morse Earle</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>United States -- Social life and customs -- To 1775</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>E151</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-09-19</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>103</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext21880">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Medallic History of the United States of America 1776-1876</dc:title>
+    <dc:creator rdf:parseType="Literal">Loubat, J. F. (Joseph Florimond), 1831-1927</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Jacquemart, Jules-Ferdinand, 1837-1880 [Illustrator]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Medallic History of the United States of Ameri</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Medals -- United States</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- History</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>CJ</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-06-20</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>57</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext21012">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Loyalists of America and Their Times, Vol. 1 of 2.
+From 1620-1816</dc:title>
+    <dc:creator rdf:parseType="Literal">Ryerson, Egerton, 1803-1882</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Loyalists of America and Their Times, Vol. 1 o</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- Politics and government -- 1775-1783</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- History -- War of 1812</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Massachusetts -- Politics and government -- To 1775</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- History -- Revolution, 1775-1783</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- Politics and government -- To 1775</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>American loyalists</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>E186</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>E201</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-04-08</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>24</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext2128">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Narratives of New Netherland, 1609-1664</dc:title>
+    <dc:description rdf:parseType="Literal">Original narratives of early American history--Series</dc:description>
+    <dc:contributor rdf:parseType="Literal">Jameson, J. Franklin (John Franklin), 1859-1937 [Editor]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">Narratives of New Netherland, 1609-1664</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>New York (State) -- History -- Colonial period, ca. 1600-1775 -- Sources</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>F106</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2000-04-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>9</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext34844">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Collection of Nebraska Pioneer Reminiscences</dc:title>
+    <dc:creator rdf:parseType="Literal">Daughters of the American Revolution. Nebraska</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Collection of Nebraska Pioneer Reminiscences</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Nebraska -- History</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Frontier and pioneer life -- Nebraska</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>F590.3</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2011-01-04</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>265</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext24765">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">A Treatise on the Tactical Use of the Three Arms: Infantry, Artillery, and Cavalry</dc:title>
+    <dc:creator rdf:parseType="Literal">Lippitt, Francis J. (Francis James), 1812-1902</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">A Treatise on the Tactical Use of the Three Arms: </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Tactics</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- History -- Civil War, 1861-1865 -- Campaigns</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>U</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2008-03-06</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>16</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext23280">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Shirley Letters from California Mines in 1851-52</dc:title>
+    <dc:creator rdf:parseType="Literal">Shirley, Dame, 1819-1906</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Shirley Letters from California Mines in 1851-</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Shirley, Dame, 1819-1906 -- Correspondence</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Women pioneers -- California -- Correspondence</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>California -- Gold discoveries</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>California -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>F850.5</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-11-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>98</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext22796">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Impressions of America
+During the years 1833, 1834 and 1835. In Two Volumes, Volume I.</dc:title>
+    <dc:creator rdf:parseType="Literal">Power, Tyrone, 1797-1841</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Impressions of America by Tyrone Power</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Canada -- Description and travel</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>E151</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2007-09-28</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>12</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext3093">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Eve of the Revolution; A Chronicle of the Breach with England</dc:title>
+    <dc:creator rdf:parseType="Literal">Becker, Carl L. (Carl Lotus), 1873-1945</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Johnson, Allen, 1870-1931 [Editor]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Eve of the Revolution; A Chronicle of the Brea</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- Politics and government -- 1775-1783</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- History -- Revolution, 1775-1783</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext3014">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Old Northwest: A Chronicle of the Ohio Valley and Beyond</dc:title>
+    <dc:creator rdf:parseType="Literal">Ogg, Frederic Austin, 1878-1951</dc:creator>
+    <dc:contributor rdf:parseType="Literal">Johnson, Allen, 1870-1931 [Editor]</dc:contributor>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Old Northwest: A Chronicle of the Ohio Valley </pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Northwest, Old -- History</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Ohio River Valley -- History</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>F476</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>E151</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2002-01-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>22</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext3157">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Path of Empire: A Chronicle of the United States as a World Power</dc:title>
+    <dc:description rdf:parseType="Literal">Chronicles of America series; v. 46</dc:description>
+    <dc:creator rdf:parseType="Literal">Fish, Carl Russell, 1876-1932</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Path of Empire: A Chronicle of the United Stat</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- Foreign relations</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- Territorial expansion</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>E151</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2002-04-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>21</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext2899">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Agrarian Crusade: A Chronicle of the Farmer in Politics</dc:title>
+    <dc:description rdf:parseType="Literal">Chronicles of America series; v. 45</dc:description>
+    <dc:creator rdf:parseType="Literal">Buck, Solon J. (Solon Justus), 1884-1962</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Agrarian Crusade: A Chronicle of the Farmer in</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Agriculture -- United States -- Societies, etc.</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Political parties -- United States</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- Politics and government -- 1865-</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>E151</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2001-11-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>15</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext16780">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Declaration of Independence of The United States of America</dc:title>
+    <dc:creator rdf:parseType="Literal">United States</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Declaration of Independence of The United Stat</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States. Declaration of Independence</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States -- History -- Revolution, 1775-1783 -- Sources</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>E201</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>JK</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2005-10-12</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>473</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext19581">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">Amendments to the United States Constitution</dc:title>
+    <dc:creator rdf:parseType="Literal">United States</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">Amendments to the United States Constitution</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <dcterms:LCSH>
+        <rdf:value>Constitutional amendments -- United States</rdf:value>
+      </dcterms:LCSH>
+    </dc:subject>
+    <dc:subject>
+      <dcterms:LCC>
+        <rdf:value>KF</rdf:value>
+      </dcterms:LCC>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2006-10-20</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>23</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:type>
+      <pgterms:category>
+        <rdf:value>Audio Book, human-read</rdf:value>
+      </pgterms:category>
+    </dc:type>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+  <pgterms:etext rdf:ID="etext10065">
+    <dc:publisher>pg;</dc:publisher>
+    <dc:title rdf:parseType="Literal">The Constitution of the United States
+A Brief Study of the Genesis, Formulation and Political Philosophy of the Constitution</dc:title>
+    <dc:creator rdf:parseType="Literal">Beck, James M. (James Montgomery), 1861-1936</dc:creator>
+    <pgterms:friendlytitle rdf:parseType="Literal">The Constitution of the United States by Beck</pgterms:friendlytitle>
+    <dc:language>
+      <dcterms:ISO639-2>
+        <rdf:value>en</rdf:value>
+      </dcterms:ISO639-2>
+    </dc:language>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>United States. Constitution</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCSH>
+            <rdf:value>Constitutional law -- United States</rdf:value>
+          </dcterms:LCSH>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:subject>
+      <rdf:Bag>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>KF</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+        <rdf:li>
+          <dcterms:LCC>
+            <rdf:value>JK</rdf:value>
+          </dcterms:LCC>
+        </rdf:li>
+      </rdf:Bag>
+    </dc:subject>
+    <dc:created>
+      <dcterms:W3CDTF>
+        <rdf:value>2003-11-01</rdf:value>
+      </dcterms:W3CDTF>
+    </dc:created>
+    <pgterms:downloads>
+      <xsd:nonNegativeInteger>
+        <rdf:value>35</rdf:value>
+      </xsd:nonNegativeInteger>
+    </pgterms:downloads>
+    <dc:rights rdf:resource="lic;"/>
+  </pgterms:etext>
+</rdf:RDF>
