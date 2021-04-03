@@ -3,7 +3,7 @@ use std::num::ParseIntError;
 
 use isolang::Language;
 
-use crate::book::Book;
+use crate::book::{Book, State};
 use crate::gutenberg::error::Error;
 
 static TEXT_TAG: &str = "etext";
@@ -49,6 +49,7 @@ fn book_from(posible_book: &minidom::Element) -> Option<Result<Book, Error>> {
         id: id_from(posible_book.attr(ATT_ID).expect("id already verified")).unwrap(),
         title: get_field(posible_book, FIELD_TITLE).expect("title already verified"),
         language: get_language(posible_book),
+        state: State::NEW
     }))
 }
 
@@ -94,7 +95,7 @@ fn all_childs_recursive(element: &minidom::Element) -> Vec<&minidom::Element> {
 /// ```
 ///assert_eq(ìdFrom("etext2489"), Ok(2489));
 ///```
-fn id_from(etext_id: &str) -> Result<u32, ParseIntError> {
+fn id_from(etext_id: &str) -> Result<i32, ParseIntError> {
     etext_id[5..].parse()
 }
 

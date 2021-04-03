@@ -61,3 +61,14 @@ The program default path for the catalog is resources/main. You could download t
 scripts/download_catalog.sh
 mv catalog.rdf resources/main
 ```
+
+### Database
+
+I will use postgres database with diesel.
+
+I will use docker database. To create database I will make
+
+
+```shell
+scripts/install_database.sh
+```
