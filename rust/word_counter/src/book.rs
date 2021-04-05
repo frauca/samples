@@ -1,5 +1,6 @@
 use serde::Serialize;
 
+#[derive(Clone, Debug)]
 pub struct Book {
     pub id: i32,
     pub title: String,
@@ -7,7 +8,7 @@ pub struct Book {
     pub state: State,
 }
 
-#[derive(Serialize)]
+#[derive(Serialize, Clone, Debug)]
 pub enum State {
     NEW,
     PROCESED,

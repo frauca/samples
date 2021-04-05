@@ -16,5 +16,6 @@ strum_macros = "0.20.1"
 isolang = "1.0.0"
 diesel = { version = "1.4.4", features = ["postgres"] }
 dotenv = "0.15.0"
-serde = {version = "1.0.125", features = ["derive"]}
+serde = { version = "1.0.125", features = ["derive"] }
 serde_plain = "0.3.0"
+tokio = { version = "1.4.0", features = ["full"] }

@@ -1,27 +1,32 @@
-use diesel::{PgConnection, Connection, RunQueryDsl};
 use std::env;
-use crate::book::Book;
-use crate::persistance::models::NewBook;
-use crate::schema::books;
+
+use diesel::{PgConnection, Connection};
 use dotenv::dotenv;
-use crate::schema::books::columns::id;
+
+use crate::book::Book;
+use crate::persistance::dao::save;
+use crate::persistance::models::NewBook;
 
 mod error;
 mod models;
+mod dao;
 
-pub fn save(book: &Book){
-    let connection = establish_connection();
-    log::debug!("Saving book {}", book.id);
+pub struct Database {
+    connection: PgConnection,
+}
 
-    let new_book = NewBook::from(book).expect("temprary implementation");
+impl Database {
+    pub fn new() -> Self {
+        let connection = establish_connection();
+        Database {
+            connection: connection
+        }
+    }
 
-    diesel::insert_into(books::table)
-        .values(&new_book)
-        .on_conflict(id)
-        .do_update()
-        .set(&new_book)
-        .execute(&connection)
-        .expect("Could not save book");
+    pub fn save_book(&self, book: &Book) {
+        let new_book = NewBook::from(book).expect("temprary implementation");
+        save(&self.connection, &new_book);
+    }
 }
 
 fn establish_connection() -> PgConnection {

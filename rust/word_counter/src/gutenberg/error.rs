@@ -9,7 +9,8 @@ pub enum Error {
     ParseXml(minidom::Error),
     Format(String),
     InvalidId(ParseIntError),
-    InvalidLanguage(ParseError)
+    InvalidLanguage(ParseError),
+    BookFormat(String)
 }
 
 impl fmt::Display for Error {
@@ -20,6 +21,7 @@ impl fmt::Display for Error {
             Error::Format(error) => write!(f, "Found an incorrect tag. Source reason:: {}", error),
             Error::InvalidId(error) => write!(f, "Invalid id. Source reason:: {:?}", error),
             Error::InvalidLanguage(error) => write!(f, "Invalid language. Source reason:: {:?}", error),
+            Error::BookFormat(error) => write!(f, "Could not parse the book. Source reason:: {:?}", error),
         }
     }
 }
