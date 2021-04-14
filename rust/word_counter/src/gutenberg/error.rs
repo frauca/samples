@@ -1,7 +1,9 @@
 use std::{fmt, io};
 use std::fmt::Formatter;
 use std::num::ParseIntError;
+
 use strum::ParseError;
+use tokio::task::JoinError;
 
 #[derive(Debug)]
 pub enum Error {
@@ -10,7 +12,10 @@ pub enum Error {
     Format(String),
     InvalidId(ParseIntError),
     InvalidLanguage(ParseError),
-    BookFormat(String)
+    BookFormat(String),
+    BookFetch(reqwest::Error),
+    NoUrlFound(String),
+    Concurrenty(JoinError),
 }
 
 impl fmt::Display for Error {
@@ -22,6 +27,10 @@ impl fmt::Display for Error {
             Error::InvalidId(error) => write!(f, "Invalid id. Source reason:: {:?}", error),
             Error::InvalidLanguage(error) => write!(f, "Invalid language. Source reason:: {:?}", error),
             Error::BookFormat(error) => write!(f, "Could not parse the book. Source reason:: {:?}", error),
+            Error::BookFetch(error) => write!(f, "Could not fetch the book. Source reason:: {:?}", error),
+            Error::Concurrenty(error) => write!(f, "Could not spawn tasks. Source reason:: {:?}", error),
+            Error::NoUrlFound(error) => write!(f, "Could not find content url. Source reason:: {:?}", error),
+
         }
     }
 }
@@ -41,5 +50,17 @@ impl From<minidom::Error> for Error {
 impl From<ParseIntError> for Error {
     fn from(error: ParseIntError) -> Self {
         Error::InvalidId(error)
+    }
+}
+
+impl From<reqwest::Error> for Error {
+    fn from(error: reqwest::Error) -> Self {
+        Error::BookFetch(error)
+    }
+}
+
+impl From<JoinError> for Error {
+    fn from(error: JoinError) -> Self {
+        Error::Concurrenty(error)
     }
 }
