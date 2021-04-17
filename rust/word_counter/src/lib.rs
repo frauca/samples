@@ -4,10 +4,9 @@ extern crate dotenv;
 
 use log::info;
 
-use crate::concurrency::Async;
+use crate::concurrency::Concurrent;
 pub use crate::book::{Book, State};
 use crate::gutenberg::Error;
-use crate::persistance::Database;
 
 mod book;
 pub mod gutenberg;
@@ -17,7 +16,7 @@ mod config;
 mod concurrency;
 
 pub struct WordCounter {
-    background: Async,
+    background: Concurrent,
 }
 
 impl WordCounter {
@@ -25,7 +24,7 @@ impl WordCounter {
         config::init_logger();
         info!("logger started");
         WordCounter {
-            background: Async::new()
+            background: Concurrent::new()
         }
     }
 

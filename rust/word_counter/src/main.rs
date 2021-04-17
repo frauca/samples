@@ -1,5 +1,4 @@
 use word_counter;
-use log::LevelFilter;
 use word_counter::WordCounter;
 
 fn main() {
