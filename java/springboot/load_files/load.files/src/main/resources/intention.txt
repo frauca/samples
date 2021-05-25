@@ -1,0 +1,4 @@
+If it is not your intention there are 2 options.
+
+* My program do not work (wich I have tested)
+* Or you have run it wrong (I bet for this one)
