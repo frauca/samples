@@ -9,7 +9,9 @@ pub async fn download_content(book: &Book) -> Result<String, Error> {
         debug!("Get the url {:?}", url);
         let response = reqwest::get(url.clone()).await?;
         if response.status().is_success() {
-            return Ok(response.text().await?);
+            let book_content = response.text().await?;
+            debug!("url {:?} downloaded the book ", url);
+            return Ok(book_content);
         }
         debug!("url {:?} has returned {}", url, response.status());
     }
@@ -26,18 +28,18 @@ fn book_url(book: &Book) -> Vec<String> {
 
 #[cfg(test)]
 mod tests {
-    use crate::{Book, State};
+    use crate::{Book};
     use crate::gutenberg::fetcher::book_url;
 
     #[test]
     fn url() {
-        let book = Book {
-            id: 2489,
-            title: String::from("moby dick"),
-            language: isolang::Language::Cat,
-            state: State::NEW,
-        };
+        let id = 2489;
+        let title = String::from("moby dick");
+        let language = isolang::Language::Cat;
+        let book = Book::new(id,title,language);
 
-        assert_eq!(book_url(&book)[0], "http://gutenberg.org/files/2489/2489-0.txt")
+        assert_eq!(book_url(&book)[0], "http://gutenberg.org/files/2489/2489.txt");
+        assert_eq!(book_url(&book)[1], "http://gutenberg.org/files/2489/2489-0.txt");
+        assert_eq!(book_url(&book)[2], "http://gutenberg.org/files/2489/2489-1.txt");
     }
 }

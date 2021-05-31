@@ -72,3 +72,34 @@ I will use docker database. To create database I will make
 ```shell
 scripts/install_database.sh
 ```
+
+some queries
+
+```postgres-psql
+select sum(wb.occurences) times, w.word 
+from words_books as wb
+    join words as w on w.id = wb.word_id
+group by w.word
+order by times desc;
+
+select count(*) words_num, language
+from words
+group by language
+order by words_num desc;
+
+select sum(wb.occurences) times, w.word 
+from words_books as wb
+    join words as w on w.id = wb.word_id
+where w.language='es'
+group by w.word
+order by times desc;
+
+select count(1) num_books, language
+from books
+group by language
+order by num_books desc
+
+select title, language
+from books
+where language != 'en';
+```

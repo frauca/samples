@@ -4,14 +4,24 @@ use log::{debug, error, info, trace};
 use tokio::sync::{mpsc, Semaphore};
 use tokio::sync::mpsc::{Receiver, Sender};
 use tokio::task::JoinHandle;
+use crate::counter;
 
-use crate::{Book, gutenberg};
+use crate::{Book,Word, gutenberg};
 use crate::gutenberg::Error;
 use crate::persistance::Database;
 
 static PARALEL_GUTENBERG_FETCH: usize = 100;
 
-async fn process_book(book: &Book) {
+
+async fn add_words(book: &mut Book, content: String) {
+        let mut words: Vec<Word> = vec![];
+        for(word,times) in counter::count(&content[..]) {
+            words.push(Word::new(-1,word, times));
+        }
+        book.words=words;
+}
+
+async fn process_book(book: &mut Book) {
     debug!("Fetching the book content {}", book.id);
     let book_content = {
         match gutenberg::book_content(book).await {
@@ -23,6 +33,7 @@ async fn process_book(book: &Book) {
         }
     };
     debug!("book {} have  chars{}", book.id, book_content.len());
+    add_words(book,book_content).await;
 }
 
 async fn fetch_all_books(books: &Vec<Book>, sender: Sender<Book>) {
@@ -30,7 +41,7 @@ async fn fetch_all_books(books: &Vec<Book>, sender: Sender<Book>) {
     let mut futures: Vec<JoinHandle<()>> = vec![];
 
     for book in books.iter() {
-        let book = book.clone();
+        let mut book = book.clone();
         let sender = sender.clone();
         let sem_clone = Arc::clone(&sem);
         let future: JoinHandle<()> = tokio::spawn(
@@ -39,7 +50,7 @@ async fn fetch_all_books(books: &Vec<Book>, sender: Sender<Book>) {
                 debug!("Before semaphre on book {}", book_id);
                 let aq = sem_clone.acquire().await;
                 trace!("semaphore {:?}", aq);
-                process_book(&book).await;
+                process_book(&mut book).await;
                 debug!("After semaphre on book {}", book_id);
                 if let Err(error) = sender.send(book).await {
                     error!("Could not send to save {}. Reason {:?}", book_id, error);
@@ -55,11 +66,14 @@ async fn fetch_all_books(books: &Vec<Book>, sender: Sender<Book>) {
 
 async fn save_received_books(db: &Database, mut receiver: Receiver<Book>) -> Vec<Book> {
     let mut books = vec![];
-    debug!("Going to receive {:?}",receiver);
+    debug!("Going to receive {:?}", receiver);
     while let Some(book) = receiver.recv().await {
         debug!("Saving book {}", book.id);
-        db.save_book(&book);
-        books.push(book);
+        if let Err(err) = db.save_book(&book) {
+            error!("could not save book {:?}", err)
+        } else {
+            books.push(book);
+        }
         if books.len() % 100 == 0 {
             info!("{} books procesed", books.len());
         }
@@ -96,6 +110,23 @@ impl Concurrent {
         let books = rt.block_on(async_read_catalog(&self.database, catlog_path))?;
         info!("all books {} has been saved", books.len());
         Ok(books)
+    }
+
+    pub fn save(&self, book: &Book) {
+        let rt = tokio::runtime::Runtime::new().unwrap();
+        let (tx, rx): (Sender<Book>, Receiver<Book>) = mpsc::channel(32);
+
+        let books = rt.block_on(async move {
+            let cloned_book = book.clone();
+            tokio::spawn(async move {
+                tx.send(cloned_book).await;
+            });
+
+            let books: Vec<Book> = save_received_books(&self.database, rx).await;
+            books
+        });
+
+        info!(" books {} has been saved", books.len());
     }
 }
 

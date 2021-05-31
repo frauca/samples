@@ -15,5 +15,6 @@ pub(super) fn read_catalog(catalog_path: String) -> Result<Vec<Book>, Error> {
 pub(super) async fn book_content(book: &Book) -> Result<String, Error> {
     let raw_content = fetcher::download_content(book).await?;
     debug!("parsing book size {}", raw_content.len());
-    Ok(String::from(parser::parse(&raw_content)?))
+    Ok(String::from(parser::parse(&raw_content).or::<&str>(Ok(&raw_content[..])).unwrap()))
 }
+

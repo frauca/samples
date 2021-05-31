@@ -1,10 +1,11 @@
 use std::env;
 
-use diesel::{PgConnection, Connection};
+use diesel::{Connection, PgConnection};
 use dotenv::dotenv;
+use log::{debug, error, info, trace};
 
 use crate::book::Book;
-use crate::persistance::dao::save;
+use crate::persistance::error::Error;
 use crate::persistance::models::NewBook;
 
 mod error;
@@ -23,9 +24,12 @@ impl Database {
         }
     }
 
-    pub fn save_book(&self, book: &Book) {
+    pub fn save_book(&self, book: &Book) -> Result<(), Error> {
         let new_book = NewBook::from(book).expect("temprary implementation");
-        save(&self.connection, &new_book);
+        let words = dao::save_words(&self.connection, &book.words, &book.language);
+        let saved_book = dao::save(&self.connection, &new_book);
+        dao::relate_word_book(&self.connection, &saved_book?, words?);
+        Ok(())
     }
 }
 

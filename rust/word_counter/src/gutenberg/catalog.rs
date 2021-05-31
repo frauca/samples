@@ -3,7 +3,7 @@ use std::num::ParseIntError;
 
 use isolang::Language;
 
-use crate::book::{Book, State};
+use crate::book::{Book};
 use crate::gutenberg::error::Error;
 
 static TEXT_TAG: &str = "etext";
@@ -45,12 +45,10 @@ fn book_from(posible_book: &minidom::Element) -> Option<Result<Book, Error>> {
         log::error!("Could not read element {:?} the error is {:?}",posible_book.attr(ATT_ID),error);
         return None;
     }
-    Some(Ok(Book {
-        id: id_from(posible_book.attr(ATT_ID).expect("id already verified")).unwrap(),
-        title: get_field(posible_book, FIELD_TITLE).expect("title already verified"),
-        language: get_language(posible_book),
-        state: State::NEW
-    }))
+    let id = id_from(posible_book.attr(ATT_ID).expect("id already verified")).unwrap();
+    let title = get_field(posible_book, FIELD_TITLE).expect("title already verified");
+    let language = get_language(posible_book);
+    Some(Ok(Book::new(id,title,language)))
 }
 
 fn get_language(posible_book: &minidom::Element) -> Language {
