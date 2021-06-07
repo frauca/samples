@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  ui:
+    build: ./ui
+    container_name: ui
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
