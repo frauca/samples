@@ -24,7 +24,6 @@ public class GuesserController {
     @MessageMapping("/guesser")
     @SendTo("/topic/guesses")
     public Answer guess(@RequestBody @Payload Riddle riddle) {
-        log.info("New riddle");
         return guesser.guest(riddle);
     }
 }
