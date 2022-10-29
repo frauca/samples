@@ -1,0 +1,16 @@
+package frauca.oauth.http;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@Slf4j
+public class PagesController {
+
+    @GetMapping("/app")
+    public String app(){
+        log.info("Call app page");
+        return "This is the app you need.";
+    }
+}
