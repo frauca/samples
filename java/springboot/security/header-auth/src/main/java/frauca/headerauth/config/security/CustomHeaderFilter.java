@@ -2,14 +2,16 @@ package frauca.headerauth.config.security;
 
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
+import org.springframework.security.web.header.HeaderWriterFilter;
+import org.springframework.security.web.util.OnCommittedResponseWrapper;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
 import javax.servlet.FilterChain;
@@ -32,11 +34,12 @@ public class CustomHeaderFilter extends AbstractAuthenticationProcessingFilter  
     public Authentication attemptAuthentication(
             HttpServletRequest request,
             HttpServletResponse response) throws AuthenticationException, IOException, ServletException {
-        log.info("Try to authenticate request");
         val password = request.getHeader(HEADER_PASSWORD_NAME);
         if(!StringUtils.hasText(password)) {
+            log.info("Password information not present on header "+request.getServletPath());
             throw new NoPasswordFoundException("The request has no %s header present".formatted(HEADER_PASSWORD_NAME));
         }
+        log.info("Try to authenticate request "+request.getServletPath());
         val authenticationRequest = CustomHeaderAuthenticationToken.unAuthenticated(password);
         return getAuthenticationManager().authenticate(authenticationRequest);
     }
@@ -47,5 +50,11 @@ public class CustomHeaderFilter extends AbstractAuthenticationProcessingFilter  
         context.setAuthentication(authResult);
         SecurityContextHolder.setContext(context);
         chain.doFilter(request,response);
+    }
+
+    @Override
+    protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException {
+        SecurityContextHolder.clearContext();
+        response.setStatus(HttpStatus.UNAUTHORIZED.value());
     }
 }

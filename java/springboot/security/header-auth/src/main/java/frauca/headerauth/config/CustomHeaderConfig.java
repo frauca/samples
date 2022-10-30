@@ -20,6 +20,10 @@ public class CustomHeaderConfig{
                           AuthenticationManager authenticationManager) throws Exception {
         val filter = new CustomHeaderFilter(authenticationManager);
         return http
+                .authorizeRequests()
+                .anyRequest()
+                .authenticated()
+                .and()
                 .addFilterBefore(filter, BasicAuthenticationFilter.class)
                 .build();
     }
