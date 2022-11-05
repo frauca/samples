@@ -6,3 +6,7 @@ spring:
           github:
             clientId: ${client-id}
             clientSecret: ${client-secret}
+
+custom:
+  user1: "I'm user 1"
+  user2: "I'm user 2"
