@@ -3,7 +3,7 @@ package frauca.oauth.config.custom;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 
-import java.util.Collection;
+import java.util.List;
 
 public class CustomHeaderToken extends AbstractAuthenticationToken {
     /**
@@ -12,8 +12,8 @@ public class CustomHeaderToken extends AbstractAuthenticationToken {
      * @param authorities the collection of <tt>GrantedAuthority</tt>s for the principal
      *                    represented by this authentication object.
      */
-    public CustomHeaderToken() {
-        super(null);
+    public CustomHeaderToken(List<? extends GrantedAuthority> roles) {
+        super(roles);
         setAuthenticated(true);
     }
 

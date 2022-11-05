@@ -8,5 +8,5 @@ spring:
             clientSecret: ${client-secret}
 
 custom:
-  user1: "I'm user 1"
-  user2: "I'm user 2"
+  password1: "I'm user 1"
+  password2: "I'm user 2"
