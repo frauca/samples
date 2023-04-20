@@ -9,6 +9,7 @@ import java.util.concurrent.Future;
 import jdk.incubator.concurrent.StructuredTaskScope;
 import org.junit.jupiter.api.Test;
 
+//To run this you must add --enable-preview --add-modules jdk.incubator.concurrent
 class StructuredConcurrencyTest {
 
   @Test
