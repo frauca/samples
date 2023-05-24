@@ -18,6 +18,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-testcontainers'
 	implementation 'org.testcontainers:postgresql'
 	implementation 'org.testcontainers:junit-jupiter'
+	implementation 'org.flywaydb:flyway-core'
 	runtimeOnly 'org.postgresql:postgresql'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
