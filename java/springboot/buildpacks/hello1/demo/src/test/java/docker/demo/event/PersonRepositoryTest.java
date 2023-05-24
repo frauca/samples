@@ -8,13 +8,13 @@ import docker.demo.BaseTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class PersonRepositoryTest extends BaseTest {
+class PersonRepositoryTest extends BaseTest {
 
   @Autowired PersonRepository repo;
 
   @Test
   void crudTest(){
-    final var person = PersonSampler.builder().id(null).build();
+    final var person = PersonSampler.unsaved();
 
     final var saved = repo.save(person);
 

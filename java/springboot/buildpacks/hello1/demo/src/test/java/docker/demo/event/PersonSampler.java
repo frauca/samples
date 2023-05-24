@@ -9,6 +9,9 @@ public class PersonSampler {
     return new PersonSampler().build();
   }
 
+  public static Person unsaved(){
+    return builder().id(null).build();
+  }
   public static PersonSampler builder(){
     return new PersonSampler();
   }

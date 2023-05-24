@@ -2,7 +2,7 @@ package docker.demo;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-public class BaseTest {
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public abstract class BaseTest {
 
 }
