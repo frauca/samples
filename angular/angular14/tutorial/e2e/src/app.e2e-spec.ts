@@ -1,6 +1,6 @@
 import { browser, element, by, logging } from 'protractor';
 
-describe('first-app-lesson-11 app', () => {
+describe('first-app-lesson-13 app', () => {
 
   beforeEach(() => browser.get(''));
 
@@ -34,6 +34,30 @@ describe('first-app-lesson-11 app', () => {
     expect(await element.all(by.css('app-details > article > section > h2')).get(0)
       .getText()).toEqual('Capital Safe Towns');
   });
+
+  it('should have a form in the details component at /details/9', async () => {
+    await browser.get('/details/9');
+    expect(await element.all(by.css('app-details > article > section > form > button')).get(0)
+      .getText()).toEqual('Apply now');
+  });
+
+  it('should filter the displayed elements by city name', async () => {
+    const filterField = element.all(by.css('app-home > section > form > input')).get(0);
+    const submitButton = element.all(by.css('app-home > section > form > button')).get(0);
+    await filterField.clear().then(() => {
+      filterField.sendKeys('chicago');});
+    await submitButton.click();
+    expect(await element.all(by.css('app-housing-location'))['length'] === 2);
+  });
+
+  it('should show all entries when filter is empty', async () => {
+    const filterField = element.all(by.css('app-home > section > form > input')).get(0);
+    const submitButton = element.all(by.css('app-home > section > form > button')).get(0);
+    await filterField.clear();
+    await submitButton.click();
+    expect(await element.all(by.css('app-housing-location'))['length'] === 10);
+  });
+
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
