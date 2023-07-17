@@ -1,13 +1,11 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import sessionmaker, declarative_base, Session
 
 from app.settings import Settings
 
 
-class Database:
-
-    def __init__(self, settings: Settings):
+def session(settings:Settings)->Session:
         engine = create_engine(settings.database_url, connect_args={"check_same_thread": False})
-        self.session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+        return sessionmaker(autocommit=False, autoflush=False, bind=engine)()
 
 Base = declarative_base()
