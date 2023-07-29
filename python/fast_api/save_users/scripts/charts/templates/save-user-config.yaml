@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: save-user-config
+stringData:
+  config.env: |
+    {{- with .Values.pg.auth }}
+      database_url=postgresql://{{ .username }}:{{ .password }}@save-user-pg/{{ .database }}
+    {{- end }}

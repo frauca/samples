@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: save-user-service
+spec:
+  selector:
+    app: save-user
+  ports:
+    - protocol: TCP
+      port: 8001
+      targetPort: 8001

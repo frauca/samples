@@ -1,0 +1,7 @@
+saveUser:
+  replicaCount: 1
+pg:
+  auth:
+    username: sample
+    password: sample
+    database: sample

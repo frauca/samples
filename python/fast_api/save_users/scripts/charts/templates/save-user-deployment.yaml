@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: save-user
+  labels:
+    app: save-user
+spec:
+  replicas: {{ .Values.saveUser.replicaCount }}
+  selector:
+    matchLabels:
+      app: save-user
+  template:
+    metadata:
+      labels:
+        app: save-user
+    spec:
+      containers:
+      - name: save-user
+        image: local-registry/save-users:0.0.1
+        ports:
+        - containerPort: 8001
+        volumeMounts:
+        - name: save-user-config
+          mountPath: "/code/app/config.env"
+          subPath: config.env
+          readOnly: true
+      volumes:
+      - name: save-user-config
+        secret:
+          secretName: save-user-config
