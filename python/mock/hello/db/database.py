@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+from typing import Generic, TypeVar
 from db.entity import BaseEntity
 
 
@@ -18,36 +20,38 @@ class DB:
     def delete(self, key:str)-> str|None:
         return self.data.pop(key)
     
+T = TypeVar('T')
 
-class BaseDao:
+class BaseDao(Generic[T],ABC):
     def __init__(self,db:DB,type:str) -> None:
         self.db = db
         self.type = type
 
-    def findById(self, id:int) -> BaseEntity|None:
+    def findById(self, id:int) -> T|None:
         raw_entity = self.db.findById(self._key(id))
         if not raw_entity :
             return None
-        return BaseDao._from_json(raw_entity)
+        return self._from_json(raw_entity)
     
-    def put(self,entity:BaseEntity) -> BaseEntity|None:
+    def put(self,entity:BaseEntity) -> T|None:
         key = self._key(entity.id)
         content = entity.model_dump_json()
         previous = self.db.put(key,content)
-        return BaseDao._from_previous(previous)
+        return self._from_previous(previous)
     
-    def delete(self, id:int) -> BaseEntity|None:
+    def delete(self, id:int) -> T|None:
         key = self._key(id)
         previous = self.db.delete(key)
-        return BaseDao._from_previous(previous)
+        return self._from_previous(previous)
     
     def _key(self,id:int)->str:
         return f'{self.type}-{id}'
     
-    def _from_json(json:str)->BaseEntity:
+    @abstractmethod
+    def _from_json(self,json:str)->T:
         return BaseEntity.model_validate_json(json)
     
-    def _from_previous(previous:str|None) -> BaseEntity|None:
+    def _from_previous(self,previous:str|None) -> T|None:
         if not previous:
             return None
-        return BaseDao._from_json(previous)
+        return self._from_json(previous)

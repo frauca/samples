@@ -1,6 +1,7 @@
 from mock import Mock
 import pytest
-from db.database import DB, BaseDao
+from db.person import PersonDao
+from db.database import DB
 
 @pytest.fixture()
 def empty_db()->DB:
@@ -11,5 +12,5 @@ def mocked_db() -> DB:
     return Mock(spec=DB)
 
 @pytest.fixture()
-def base_dao(mocked_db:DB) -> BaseDao:
-    return BaseDao(mocked_db,"base_dao")
+def person_dao(mocked_db:DB) -> PersonDao:
+    return PersonDao(mocked_db)
