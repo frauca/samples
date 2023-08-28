@@ -1,0 +1,10 @@
+apiVersion: v2
+name: fairs_bg
+description: Simple application
+type: application
+version: 0.0.1-rc.1
+dependencies:
+  - name: postgresql
+    alias: pg
+    version: 12.6.6
+    repository: https://charts.bitnami.com/bitnami

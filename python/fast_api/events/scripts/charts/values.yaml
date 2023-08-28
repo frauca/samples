@@ -1,0 +1,7 @@
+fairsBg:
+  replicaCount: 1
+pg:
+  auth:
+    username: fairs
+    password: fairs
+    database: fairs

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fairs-bg
+  labels:
+    app: fairs-bg
+spec:
+  replicas: {{ .Values.fairsBg.replicaCount }}
+  selector:
+    matchLabels:
+      app: fairs-bg
+  template:
+    metadata:
+      labels:
+        app: fairs-bg
+    spec:
+      containers:
+      - name: fairs-bg
+        image: fairs-bg:0.0.1
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - name: fairs-bg-config
+          mountPath: "/app/config.yaml"
+          subPath: config.yaml
+          readOnly: true
+      volumes:
+      - name: fairs-bg-config
+        secret:
+          secretName: fairs-bg-config

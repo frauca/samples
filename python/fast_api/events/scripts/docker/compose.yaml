@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:15.4
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=fairs
+      - POSTGRES_USER=fairs
+      - POSTGRES_DB=fairs

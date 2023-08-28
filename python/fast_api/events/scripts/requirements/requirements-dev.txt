@@ -1,0 +1,4 @@
+-e .
+-r requirements-test.txt
+mypy==1.5.1
+alembic==1.11.3

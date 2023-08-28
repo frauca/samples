@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: fairs-bg-config
+stringData:
+  config.yaml: |
+    {{- with .Values.pg.auth }}
+      database_url: postgresql://{{ .username }}:{{ .password }}@fairs-bg-pg/{{ .database }}
+    {{- end }}
