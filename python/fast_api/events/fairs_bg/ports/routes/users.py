@@ -12,5 +12,5 @@ router = APIRouter(prefix="/users",
                    tags=["users"])
 
 @router.get("/{id}",summary="Retrieve specific user")
-def get_user_by_id(id:int,user_service:UserService = Depends(get_user_service))-> User:
+def get_user_by_id(id:int,user_service:UserService = Depends(get_user_service))-> User | None:
     return user_service.get(id)

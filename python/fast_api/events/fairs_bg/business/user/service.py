@@ -6,5 +6,5 @@ class UserService:
     def __init__(self, dao: Dao[User]) -> None:
         self.dao: Dao[User] = dao
 
-    def get(self, id:int) -> User:
+    def get(self, id:int) -> User | None:
         return self.dao.findById(id)

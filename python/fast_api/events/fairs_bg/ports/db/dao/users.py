@@ -18,8 +18,10 @@ class UserDao(Dao[User]):
     def __init__(self, db: Session) -> None:
         self.db = db
 
-    def findById(self, id: int) -> User:
-        user_db:UserDB = self.db.query(UserDB).get(id)
+    def findById(self, id: int) -> User | None:
+        user_db:UserDB | None = self.db.get(UserDB,id)
+        if not user_db:
+            return None
         return self._adapt_from_db(user_db)
     
     def _adapt_from_db(self,user:UserDB) -> User:

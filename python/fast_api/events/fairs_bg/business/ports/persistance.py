@@ -12,5 +12,5 @@ P = TypeVar("P")
 
 class Dao(Generic[P], metaclass=abc.ABCMeta):
     @abc.abstractmethod
-    def findById(self, id: int) -> P:
+    def findById(self, id: int) -> P | None:
         raise NotImplementedError
