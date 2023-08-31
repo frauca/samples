@@ -1,9 +1,12 @@
 import logging
+from fairs_bg.business.errors.fairs_error import FairsException
 from fairs_bg.ports.config.settings import FairsSettings
 from fairs_bg.logs.setup import get_logger
 from fairs_bg.ports import routes
 import uvicorn
 from fastapi import FastAPI
+
+from fairs_bg.ports.routes.errors import http_error_handler
 
 SETTINGS_PATH: str = "config.yaml"
 
@@ -25,6 +28,7 @@ def app_from(settings:FairsSettings) -> FastAPI:
     app = FastAPI()
     app.state.settings = settings
     app.include_router(routes.endpoints)
+    app.add_exception_handler(FairsException,http_error_handler)
     return app
 
 def generate_app() -> FastAPI:
