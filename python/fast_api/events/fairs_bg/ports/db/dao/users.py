@@ -1,11 +1,11 @@
+from typing import Tuple
 from fastapi import Depends
-from sqlalchemy import Column, Integer, String
-
-from fairs_bg.business.ports.persistance import Dao
-from fairs_bg.business.user.model import User
+from sqlalchemy import Column, Integer, Select, String
+from fairs_bg.business.user.model import User, UserDao
 from sqlalchemy.orm import Session
+from sqlalchemy import select
 
-from fairs_bg.ports.db.sqlalchemy import Base, get_db
+from fairs_bg.ports.db.sqlalchemy import Base, BaseAlchemyDao, get_db
 
 class UserDB(Base):
     __tablename__ = "users"
@@ -14,21 +14,20 @@ class UserDB(Base):
     name = Column(String, unique=True, index=True)    
     email = Column(String, unique=True, index=True)
 
-class UserDao(Dao[User]):
+class UserAlchemy(UserDao,BaseAlchemyDao[User,UserDB]):
     def __init__(self, db: Session) -> None:
-        self.db = db
-
-    def findById(self, id: int) -> User | None:
-        user_db:UserDB | None = self.db.get(UserDB,id)
-        if not user_db:
-            return None
-        return self._adapt_from_db(user_db)
+        super().__init__(db,UserDB)
+    
+    def findByName(self, name: str) -> User | None:
+        stmt:Select[Tuple[UserDB]] = select(UserDB).where(UserDB.name == name)
+        return self.db.scalar(stmt)
     
     def _adapt_from_db(self,user:UserDB) -> User:
         return User(**user.__dict__)
     
     def _adapt_from_business(self,user:User) -> UserDB:
         return UserDB(**user.model_dump())
+    
 
-def get_user_dao(db:Session = Depends(get_db)) -> Dao[User]:
-    return UserDao(db)
+def get_user_dao(db:Session = Depends(get_db)) -> UserAlchemy:
+    return UserAlchemy(db)

@@ -1,16 +1,22 @@
 import abc
-from collections.abc import Iterable
 from typing import Generic, TypeVar
 from pydantic import BaseModel
-
 
 class Persistable(BaseModel):
     id: int
 
-P = TypeVar("P")
+P = TypeVar("P",bound=Persistable)
 
-
-class Dao(Generic[P], metaclass=abc.ABCMeta):
+class ModelDao(Generic[P], metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def findById(self, id: int) -> P | None:
         raise NotImplementedError
+    
+    @abc.abstractmethod
+    def save(self,entity:P)->None:
+        raise NotImplementedError
+    
+    @abc.abstractmethod
+    def delete(self,id:int)->None:
+        raise NotImplementedError
+    

@@ -2,20 +2,21 @@ from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
 from fairs_bg.business.user.model import User
-from fairs_bg.ports.db.dao.users import UserDB
 
 
 def test_get_valid_user(client:TestClient,db:Session, user:User)->None:
-    new_user = UserDB(**user.model_dump())
+    new_user = User(**user.model_dump())
     new_user.name = 'get valid test user'
-    db.add(new_user)
-    db.commit()
-    response = client.get(f"/users/{new_user.id}")
+    response = client.post("/users",json=new_user.model_dump())
+    user_id = response.json()['id']
+    assert user_id
+    response = client.get(f"/users/{user_id}")
+
     assert response.status_code == 200
     assert response.json()['name'] == "get valid test user"
-    db.delete(new_user)
-    db.commit()
 
+    client.delete(f"/users/{user_id}")
+    
 def test_user_not_found(client:TestClient)->None:
     response = client.get(f"/users/666666")
     assert response.status_code == 404

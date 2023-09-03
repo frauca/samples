@@ -1,10 +1,15 @@
-from fairs_bg.business.ports.persistance import Dao
-from fairs_bg.business.user.model import User
+from fairs_bg.business.user.model import User,UserDao
 
 
 class UserService:
-    def __init__(self, dao: Dao[User]) -> None:
-        self.dao: Dao[User] = dao
+    def __init__(self, dao: UserDao) -> None:
+        self.dao: UserDao = dao
 
     def get(self, id:int) -> User | None:
         return self.dao.findById(id)
+    
+    def save(self, user:User) -> None:
+        self.dao.save(user)
+
+    def delete(self, id:int) -> None:
+        self.dao.delete(id) 

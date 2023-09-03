@@ -4,18 +4,25 @@ from fairs_bg.business.errors.fairs_error import FairsException
 from fairs_bg.business.user.model import User
 from fairs_bg.business.user.service import UserService
 
-from fairs_bg.ports.db.dao.users import UserDao, get_user_dao
+from fairs_bg.ports.db.dao.users import UserAlchemy, get_user_dao
+from fairs_bg.ports.routes.services.users import UserCommandService
 
 
-def get_user_service(dao:UserDao = Depends(get_user_dao)) -> UserService:
-    return UserService(dao)
+def get_user_service(dao:UserAlchemy = Depends(get_user_dao)) -> UserCommandService:
+    service = UserService(dao)
+    return UserCommandService(service)
 
 router = APIRouter(prefix="/users",
                    tags=["users"])
 
 @router.get("/{id}",summary="Retrieve specific user")
-def get_user_by_id(id:int,user_service:UserService = Depends(get_user_service))-> User | None:
-    user = user_service.get(id)
-    if not user:
-        raise FairsException(ErrorCode.NOT_FOUND,f"The user with the id '{id}' could not be found")
-    return user
+def get_user_by_id(id:int,service:UserCommandService = Depends(get_user_service))-> User:
+    return service.get(id)
+
+@router.post("",summary="Create new user or save existing one")
+def save_user(user:User,service:UserCommandService = Depends(get_user_service)) -> User:
+    return service.save(user)
+
+@router.delete("/{id}",summary="Delete user")
+def delete(id:int,service:UserCommandService = Depends(get_user_service))-> None:
+    return service.get(id)
