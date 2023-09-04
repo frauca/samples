@@ -25,4 +25,4 @@ def save_user(user:User,service:UserCommandService = Depends(get_user_service)) 
 
 @router.delete("/{id}",summary="Delete user")
 def delete(id:int,service:UserCommandService = Depends(get_user_service))-> None:
-    return service.get(id)
+    service.delete(id)

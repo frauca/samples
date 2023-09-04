@@ -34,14 +34,19 @@ class BaseAlchemyDao(ModelDao[P],Generic[P,PDB]):
           self.type:PDB = type
 
     def findById(self, id: int) -> P | None:
-         el:PDB|None = self._findByIdDB(id)
-         if not el:
-              return None
-         return self._adapt_from_db(el)
+         try:
+            el:PDB|None = self._findByIdDB(id)
+            if not el:
+                return None
+            return self._adapt_from_db(el)
+         except Exception as error:
+            raise self.conver_error(error)
     
-    def save(self, model:P)->None:
-         entity = self._adapt_from_business(model)
-         self.db.add(entity)
+    def save(self, model:P)->P:
+        entity = self._adapt_from_business(model)
+        self.db.add(entity)
+        self.db.flush()
+        return self._adapt_from_db(entity)
 
     def delete(self, id:int) -> None:
          entity:PDB|None = self._findByIdDB(id)
@@ -59,6 +64,9 @@ class BaseAlchemyDao(ModelDao[P],Generic[P,PDB]):
     def _adapt_from_business(self,user:P) -> PDB:
         raise NotADirectoryError
     
+    def conver_error(self,error:Exception) -> FairsException:
+         return FairsException(ErrorCode.UNEXPECTED,f"Dad it's not my fault is another one fault, look the error {type(error)} says: {str(error)}")
+    
 def transactional(dao:ModelDao,process: Callable[[],T])->T:
     if not isinstance(dao,BaseAlchemyDao):
          raise FairsException(ErrorCode.UNEXPECTED,"Breaking news: Our code had a mini rebellion. An inspirated developer took a decision that another one did not see it comming. ")
@@ -68,4 +76,4 @@ def transactional(dao:ModelDao,process: Callable[[],T])->T:
         return result
     except Exception as error:
         dao.db.rollback()
-        raise error
+        raise dao.conver_error(error)

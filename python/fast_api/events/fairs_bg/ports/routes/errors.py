@@ -20,6 +20,8 @@ def _get_status_from_code(code:ErrorCode) -> int:
     match code:
         case ErrorCode.NOT_FOUND:
             return 404
+        case ErrorCode.USER_DUPLICATED_EMAIL:
+            return 400
         case _:
             return 500
         

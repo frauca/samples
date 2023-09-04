@@ -8,8 +8,8 @@ class UserService:
     def get(self, id:int) -> User | None:
         return self.dao.findById(id)
     
-    def save(self, user:User) -> None:
-        self.dao.save(user)
+    def save(self, user:User) -> User:
+        return self.dao.save(user)
 
     def delete(self, id:int) -> None:
         self.dao.delete(id) 

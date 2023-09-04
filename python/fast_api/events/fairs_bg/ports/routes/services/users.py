@@ -17,8 +17,7 @@ class UserCommandService:
     
     def save(self,user:User) -> User:
         def service_save()->User:
-            self.service.save(user)
-            return user
+            return self.service.save(user)
         return transactional(self.service.dao,service_save)
     
     def delete(self,id:int)->None:

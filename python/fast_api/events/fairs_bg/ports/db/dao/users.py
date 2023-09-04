@@ -1,6 +1,10 @@
 from typing import Tuple
 from fastapi import Depends
+from psycopg2.errors import UniqueViolation
 from sqlalchemy import Column, Integer, Select, String
+from sqlalchemy.exc import IntegrityError
+from fairs_bg.business.errors.error_code import ErrorCode
+from fairs_bg.business.errors.fairs_error import FairsException
 from fairs_bg.business.user.model import User, UserDao
 from sqlalchemy.orm import Session
 from sqlalchemy import select
@@ -21,6 +25,13 @@ class UserAlchemy(UserDao,BaseAlchemyDao[User,UserDB]):
     def findByName(self, name: str) -> User | None:
         stmt:Select[Tuple[UserDB]] = select(UserDB).where(UserDB.name == name)
         return self.db.scalar(stmt)
+    
+    def conver_error(self, error: Exception) -> FairsException:
+        if (isinstance(error,IntegrityError) 
+            and isinstance(error.orig,UniqueViolation) 
+            and "unique_email" in str(error.orig)):
+            return FairsException(ErrorCode.USER_DUPLICATED_EMAIL,"The email is already present in our system. To update the user you need to know the id of the user.")
+        return super().conver_error(error)
     
     def _adapt_from_db(self,user:UserDB) -> User:
         return User(**user.__dict__)
