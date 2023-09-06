@@ -6,18 +6,19 @@ from fairs_bg.business.user.model import User
 
 @pytest.mark.asyncio
 async def test_get_valid_user(client:AsyncClient,db:Session, user:User)->None:
-    new_user = User(**user.model_dump())
-    new_user.id = None
-    new_user.name = 'get valid test user'
-    response = await client.post("/users",json=new_user.model_dump())
-    user_id = response.json()['id']
-    assert user_id
-    response = await client.get(f"/users/{user_id}")
+    for i in range(100):
+        new_user = User(**user.model_dump())
+        new_user.id = None
+        new_user.name = 'get valid test user'
+        response = await client.post("/users",json=new_user.model_dump())
+        user_id = response.json()['id']
+        assert user_id
+        response = await client.get(f"/users/{user_id}")
 
-    assert response.status_code == 200
-    assert response.json()['name'] == "get valid test user"
+        assert response.status_code == 200
+        assert response.json()['name'] == "get valid test user"
 
-    await client.delete(f"/users/{user_id}")
+        await client.delete(f"/users/{user_id}")
     
 @pytest.mark.asyncio
 async def test_user_not_found(client:AsyncClient)->None:

@@ -14,8 +14,7 @@ def session(settings:FairsSettings)->AsyncSession:
         return async_sessionmaker(engine,expire_on_commit=False)()
 
 async def get_db(request:Request)->AsyncGenerator[AsyncSession,None]:
-    settings:FairsSettings = request.app.state.settings
-    db = session(settings)
+    db = request.app.state.db_session
     try:
         async with db.begin():
             yield db
