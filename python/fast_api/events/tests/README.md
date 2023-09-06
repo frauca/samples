@@ -33,7 +33,7 @@ We did execute it without authentication and syncronously (commit 648a4da)
 | 10    | 152 | 12%   |
 | 20    | 162 | 35%   |
 
-we have added syncronous (commit ) and run the tests again. I have to say that the results really impacted me:
+we have added syncronous (commit 85eb22c) and run the tests again. I have to say that the results really impacted me:
 
 | users | rps | erors |
 |-------|-----|-------|
