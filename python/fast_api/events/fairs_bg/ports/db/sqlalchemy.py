@@ -9,12 +9,12 @@ from fairs_bg.business.errors.fairs_error import FairsException
 from fairs_bg.business.ports.persistance import P, ModelDao
 from fairs_bg.ports.config.settings import FairsSettings
 
-def session(settings:FairsSettings)->AsyncSession:
+def session(settings:FairsSettings)->async_sessionmaker[AsyncSession]:
         engine = create_async_engine(settings.database_url)
-        return async_sessionmaker(engine,expire_on_commit=False)()
+        return async_sessionmaker(engine,expire_on_commit=False)
 
 async def get_db(request:Request)->AsyncGenerator[AsyncSession,None]:
-    db = request.app.state.db_session
+    db = request.app.state.db_session()
     try:
         async with db.begin():
             yield db
