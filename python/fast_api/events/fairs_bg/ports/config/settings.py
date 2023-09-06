@@ -3,7 +3,7 @@ import yaml
 
 
 class FairsSettings(BaseModel):
-    database_url: str = "postgresql://fairs:fairs@localhost/fairs"
+    database_url: str = "postgresql+asyncpg://fairs:fairs@localhost/fairs"
     logging_conf: str = "logging.conf"
     workers: int = 1
 

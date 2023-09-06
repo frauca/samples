@@ -6,5 +6,5 @@ metadata:
 stringData:
   config.yaml: |
     {{- with .Values.pg.auth }}
-      database_url: postgresql://{{ .username }}:{{ .password }}@fairs-bg-pg/{{ .database }}
+      database_url: postgresql+asyncpg://{{ .username }}:{{ .password }}@fairs-bg-pg/{{ .database }}
     {{- end }}

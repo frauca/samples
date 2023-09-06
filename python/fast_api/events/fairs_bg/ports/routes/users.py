@@ -16,13 +16,13 @@ router = APIRouter(prefix="/users",
                    tags=["users"])
 
 @router.get("/{id}",summary="Retrieve specific user")
-def get_user_by_id(id:int,service:UserCommandService = Depends(get_user_service))-> User:
-    return service.get(id)
+async def get_user_by_id(id:int,service:UserCommandService = Depends(get_user_service))-> User:
+    return await service.get(id)
 
 @router.post("",summary="Create new user or save existing one")
-def save_user(user:User,service:UserCommandService = Depends(get_user_service)) -> User:
-    return service.save(user)
+async def save_user(user:User,service:UserCommandService = Depends(get_user_service)) -> User:
+    return await service.save(user)
 
 @router.delete("/{id}",summary="Delete user")
-def delete(id:int,service:UserCommandService = Depends(get_user_service))-> None:
-    service.delete(id)
+async def delete(id:int,service:UserCommandService = Depends(get_user_service))-> None:
+    await service.delete(id)

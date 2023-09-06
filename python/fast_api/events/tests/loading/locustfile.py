@@ -8,7 +8,7 @@ def random_string(length:int)->str:
 class UserCreation(HttpUser):
 
     @task
-    def create_get_delete(self)->None:
+    def create_get_delete_users(self)->None:
         name = random_string(20)
         response = self.client.post("/users", json={
             "id":None,

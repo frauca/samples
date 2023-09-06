@@ -5,11 +5,11 @@ class UserService:
     def __init__(self, dao: UserDao) -> None:
         self.dao: UserDao = dao
 
-    def get(self, id:int) -> User | None:
-        return self.dao.findById(id)
+    async def get(self, id:int) -> User | None:
+        return await self.dao.findById(id)
     
-    def save(self, user:User) -> User:
-        return self.dao.save(user)
+    async def save(self, user:User) -> User:
+        return await self.dao.save(user)
 
-    def delete(self, id:int) -> None:
-        self.dao.delete(id) 
+    async def delete(self, id:int) -> None:
+        await self.dao.delete(id) 

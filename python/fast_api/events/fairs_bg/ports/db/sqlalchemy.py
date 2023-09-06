@@ -1,60 +1,64 @@
 import abc
-from typing import Callable, Generator, Generic, TypeVar
+from typing import Any, AsyncGenerator, Generic, Type, TypeVar, Coroutine
 from fastapi import Request
-from sqlalchemy import create_engine
-from sqlalchemy.orm import Session, sessionmaker, declarative_base
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker, AsyncAttrs
+from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy import select
 from fairs_bg.business.errors.error_code import ErrorCode
 from fairs_bg.business.errors.fairs_error import FairsException
 from fairs_bg.business.ports.persistance import P, ModelDao
 from fairs_bg.ports.config.settings import FairsSettings
 
+def session(settings:FairsSettings)->AsyncSession:
+        engine = create_async_engine(settings.database_url)
+        return async_sessionmaker(engine,expire_on_commit=False)()
 
-
-def session(settings:FairsSettings)->Session:
-        engine = create_engine(settings.database_url, connect_args={})
-        return sessionmaker(bind=engine)()
-
-def get_db(request:Request)->Generator[Session,None,None]:
+async def get_db(request:Request)->AsyncGenerator[AsyncSession,None]:
     settings:FairsSettings = request.app.state.settings
     db = session(settings)
     try:
-        yield db
+        async with db.begin():
+            yield db
     finally:
-        db.close()
+        await db.close()
 
-Base = declarative_base()
+class Base(AsyncAttrs, DeclarativeBase):
+    pass
 
-PDB = TypeVar('PDB')
+PDB = TypeVar('PDB',bound=AsyncAttrs)
 T = TypeVar('T')
 
 class BaseAlchemyDao(ModelDao[P],Generic[P,PDB]):
-    def __init__(self,db:Session,type:PDB) -> None:
+    def __init__(self,db:AsyncSession,type:Type[PDB]) -> None:
           super().__init__()
-          self.db:Session = db
-          self.type:PDB = type
+          self.db:AsyncSession = db
+          self.type:Type[PDB] = type
 
-    def findById(self, id: int) -> P | None:
+    async def findById(self, id: int) -> P | None:
          try:
-            el:PDB|None = self._findByIdDB(id)
+            el:PDB|None = await self._findByIdDB(id)
             if not el:
                 return None
             return self._adapt_from_db(el)
          except Exception as error:
             raise self.conver_error(error)
     
-    def save(self, model:P)->P:
+    async def save(self, model:P)->P:
         entity = self._adapt_from_business(model)
         self.db.add(entity)
-        self.db.flush()
+        await self.db.flush()
         return self._adapt_from_db(entity)
 
-    def delete(self, id:int) -> None:
-         entity:PDB|None = self._findByIdDB(id)
+    async def delete(self, id:int) -> None:
+         entity:PDB|None = await self._findByIdDB(id)
          if entity:
-            self.db.delete(entity)
+            await self.db.delete(entity)
     
-    def _findByIdDB(self, id:int) -> PDB | None:
-         return self.db.query(self.type).get(id)
+    async def _findByIdDB(self, id:int) -> PDB | None:
+         result = await self.db.execute(
+             select(self.type).where(self.type.id == id)
+             )
+         return result.scalar_one_or_none()
     
     @abc.abstractmethod
     def _adapt_from_db(self,user:PDB) -> P:
@@ -67,13 +71,13 @@ class BaseAlchemyDao(ModelDao[P],Generic[P,PDB]):
     def conver_error(self,error:Exception) -> FairsException:
          return FairsException(ErrorCode.UNEXPECTED,f"Dad it's not my fault is another one fault, look the error {type(error)} says: {str(error)}")
     
-def transactional(dao:ModelDao,process: Callable[[],T])->T:
+async def transactional(dao:ModelDao,process: Coroutine[Any,Any,T])->T:
     if not isinstance(dao,BaseAlchemyDao):
          raise FairsException(ErrorCode.UNEXPECTED,"Breaking news: Our code had a mini rebellion. An inspirated developer took a decision that another one did not see it comming. ")
     try:
-        result = process()
-        dao.db.commit()
+        result = await process
+        await dao.db.commit()
         return result
     except Exception as error:
-        dao.db.rollback()
+        await dao.db.rollback()
         raise dao.conver_error(error)

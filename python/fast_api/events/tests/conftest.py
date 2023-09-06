@@ -1,3 +1,4 @@
+
 from fairs_bg.business.user.model import User
 import pytest
 
