@@ -42,4 +42,13 @@ we have added syncronous (commit 85eb22c) and run the tests again. I have to say
 | 10    | 26  | 17%   |
 | 20    | 30  | 47%   |
 
-Really much worst. I would keep with async just for learning purposes but the results somehow hit me hard
+Really much worst. I would keep with async just for learning purposes but the results somehow hit me hard.
+
+I found the error. The correction is in the commit (b1ab96c). With this correction the async execution shows as
+
+| users | rps | erors |
+|-------|-----|-------|
+| 1     | 264 | 0%    |
+| 5     | 490 | 0%    |
+| 10    | 251 | 0%    |
+| 20    | 150 | 0%    |
