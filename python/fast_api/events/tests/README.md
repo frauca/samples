@@ -37,9 +37,9 @@ we have added syncronous (commit 85eb22c) and run the tests again. I have to say
 
 | users | rps | erors |
 |-------|-----|-------|
-| 1     | 66  | 0%    |
-| 5     | 134 | 0%    |
-| 10    | 152 | 12%   |
-| 20    | 162 | 35%   |
+| 1     | 24  | 0%    |
+| 5     | 24  | 0%    |
+| 10    | 26  | 17%   |
+| 20    | 30  | 47%   |
 
 Really much worst. I would keep with async just for learning purposes but the results somehow hit me hard
