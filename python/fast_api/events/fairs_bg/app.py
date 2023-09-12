@@ -5,7 +5,7 @@ from fairs_bg.ports.config.settings import FairsSettings
 from fairs_bg.logs.setup import get_logger
 from fairs_bg.ports import routes
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from sqlalchemy.exc import SQLAlchemyError
 from fairs_bg.ports.db.sqlalchemy import session
 
@@ -33,6 +33,7 @@ def app_from(settings:FairsSettings) -> FastAPI:
     app.include_router(routes.endpoints)
     app.add_exception_handler(FairsException,http_error_handler)
     app.add_exception_handler(SQLAlchemyError,http_error_handler)
+    app.add_exception_handler(HTTPException,http_error_handler)
     return app
 
 def generate_app() -> FastAPI:

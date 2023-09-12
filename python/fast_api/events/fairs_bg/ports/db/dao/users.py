@@ -11,33 +11,37 @@ from sqlalchemy import select
 
 from fairs_bg.ports.db.sqlalchemy import Base, BaseAlchemyDao, get_db
 
+
 class UserDB(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, unique=True, index=True)    
+    name = Column(String, unique=True, index=True)
     email = Column(String, unique=True, index=True)
 
-class UserAlchemy(UserDao,BaseAlchemyDao[User,UserDB]):
-    def __init__(self, db: AsyncSession) -> None:
-        super().__init__(db,UserDB)
-    
-    def findByName(self, name: str) -> User | None:
-        stmt:Select[Tuple[UserDB]] = select(UserDB).where(UserDB.name == name)
-        return self.db.scalar(stmt)
-    
-    def conver_error(self, error: Exception) -> FairsException:
-        if (isinstance(error,IntegrityError) 
-            and "unique_email" in str(error)):
-            return FairsException(ErrorCode.USER_DUPLICATED_EMAIL,"The email is already present in our system. To update the user you need to know the id of the user.")
-        return super().conver_error(error)
-    
-    def _adapt_from_db(self,user:UserDB) -> User:
-        return User(**user.__dict__)
-    
-    def _adapt_from_business(self,user:User) -> UserDB:
-        return UserDB(**user.model_dump())
-    
 
-def get_user_dao(db:AsyncSession = Depends(get_db)) -> UserAlchemy:
+class UserAlchemy(UserDao, BaseAlchemyDao[User, UserDB]):
+    def __init__(self, db: AsyncSession) -> None:
+        super().__init__(db, UserDB)
+
+    def findByEmail(self, mail: str) -> User | None:
+        stmt: Select[Tuple[UserDB]] = select(UserDB).where(UserDB.email == mail)
+        return self.db.scalar(stmt)
+
+    def conver_error(self, error: Exception) -> FairsException:
+        if isinstance(error, IntegrityError) and "unique_email" in str(error):
+            return FairsException(
+                ErrorCode.USER_DUPLICATED_EMAIL,
+                "The email is already present in our system. To update the user you need to know the id of the user.",
+            )
+        return super().conver_error(error)
+
+    def _adapt_from_db(self, user: UserDB) -> User:
+        return User(**user.__dict__)
+
+    def _adapt_from_business(self, user: User) -> UserDB:
+        return UserDB(**user.model_dump())
+
+
+def get_user_dao(db: AsyncSession = Depends(get_db)) -> UserAlchemy:
     return UserAlchemy(db)

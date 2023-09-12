@@ -8,6 +8,8 @@ class UserService:
     async def get(self, id:int) -> User | None:
         return await self.dao.findById(id)
     
+    async def findByEmail(self, email:str) -> User | None:
+        return await self.dao.findByEmail(email)
     async def save(self, user:User) -> User:
         return await self.dao.save(user)
 

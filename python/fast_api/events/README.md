@@ -22,3 +22,8 @@ This project will have just the background part of the application. If I do find
 * [developer](./scripts/README.md)
 * [tests](./test/README.md)
 
+## Disclaimers
+
+### Security
+
+It is quite obvious that this project is not secure at all. This is just a project to learn. By the moment I have not the focus on the sucurity rather than adding the layer itself. The security in place is just to add a security layer, it would be easily replaced by OpenId one where we create a user from the email or log if it exists.
