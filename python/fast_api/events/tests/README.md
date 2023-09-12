@@ -5,7 +5,7 @@ To run the test
 ```
 pip install -r scripts/requirements/requirements-test.txt 
 coverage run -m pytest
-coverage report
+coverage report --show-missing
 ```
 
 ## Loading tests
