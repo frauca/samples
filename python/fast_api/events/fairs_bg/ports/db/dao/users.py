@@ -1,7 +1,7 @@
 from typing import Tuple
 from fastapi import Depends
-from asyncpg.exceptions import UniqueViolationError
-from sqlalchemy import Column, Integer, Select, String
+from sqlalchemy.orm import mapped_column, Mapped
+from sqlalchemy import Select
 from sqlalchemy.exc import IntegrityError
 from fairs_bg.business.errors.error_code import ErrorCode
 from fairs_bg.business.errors.fairs_error import FairsException
@@ -15,18 +15,21 @@ from fairs_bg.ports.db.sqlalchemy import Base, BaseAlchemyDao, get_db
 class UserDB(Base):
     __tablename__ = "users"
 
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, unique=True, index=True)
-    email = Column(String, unique=True, index=True)
+    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    name: Mapped[str] = mapped_column(unique=True, index=True)
+    email: Mapped[str] = mapped_column(unique=True, index=True)
 
 
 class UserAlchemy(UserDao, BaseAlchemyDao[User, UserDB]):
     def __init__(self, db: AsyncSession) -> None:
         super().__init__(db, UserDB)
 
-    def findByEmail(self, mail: str) -> User | None:
+    async def findByEmail(self, mail: str) -> User | None:
         stmt: Select[Tuple[UserDB]] = select(UserDB).where(UserDB.email == mail)
-        return self.db.scalar(stmt)
+        raw_user = await self.db.scalar(stmt)
+        if not raw_user:
+            return None
+        return self._adapt_from_db(raw_user)
 
     def conver_error(self, error: Exception) -> FairsException:
         if isinstance(error, IntegrityError) and "unique_email" in str(error):

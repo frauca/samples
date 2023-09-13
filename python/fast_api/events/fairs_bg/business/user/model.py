@@ -11,5 +11,5 @@ class User(Persistable):
 
 class UserDao(ModelDao[User], metaclass=abc.ABCMeta):
     @abc.abstractmethod
-    def findByEmail(self, email: str) -> User | None:
+    async def findByEmail(self, email: str) -> User | None:
         raise NotImplementedError
