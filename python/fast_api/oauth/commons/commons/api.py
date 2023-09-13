@@ -27,3 +27,9 @@ def random_state()->str:
 
 def get_okta_authorize(client_id:str,port:int,state:str)->str:
     return f"{get_okta_base()}/oauth2/v1/authorize?client_id={client_id}&response_type=code&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A{port}%2Fauthorization-code%2Fcallback&state={state}"
+
+def get_redirect_uri()-> None:
+    client_id = get_client_id_1()
+    state = random_state()
+    redirect_uri = get_okta_authorize(client_id,8080,state)
+    print(f"open {redirect_uri}")
