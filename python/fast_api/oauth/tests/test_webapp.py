@@ -43,3 +43,11 @@ def test_get_user_info()->None:
                                      headers={'Authorization': f'Bearer {token}'})
     user_json = userinfo_response.json()
     assert user_json.get("sub_id") == "user1@fake.user.com"
+
+def test_webapp_call_resource()->None:
+    token = "eyJraWQiOiJzcFdiSWhZQ0gxUWNqRUFhQm11c0pTVmM4dURFbndvLXg4T3VQTVJZeVZNIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIwMHViNXh0ejkyVURsRHJhazVkNyIsIm5hbWUiOiJ1c2VyMSBmYWtlIiwidmVyIjoxLCJpc3MiOiJodHRwczovL2Rldi0zNDIxMDU0Ny5va3RhLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6IjBvYXQ1ejB2MzR2dGVna1c2NWQ2IiwiaWF0IjoxNjk0Njc0NzU1LCJleHAiOjE2OTQ2NzgzNTUsImp0aSI6IklELk5lTmFoeDZvTXlvUjdySVNoeVVKM2Q4OUtzTHJNa3Q2UGwweVBSb01HUUUiLCJhbXIiOlsicHdkIl0sImlkcCI6IjAwb3Q1ODlxNGRmd3hlZzVtNWQ2IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlcjFAZmFrZS51c2VyLmNvbSIsImF1dGhfdGltZSI6MTY5NDY2OTc5MSwiYXRfaGFzaCI6IlFrYWdKd0VsbnlXNDZaYUZVa3BfRlEiLCJzdWJfaWQiOiJ1c2VyMUBmYWtlLnVzZXIuY29tIn0.W1PqTmZYCkzL6wC0g3u4v4gOg77xwba9pEWexc0dE00XwpM-WxuH2lpkeX0264ovZOqwNvgOyYZ54oBT1a3kEVhhUYQchouZmpwfhQcQJcFFf8rrMQiNjMZDKYV12oX6IC9p7ryX1GLEaXk7qX_ImujKe9lSNfXfsWZtWCDcHDikc1SJsrs4_7Ni1cd-Vgja9iUkz9SowHC0T0Vt8qqFxOXA71do9Js2kPCHv_Eadtk8zW0rHxvORFTx5cL-Je3-yzDr6_wZu6D_ia9aZ_iZDP_72TFd6O3A4lCzACcFavO9Piv7yrSjDCSFsoN6j2Un8Unsez2TbB0-DV-UqzjVpA"
+
+    response = httpx.get("http://localhost:8080/call-resource",headers={"Authorization":f"Bearer {token}"})
+    
+    assert response.status_code == 200
+    assert os.environ['OKTA_USER'] in response.text

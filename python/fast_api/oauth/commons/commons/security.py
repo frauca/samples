@@ -1,18 +1,17 @@
-import asyncio
 from fastapi import HTTPException, status
 import httpx
 from okta_jwt_verifier import AccessTokenVerifier, IDTokenVerifier,JWTUtils
 from commons.api import get_client_id_1, get_client_secret_1, get_local_callback, get_okta_base, get_okta_issuer, get_okta_token, get_port
 
-def _get_user_from_token(token:str)->str:
+def _get_user_from_token(token:str, claim_name)->str:
     headers,claims,signing,signature = JWTUtils.parse_token(token)
-    if not 'sub_id' in claims:
+    if not claim_name in claims:
          raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Can not find sub_id in claims",
+            detail=f"Can not find {claim_name} in claims",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    return claims['sub_id']
+    return claims[claim_name]
 
 async def _raise_if_token_id_not_valid(token:str)->None:
     verifier = IDTokenVerifier(get_okta_issuer(),get_client_id_1())
@@ -28,7 +27,7 @@ async def _raise_if_access_token_not_valid(token:str)->None:
     except Exception as err:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail=str(err)) from err
 
-async def validate_user(token:str|None)->str:
+async def validate_user(token:str|None, claim_name='sub_id')->str:
     if not token:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -36,7 +35,7 @@ async def validate_user(token:str|None)->str:
             headers={"WWW-Authenticate": "Bearer"},
         )
     await _raise_if_token_id_not_valid(token)
-    return _get_user_from_token(token)
+    return _get_user_from_token(token,claim_name)
 
 
 async def login_code(code:str|None)->dict:

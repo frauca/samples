@@ -1,9 +1,11 @@
 import asyncio
+import resource
 from typing import Annotated
-from fastapi import Depends, FastAPI, Request
+from fastapi import Depends, FastAPI, HTTPException, Request,status
 from fastapi.security import OAuth2AuthorizationCodeBearer
+import httpx
 
-from webapp.security import login_code, validate_user
+from commons.security import login_code, validate_user
 
 app = FastAPI()
 oauth2_scheme = OAuth2AuthorizationCodeBearer(authorizationUrl="/auth-code/callback",tokenUrl="token")
@@ -20,3 +22,12 @@ def protected(user: Annotated[str, Depends(get_current_user)])->str:
 async def login(request: Request):
     code = request.query_params.get("code")
     return await login_code(code)
+
+@app.get("/call-resource")
+def call_resource(user: Annotated[str, Depends(get_current_user)],
+                  token: Annotated[str, Depends(oauth2_scheme)]) -> str:
+    response = httpx.get("http://localhost:8001/protected",
+                         headers={'Authorization': f'Bearer {token}'})
+    if response.status_code>299:
+        raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR, detail=response.text)
+    return response.text

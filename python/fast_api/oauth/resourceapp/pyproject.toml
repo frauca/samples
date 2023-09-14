@@ -3,17 +3,18 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "commons"
+name = "resourceapp"
 authors = [{ name = "Roger Frauca", email = "roger.frauca@gmail.com" }]
-description = "Testing webapp"
+description = "Testing resource app"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "BSD-3-Clause" }
 classifiers = ["Framework :: Django", "Programming Language :: Python :: 3"]
-dependencies = ["httpx == 0.25.0","fastapi[all] == 0.103.1",
-    "okta-jwt-verifier == 0.2.4"]
+dependencies = ["fastapi[all] == 0.103.1", "uvicorn == 0.23.2"]
 dynamic = ["version"]
 
+[project.scripts]
+resource = "resource.__main__:main"
 
 [tool.mypy]
 python_version = "3.11"

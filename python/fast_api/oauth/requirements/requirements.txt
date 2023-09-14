@@ -1,3 +1,4 @@
 -e webapp
 -e commons
+-e resourceapp
 python-dotenv == 1.0.0
