@@ -5,7 +5,7 @@ from fastapi import Depends, FastAPI, HTTPException, Request,status
 from fastapi.security import OAuth2AuthorizationCodeBearer
 import httpx
 
-from commons.security import login_code, validate_user
+from commons.security import load_from_session, login_code, validate_user
 
 app = FastAPI()
 oauth2_scheme = OAuth2AuthorizationCodeBearer(authorizationUrl="/auth-code/callback",tokenUrl="token")
@@ -26,8 +26,9 @@ async def login(request: Request):
 @app.get("/call-resource")
 def call_resource(user: Annotated[str, Depends(get_current_user)],
                   token: Annotated[str, Depends(oauth2_scheme)]) -> str:
+    access_token = load_from_session(token)
     response = httpx.get("http://localhost:8001/protected",
-                         headers={'Authorization': f'Bearer {token}'})
+                         headers={'Authorization': f'Bearer {access_token}'})
     if response.status_code>299:
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR, detail=response.text)
     return response.text
