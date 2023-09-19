@@ -1,5 +1,5 @@
 import abc
-from typing import Any, AsyncGenerator, Generic, Type, TypeVar, Coroutine
+from typing import Any, AsyncGenerator, Generic, TypeVar, Coroutine
 from fastapi import Request
 from sqlalchemy.ext.asyncio import (
     create_async_engine,
@@ -33,7 +33,7 @@ class Base(AsyncAttrs, DeclarativeBase):
     pass
 
 
-PDB = TypeVar("PDB", bound=Base)
+PDB = TypeVar("PDB", bound=type[Base])
 T = TypeVar("T")
 
 
@@ -45,7 +45,7 @@ class BaseAlchemyDao(ModelDao[P], Generic[P, PDB]):
 
     async def findById(self, id: int) -> P | None:
         try:
-            el: PDB | None = await self._findByIdDB(id)
+            el: PDB | None = await self.findByIdDB(id)
             if not el:
                 return None
             return self._adapt_from_db(el)
@@ -53,17 +53,17 @@ class BaseAlchemyDao(ModelDao[P], Generic[P, PDB]):
             raise self.conver_error(error)
 
     async def save(self, model: P) -> P:
-        entity = self._adapt_from_business(model)
+        entity = await self._adapt_from_business(model)
         self.db.add(entity)
         await self.db.flush()
         return self._adapt_from_db(entity)
 
     async def delete(self, id: int) -> None:
-        entity: PDB | None = await self._findByIdDB(id)
+        entity: PDB | None = await self.findByIdDB(id)
         if entity:
             await self.db.delete(entity)
 
-    async def _findByIdDB(self, id: int) -> PDB | None:
+    async def findByIdDB(self, id: int) -> PDB | None:
         result = await self.db.execute(select(self.type).where(self.type.id == id))
         return result.scalar_one_or_none()
 
@@ -72,7 +72,7 @@ class BaseAlchemyDao(ModelDao[P], Generic[P, PDB]):
         raise NotImplementedError
 
     @abc.abstractmethod
-    def _adapt_from_business(self, user: P) -> PDB:
+    async def _adapt_from_business(self, user: P) -> PDB:
         raise NotADirectoryError
 
     def conver_error(self, error: Exception) -> FairsException:

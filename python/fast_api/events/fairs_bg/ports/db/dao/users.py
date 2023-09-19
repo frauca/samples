@@ -20,7 +20,7 @@ class UserDB(Base):
     email: Mapped[str] = mapped_column(unique=True, index=True)
 
 
-class UserAlchemy(UserDao, BaseAlchemyDao[User, UserDB]):
+class UserAlchemy(UserDao, BaseAlchemyDao[User, type[UserDB]]):
     def __init__(self, db: AsyncSession) -> None:
         super().__init__(db, UserDB)
 
@@ -39,11 +39,19 @@ class UserAlchemy(UserDao, BaseAlchemyDao[User, UserDB]):
             )
         return super().conver_error(error)
 
-    def _adapt_from_db(self, user: UserDB) -> User:
+    @classmethod
+    def to_business(cls, user: UserDB) -> User:
         return User(**user.__dict__)
 
-    def _adapt_from_business(self, user: User) -> UserDB:
+    def _adapt_from_db(self, user: UserDB) -> User:
+        return UserAlchemy.to_business(user)
+
+    @classmethod
+    def from_business(cls, user: User) -> UserDB:
         return UserDB(**user.model_dump())
+
+    async def _adapt_from_business(self, user: User) -> UserDB:
+        return UserAlchemy.from_business(user)
 
 
 def get_user_dao(db: AsyncSession = Depends(get_db)) -> UserAlchemy:

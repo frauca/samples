@@ -3,6 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
+version = "0.0.1"
 name = "fairs_bg"
 authors = [{ name = "Roger Frauca", email = "roger.frauca@gmail.com" }]
 description = "My package description"
@@ -16,7 +17,6 @@ dependencies = [
     "alembic == 1.11.3",
     "asyncpg == 0.28.0",
 ]
-dynamic = ["version"]
 
 [project.optional-dependencies]
 pdf = ["ReportLab>=1.2", "RXP"]

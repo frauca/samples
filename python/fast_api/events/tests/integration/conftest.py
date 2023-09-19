@@ -11,7 +11,7 @@ from alembic.config import Config as AlembicConfig
 from alembic import command as alembic_command
 from fairs_bg.business.user.model import User
 from fairs_bg.ports.config.settings import FairsSettings
-from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.ext.asyncio import AsyncSession,async_sessionmaker
 
 from fairs_bg.ports.db.sqlalchemy import session
 from fairs_bg.ports.routes.services.users import UserCommandService, get_user_service
@@ -59,7 +59,7 @@ async def unauth_client(app: FastAPI, user: User) -> AsyncGenerator[AsyncClient,
 
 
 @pytest.fixture(scope="session", autouse=True)
-def db(app_settings: FairsSettings) -> AsyncSession:
+def db(app_settings: FairsSettings) -> async_sessionmaker[AsyncSession]:
     return session(app_settings)
 
 
