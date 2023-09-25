@@ -14,7 +14,7 @@ from fairs_bg.ports.config.settings import FairsSettings
 from sqlalchemy.ext.asyncio import AsyncSession,async_sessionmaker
 
 from fairs_bg.ports.db.sqlalchemy import session
-from fairs_bg.ports.routes.services.users import UserCommandService, get_user_service
+from fairs_bg.ports.routes.users.service import UserCommandService, get_user_service
 
 
 @pytest.fixture(scope="session", autouse=True)

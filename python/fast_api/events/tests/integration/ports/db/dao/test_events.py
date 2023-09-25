@@ -5,6 +5,7 @@ from fairs_bg.business.user.model import User
 from fairs_bg.ports.db.dao.events import EventAlchemy, EventDB
 from datetime import datetime, timedelta
 from fairs_bg.ports.db.dao.users import UserAlchemy, UserDB
+from tests.conftest import unsaved_event, unsaved_user
 
 
 @pytest.mark.asyncio
@@ -33,17 +34,15 @@ async def test_adding_events(db: async_sessionmaker[AsyncSession]) -> None:
 
 @pytest.mark.asyncio
 async def test_find_bt_organizer(
-    db: async_sessionmaker[AsyncSession], unsaved_event: Event
-) -> None:
+    db: async_sessionmaker[AsyncSession]) -> None:
     con = db()
     try:
         async with con.begin():
-            unsaved_user = unsaved_event.organizer
+            un_user:User = unsaved_user()
             user_dao = UserAlchemy(con)
             event_dao = EventAlchemy(con, user_dao)
-            user = await user_dao.save(model=unsaved_user)
-            unsaved_event.organizer = user
-            event = await event_dao.save(unsaved_event)
+            user = await user_dao.save(model=un_user)
+            event = await event_dao.save(unsaved_event(owner=user))
             assert user.id and event.id
 
             user_events = await event_dao.findByOrganizer(organizer_id=user.id)

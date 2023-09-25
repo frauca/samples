@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from fairs_bg.business.user.model import User
 
-from fairs_bg.ports.routes.services.users import UserCommandService, get_user_service
+from fairs_bg.ports.routes.users.service import UserCommandService, get_user_service
 from fairs_bg.ports.security.basic import get_authenticated_user
 
 

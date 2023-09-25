@@ -63,16 +63,16 @@ class EventAlchemy(BaseAlchemyDao[Event, EventDB]):
             name=event.name,
             begining=event.begining,
             ending=event.ending,
-            organizer=UserAlchemy.to_business(event.organizer),
+            organizer_id=event.organizer_id,
         )
 
     async def _adapt_from_business(self, event: Event) -> EventDB:
-        if not event.organizer.id:
+        if not event.organizer_id:
             raise FairsException(
                 ErrorCode.UNEXPECTED,
                 f"I did not see this comming. An event {event.id} has no organizer, and I really put all my efforts to this not to happen",
             )
-        organizer_db = await self.user_dao.findByIdDB(event.organizer.id)
+        organizer_db = await self.user_dao.findByIdDB(event.organizer_id)
         return EventDB(
             id=event.id,
             name=event.name,

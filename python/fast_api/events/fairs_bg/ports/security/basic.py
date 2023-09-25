@@ -4,7 +4,7 @@ from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from fairs_bg.business.errors.fairs_error import FairsException
 
 from fairs_bg.business.user.model import User
-from fairs_bg.ports.routes.services.users import UserCommandService, get_user_service
+from fairs_bg.ports.routes.users.service import UserCommandService, get_user_service
 
 
 security = HTTPBasic()

@@ -5,7 +5,7 @@ from sqlalchemy import Select
 from sqlalchemy.exc import IntegrityError
 from fairs_bg.business.errors.error_code import ErrorCode
 from fairs_bg.business.errors.fairs_error import FairsException
-from fairs_bg.business.user.model import User, UserDao
+from fairs_bg.business.user.service import User, UserDao
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 
