@@ -1,3 +1,4 @@
+from fastapi import Depends
 from sqlalchemy import ForeignKey, PrimaryKeyConstraint, Result, select
 from sqlalchemy.orm import mapped_column, Mapped, relationship, joinedload
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -5,7 +6,7 @@ from fairs_bg.business.errors.error_code import ErrorCode
 from fairs_bg.business.errors.fairs_error import FairsException
 from fairs_bg.business.events.model import Event
 from fairs_bg.business.user.model import User
-from fairs_bg.ports.db.dao.users import UserAlchemy, UserDB
+from fairs_bg.ports.db.dao.users import UserAlchemy, UserDB, get_user_dao
 from fairs_bg.ports.db.sqlalchemy import Base, BaseAlchemyDao
 from datetime import datetime
 
@@ -80,3 +81,7 @@ class EventAlchemy(BaseAlchemyDao[Event, EventDB]):
             ending=event.ending,
             organizer=organizer_db,
         )
+
+
+def get_event_dao(user_dao: UserAlchemy = Depends(get_user_dao)) -> EventAlchemy:
+    return EventAlchemy(user_dao.db, user_dao)

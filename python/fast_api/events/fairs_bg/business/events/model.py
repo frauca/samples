@@ -1,7 +1,7 @@
 from datetime import datetime
-from typing import Annotated
+from typing import Annotated, Self
 
-from pydantic import Field, validator
+from pydantic import Field,  model_validator
 from fairs_bg.business.errors.error_code import ErrorCode
 from fairs_bg.business.errors.fairs_error import FairsException
 from fairs_bg.business.ports.persistance import Persistable
@@ -14,13 +14,11 @@ class Event(Persistable):
     ending: datetime
     organizer_id: int
 
-    @validator("ending", pre=True, always=True)
-    @classmethod
-    def validate_dates(cls, ending: datetime, values) -> datetime:
-        begining: datetime = values.get("begining")
-        if begining > ending:
+    @model_validator(mode='after')
+    def validate_dates(self) -> Self:
+        if self.begining > self.ending:
             raise FairsException(
                 ErrorCode.EVENT_DATE_ENDS_BEFORE_START,
-                f"End date {ending} must be after start date {begining}",
+                f"End date {self.ending} must be after start date {self.begining}",
             )
-        return ending
+        return self

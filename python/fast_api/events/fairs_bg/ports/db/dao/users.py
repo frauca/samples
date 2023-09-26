@@ -20,7 +20,7 @@ class UserDB(Base):
     email: Mapped[str] = mapped_column(unique=True, index=True)
 
 
-class UserAlchemy(UserDao, BaseAlchemyDao[User, type[UserDB]]):
+class UserAlchemy(UserDao, BaseAlchemyDao[User, UserDB]):
     def __init__(self, db: AsyncSession) -> None:
         super().__init__(db, UserDB)
 

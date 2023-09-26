@@ -33,15 +33,15 @@ class Base(AsyncAttrs, DeclarativeBase):
     pass
 
 
-PDB = TypeVar("PDB", bound=type[Base])
+PDB = TypeVar("PDB", bound=Base)
 T = TypeVar("T")
 
 
 class BaseAlchemyDao(ModelDao[P], Generic[P, PDB]):
-    def __init__(self, db: AsyncSession, entity_type: PDB) -> None:
+    def __init__(self, db: AsyncSession, entity_type: type[PDB]) -> None:
         super().__init__()
         self.db: AsyncSession = db
-        self.type: PDB = entity_type
+        self.type: type[PDB] = entity_type
 
     async def findById(self, id: int) -> P | None:
         try:

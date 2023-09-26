@@ -10,12 +10,13 @@ from tests.conftest import unsaved_event, unsaved_user
 
 def test_date_validations(user: User) -> None:
     with pytest.raises(FairsException) as failure:
+        assert user.id
         Event(
             id=1,
             name="event",
             begining=datetime.now(),
             ending=datetime.now() - timedelta(days=3),
-            organizer=user,
+            organizer_id=user.id,
         )
     error = failure.value
     assert error.type == ErrorCode.EVENT_DATE_ENDS_BEFORE_START
