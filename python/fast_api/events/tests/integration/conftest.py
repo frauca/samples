@@ -47,7 +47,7 @@ async def client(app: FastAPI, user: User) -> AsyncGenerator[AsyncClient, None]:
     async with AsyncClient(
         app=app,
         base_url="http://test",
-        headers=auth_header(user.email, "DoNotTellNoOne"),
+        headers=auth_header(user.email),
     ) as client:
         yield client
 
@@ -68,6 +68,6 @@ def event_loop():
     return asyncio.get_event_loop()
 
 
-def auth_header(user: str, password: str) -> dict:
+def auth_header(user: str, password: str="DoNotTellNoOne") -> dict:
     auth = b64encode(f"{user}:{password}".encode("utf-8")).decode("ascii")
     return {"Authorization": f"Basic {auth}"}
