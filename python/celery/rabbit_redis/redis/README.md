@@ -14,3 +14,6 @@ docker stop my-redis-container
 docker start my-redis-container
 python redis/read.py
 ```
+
+
+# redis two readers
