@@ -1,7 +1,8 @@
 from celery import Celery
 
-
-app = Celery('read', broker='redis://localhost:6379/0')
+rabbit_broker_url = "amqp://localhost:5672//"
+redis_broker_url='redis://localhost:6379/0'
+app = Celery('read', broker=redis_broker_url)
 
 @app.task
 def logger_task(message:str)->None:

@@ -1,5 +1,4 @@
 import sys
-from celery import Celery
 
 from read import logger_task
 
