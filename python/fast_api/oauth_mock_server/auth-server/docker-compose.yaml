@@ -1,0 +1,16 @@
+version: '3'
+services:
+  auth-mock:
+    container_name: authentication-mock
+    image: wiremock/wiremock:3.2.0 
+    ports:
+      - "5000:8080"
+    volumes:
+      - wiremock-volume:/home/wiremock/:rw
+volumes:
+  wiremock-volume:
+    driver: local
+    driver_opts:
+      type: "none"
+      o: "bind"
+      device: "wiremock-mappings"

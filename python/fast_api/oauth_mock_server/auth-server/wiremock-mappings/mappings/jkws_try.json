@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPath": "/oauth/jwks"
+    },
+    "response": {
+        "status": 200,
+
+        "body": "{\"keys\" : [ {\"kid\" : \"1438289820780\", \"crv\":\"P-256\",\"kty\":\"EC\",\"x\":\"2bqlxpmzxPza9X2o-U1BudmEBThQIkM-sqnll9LTBK8\",\"y\":\"NV7cZ7Xji_y0xRsusQHxw45wh4TyuOkJp-nX2_OUe-c\"} ]}",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

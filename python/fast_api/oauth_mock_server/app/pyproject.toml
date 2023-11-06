@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-oauth"
+version = "0.0.0"
+description = 'OAUTH with mock server'
+requires-python = ">=3.11"
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "License :: Sony Semiconductor Solutions Corporation",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "fastapi==0.104.1",
+  "uvicorn[standard]==0.23.2",
+  "pyjwt==2.8.0","cryptography==41.0.5"
+  ]
+
