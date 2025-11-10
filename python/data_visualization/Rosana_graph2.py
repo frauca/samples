@@ -125,48 +125,77 @@ def read_db_files(files:list[Path])->DataFrame:
     print(f"Total rows after processing: {len(ordered_df)}")
     return ordered_df
 
-def separate_by_dut_id(df:DataFrame)->dict[str,DataFrame]:
-    dut_dict:dict[str,DataFrame] = {}
+
+def separate_by_dut_id(df: DataFrame, filas_por_grupo: int) -> dict[str, dict[str, DataFrame]]:
+
+    dut_dict: dict[str, dict[str, DataFrame]] = {}
     unique_dut_ids = df['dut_id'].unique()
+
     for dut_id in unique_dut_ids:
-        dut_dict[dut_id] = df[df['dut_id'] == dut_id]
+        df_dut = df[df['dut_id'] == dut_id]
+        dut_dict[dut_id] = {}
+
+        # Dividir en grupos de tamaño fijo
+        num_grupos = (len(df_dut) + filas_por_grupo - 1) // filas_por_grupo
+
+        for i in range(num_grupos):
+            inicio_idx = i * filas_por_grupo
+            fin_idx = min((i + 1) * filas_por_grupo, len(df_dut))
+
+            # Extraer el tramo
+            tramo = df_dut.iloc[inicio_idx:fin_idx]
+
+            # Calcular fecha mínima y máxima
+            fecha_min = tramo['timestamp'].min()
+            fecha_max = tramo['timestamp'].max()
+
+            # Formatear el label como "01_MMDD_MMDD"
+            mmdd_min = fecha_min.strftime('%m%d')
+            mmdd_max = fecha_max.strftime('%m%d')
+            grupo_label = f"{i + 1:02d}_{mmdd_min}_{mmdd_max}"
+
+            dut_dict[dut_id][grupo_label] = tramo
+
     return dut_dict
 
-def paint_files(output_dir:Path, dut_dict:dict[str,DataFrame], print_excel:bool)->None:
 
-    for dut_id, diag_df in dut_dict.items():
-        dut_output_dir = output_dir / "processed" / dut_id
-        dut_output_dir.mkdir(parents=True, exist_ok=True)
 
-        # 1️⃣ Full diagnostics plot
-        print(f"Full diagnostic plot of: {dut_id}")
-        fig = px.line(diag_df, x="timestamp", y="value", color="variable", title=f"Diagnostics - {dut_id}", markers=True)
-        fig.write_html(dut_output_dir / f"{dut_id}_diag_plot.html")
+def paint_files(output_dir:Path, dut_dict:dict[str, dict[str, DataFrame]], print_excel:bool)->None:
 
-        # 2️⃣ Fail diagnostics plot
-        print(f"Failured plot of: {dut_id}")
-        diag_df_fail = diag_df[diag_df["results"] == "FAIL"]
-        fig = px.line(diag_df_fail, x="timestamp", y="value", color="variable", title=f"Diagnostics Fails - {dut_id}", markers=True)
-        fig.write_html(dut_output_dir / f"{dut_id}_diag_fails_plot.html")
+    for dut_id, by_date in dut_dict.items():
+        for date_slice, diag_df in by_date.items():
+            dut_output_dir = output_dir / "processed" / dut_id
+            dut_output_dir.mkdir(parents=True, exist_ok=True)
 
-        # 3️⃣ Excel of fails
-        if print_excel:
-            print(f"Excel of fails of: {dut_id}")
-            diag_df_fail.to_excel(dut_output_dir / f"{dut_id}_diagnostics_fails.xlsx", index=False)
+            # 1️⃣ Full diagnostics plot
+            print(f"Full diagnostic plot of: {dut_id} {date_slice}")
+            fig = px.line(diag_df, x="timestamp", y="value", color="variable", title=f"Diagnostics - {dut_id}", markers=True)
+            fig.write_html(dut_output_dir / f"{dut_id}_{date_slice}_diag_plot.html")
 
-        # 2️⃣ Positive diagnostics plot
-        print(f"Positive plot of: {dut_id}")
-        diag_df_positive = diag_df[diag_df["value"] >=  0]
-        fig = px.line(diag_df_positive, x="timestamp", y="value", color="variable", title=f"Diagnostics Positive - {dut_id}", markers=True)
-        fig.write_html(dut_output_dir / f"{dut_id}_diag_positive_plot.html")
+            # 2️⃣ Fail diagnostics plot
+            print(f"Failured plot of: {dut_id} {date_slice}")
+            diag_df_fail = diag_df[diag_df["results"] == "FAIL"]
+            fig = px.line(diag_df_fail, x="timestamp", y="value", color="variable", title=f"Diagnostics Fails - {dut_id}", markers=True)
+            fig.write_html(dut_output_dir / f"{dut_id}_{date_slice}_diag_fails_plot.html")
+
+            # 3️⃣ Excel of fails
+            if print_excel:
+                print(f"Excel of fails of: {dut_id} {date_slice}")
+                diag_df_fail.to_excel(dut_output_dir / f"{dut_id}_{date_slice}_diagnostics_fails.xlsx", index=False)
+
+            # 2️⃣ Positive diagnostics plot
+            print(f"Positive plot of: {dut_id} {date_slice}")
+            diag_df_positive = diag_df[diag_df["value"] >=  0]
+            fig = px.line(diag_df_positive, x="timestamp", y="value", color="variable", title=f"Diagnostics Positive - {dut_id}", markers=True)
+            fig.write_html(dut_output_dir / f"{dut_id}_{date_slice}_diag_positive_plot.html")
 
 
 def main():
     folder_path = Path(askdirectory(title="Select directory containing .db files"))
     db_files = get_db_files(folder_path)
     db_all = read_db_files(db_files)
-    dut_dict = separate_by_dut_id(db_all)
-    paint_files(folder_path, dut_dict, print_excel=False)
+    duc_dict_sliced = separate_by_dut_id(db_all,1_000_000)
+    paint_files(folder_path, duc_dict_sliced, print_excel=False)
 
     print("done")
 
